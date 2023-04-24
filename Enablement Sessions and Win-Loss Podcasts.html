@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="https://www.e2open.com/wp-content/uploads/2022/06/e2open-Favicon-32x32-1.png">
+<style>
+body {
+    font-family: Arial;
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #282828;
+  margin-top: 0px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+ Padding: 15px 18.8px;
+    width: 15.9%;
+  transition: 0.3s;
+  font-size: 14px;
+  color:#97baba;
+  font-weight:600;
+}
+.tab button.active {
+  background-color: #cccccc;
+  color:#ffffff;
+}
+
+.tab button.active:after,
+.tab button:hover:after {
+  opacity: 0;
+}
+
+
+.tab button:hover{
+-webkit-animation-name: hvr-push;
+  animation-name: hvr-push;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+   background-color: #ffffff;
+   color:#3d8080;
+    }
+	@-webkit-keyframes hvr-push {
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes hvr-push {
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+.Heading{
+text-align:center;
+color: #282828;
+}
+
+a{
+  text-decoration:none;
+}
+
+.no{
+  color:#c0392b;
+}
+.not_available{
+  color:gray;
+}
+.btn1{
+  outline:none;
+  border:0;
+  background:#1e5b67;
+  padding:16px 7px;
+  border-radius:4px;
+  text-align:center;
+  cursor: pointer;
+  width:150px;
+  color:#fff;
+  transition:0.5s;
+  font-weight: 600;
+}
+.btn1:hover{
+  background:#282828;
+  cursor: pointer;
+}
+
+.column {
+  float: left;
+  width: 20%;
+  padding: 20px 26px;
+  height: 414px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+    box-shadow: 0 20px 40px -14px rgb(0 0 0 / 25%);
+    padding: 5px 12px 0px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-size: 13px;
+	height: 255px;
+}
+li a.course{
+text-decoration:none;
+    font-size: 15px;
+    line-height: 1.5;
+}
+h3{
+color:#1e5b67;}
+p{
+color:#282828;}
+span.session_duration{
+    justify-content: left;
+    display: flex;
+	}
+.card:hover {
+    transform: translate(0, -5px);
+}
+</style>
+</head>
+<body>
+<div class="Heading"><h2>Enablement Sessions and Win-Loss Podcasts</h2></div>
+<br/>
+<div class="tab">
+<div class="tab_items" style="margin-left: 60px;">
+  <button class="tablinks" onclick="openApp(event, 'date')" id="defaultOpen">By Date</button>
+  <button class="tablinks" onclick="openApp(event, 'product')" id="defaultOpen">Product Marketing</button>
+  <button class="tablinks" onclick="openApp(event, 'app')">By App Suite</button>
+  <button class="tablinks" onclick="openApp(event, 'process')">Process & Tools</button>
+  <button class="tablinks" onclick="openApp(event, 'customer')">Customer Stories</button>
+  <button class="tablinks" onclick="openApp(event, 'Podcasts')">Win-Loss Podcasts</button>
+  
+  </div>
+</div>
+
+<div id="date" class="tabcontent">
+<div class="row">
+
+   <ul class="courses">
+    <li><a class="product"><b>2023</b></a>
+    <ul>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1743/field-enablement-gartner-recognizes-e2open-in-the-2023-magic-quadrant-for-tms" class="course" target="_blank">Field Enablement: Gartner Recognizes e2open in the 2023 Magic Quadrant for TMS</a> <span style="font-size:12px;">(2023-03-30)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1730/field-enablement-connect-europe-2023-briefing" class="course" target="_blank">Field Enablement: Connect Europe 2023 Briefing</a> <span style="font-size:12px;">(2023-03-16)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1678/field-enablement-bookings-policy" class="course" target="_blank">Field Enablement: Bookings Policy</a> <span style="font-size:12px;">(2023-02-16)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1659/field-enablement-genus-price-book-updates-231" class="course" target="_blank">Field Enablement: Genus Price Book Updates 23.1</a> <span style="font-size:12px;">(2023-02-02)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1630/field-enablement-shippeo-strategic-partnership-updates-january-5-2023" class="course" target="_blank">Field Enablement: Shippeo - Strategic Partnership Updates January 5 2023</a> <span style="font-size:12px;">(2023-01-05)</li>
+	</ul>
+	</li>
+    <li><a class="product"><b>2022</b></a>
+    <ul>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1547/field-enablement-sales-ops-quizbowl" class="course" target="_blank">Field Enablement: Sales Ops Quizbowl</a> <span style="font-size:12px;">(2022-12-15)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1546/field-enablement-working-with-partners-kpmg-update-tips-and-tricks" class="course" target="_blank">Field Enablement: Working With Partners - KPMG Update & Tips and Tricks</a> <span style="font-size:12px;">(2022-12-15)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1525/field-enablement-how-to-pitch-restricted-party-screening-rps-better" class="course" target="_blank">Field Enablement: How to Pitch Restricted Party Screening (RPS) Better</a> <span style="font-size:12px;">(2022-12-08)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1515/field-enablement-6sense-refresher-session-dec-2022" class="course" target="_blank">Field Enablement: 6Sense Refresher Session (Dec 2022)</a> <span style="font-size:12px;">(2022-12-01)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1516/field-enablement-carrier-marketplace-program-updates-dec-2022" class="course" target="_blank">Field Enablement: Carrier Marketplace Program Updates (Dec 2022)</a> <span style="font-size:12px;">(2022-12-01)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1425/field-enablement-introduction-to-loadsmart-partnership" class="course" target="_blank">Field Enablement: Introduction to Loadsmart Partnership</a> <span style="font-size:12px;">(2022-11-03)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1407/field-enablement-esg-updates" class="course" target="_blank">Field Enablement: ESG Updates</a> <span style="font-size:12px;">(2022-10-27)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1408/field-enablement-new-training-program-packages" class="course" target="_blank">Field Enablement: New Training Program Packages</a> <span style="font-size:12px;">(2022-10-27)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1375/field-enablement-professional-services-advisory-e2e-best-practices-walkthrough" class="course" target="_blank">Field Enablement: Professional Services Advisory E2E Best Practices Walkthrough</a> <span style="font-size:12px;">(2022-10-20)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1261/field-enablement-idc-and-nucleus-supply-planning-and-control-tower" class="course" target="_blank">Field Enablement: IDC And Nucleus - Supply Planning And Control Tower</a> <span style="font-size:12px;">(2022-10-06)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1252/field-enablement-shippeo" class="course" target="_blank">Field Enablement: Shippeo</a> <span style="font-size:12px;">(2022-09-29)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1247/field-enablement-idc-and-uflpa" class="course" target="_blank">Field Enablement: IDC And UFLPA</a> <span style="font-size:12px;">(2022-09-22)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1231/field-enablement-branding-wave-2-idc-updates-e2u-updates" class="course" target="_blank">Field Enablement: Branding Wave 2, IDC Updates, + e2u Updates</a> <span style="font-size:12px;">(2022-09-15)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1202/field-enablement-co-selling-with-partners" class="course" target="_blank">Field Enablement: Co-Selling with Partners</a> <span style="font-size:12px;">(2022-08-25)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1190/field-enablement-freight-rating-functionality-launch-and-review" class="course" target="_blank">Field Enablement: Freight Rating Functionality Launch and Review</a> <span style="font-size:12px;">(2022-08-18)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1189/field-enablement-leaders-forum-2022-call-to-action" class="course" target="_blank">Field Enablement: Leaders Forum 2022 - Call To Action</a> <span style="font-size:12px;">(2022-08-18)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1177/field-enablement-extreme-ownership-and-other-success-behaviors-presented-by-peter-hantman" class="course" target="_blank">Field Enablement: Extreme Ownership and Other Success Behaviors Presented by Peter Hantman</a> <span style="font-size:12px;">(2022-08-11)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1142/field-enablement-tms-positioning-focusing-on-rail-aka-raven" class="course" target="_blank">Field Enablement: TMS Positioning - focusing on Rail (aka Raven)</a> <span style="font-size:12px;">(2022-08-04)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1137/field-enablement-genus-tool-update" class="course" target="_blank">Field Enablement: Genus Tool Update</a> <span style="font-size:12px;">(2022-07-28)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1135/field-enablement-demand-management-lead-process-change-update-july-2022" class="course" target="_blank">Field Enablement: Demand Management Lead Process Change Update (July 2022)</a> <span style="font-size:12px;">(2022-07-21)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1122/field-enablement-understanding-the-end-to-end-e2open-story-plus-customer-stories" class="course" target="_blank">Field Enablement: Understanding the End-to-End e2open Story plus Customer Stories</a> <span style="font-size:12px;">(2022-07-14)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1097/field-enablement-restricted-party-screening-updates-and-partnerships" class="course" target="_blank">Field Enablement: Restricted Party Screening Updates And Partnerships</a> <span style="font-size:12px;">(2022-06-23)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1096/field-enablement-gartner-mq-multi-enterprise-supply-chain-business-networks-mescbn" class="course" target="_blank">Field Enablement: Gartner MQ Multi-Enterprise Supply Chain Business Networks (MESCBN)</a> <span style="font-size:12px;">(2022-06-16)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1086/field-enablement-learning-about-our-new-brand-and-what-you-need-to-know-for-launch-day" class="course" target="_blank">Field Enablement: Learning About Our New Brand And What You Need to Know for Launch Day</a> <span style="font-size:12px;">(2022-06-02)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1087/field-enablement-parcel-positioning-update" class="course" target="_blank">Field Enablement: Parcel Positioning Update</a> <span style="font-size:12px;">(2022-06-02)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1060/field-enablement-gartner-magic-quadrant-for-scp" class="course" target="_blank">Field Enablement: Gartner Magic Quadrant for SCP</a> <span style="font-size:12px;">(2022-05-26)</li>
+    <li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1057/field-enablement-helping-clients-meet-their-esg-goals" class="course" target="_blank">Field Enablement: Helping Clients Meet Their ESG Goals</a> <span style="font-size:12px;">(2022-05-19)</li>
+    <li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1044/field-enablement-heroku-introduction" class="course" target="_blank">Field Enablement: Heroku Introduction</a> <span style="font-size:12px;">(2022-05-05)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1053/field-enablement-end-to-end-supply-chain-playbook" class="course" target="_blank">Field Enablement: End-to-End Supply Chain Playbook</a> <span style="font-size:12px;">(2022-05-19)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1015/field-enablement-four-new-quadrants-to-power-your-sales" class="course" target="_blank">Field Enablement: Four New Quadrants to Power Your Sales</a> <span style="font-size:12px;">(2022-04-28)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1010/field-enablement-sdr-sales-6sense-training" class="course" target="_blank">Field Enablement: SDR & Sales 6sense Training</a> <span style="font-size:12px;">(2022-04-14)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/981/field-enablement-introduction-to-6sense" class="course" target="_blank">Field Enablement: Introduction to 6sense</a> <span style="font-size:12px;">(2022-03-31)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/963/field-enablement-221-price-book-update" class="course" target="_blank">Field Enablement: 22.1 Price Book Update</a> <span style="font-size:12px;">(2022-03-24)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/962/field-enablement-fy22-recap-fy23-bookings-plan-and-pricing-basics" class="course" target="_blank">Field Enablement: FY22 Recap, FY23 Bookings Plan, and Pricing Basics</a> <span style="font-size:12px;">(2022-03-10)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/935/field-enablement-demand-sensing-overview" class="course" target="_blank">Field Enablement: Demand Sensing Overview</a> <span style="font-size:12px;">(2022-02-10)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/927/field-enablement-connect-event-update" class="course" target="_blank">Field Enablement: CONNECT Event Update</a> <span style="font-size:12px;">(2022-02-03)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/925/field-enablement-supply-sensing-overview" class="course" target="_blank">Field Enablement: Supply Sensing Overview</a> <span style="font-size:12px;">(2022-01-27)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/923/field-enablement-channel-and-strategic-partners-overview" class="course" target="_blank">Field Enablement: Channel and Strategic Partners Overview</a> <span style="font-size:12px;">(2022-01-13)</li>
+    </ul>
+    </li>
+	 <li><a class="product"><b>2021</b></a>
+    <ul>
+    <li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/899/field-enablement-pmi-webinar-how-to-use-it-in-practice" class="course" target="_blank">Field Enablement: PMI Webinar: How to Use It in Practice</a> <span style="font-size:12px;">(2021-12-09)</li>
+    <li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/881/field-enablement-parcel-management-overview" class="course" target="_blank">Field Enablement: Parcel Management Overview</a> <span style="font-size:12px;">(2021-12-02)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/748/field-enablement-e2data-overview" class="course" target="_blank">Field Enablement: E2data Overview</a> <span style="font-size:12px;">(2021-11-11)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/844/field-enablement-ocean-shipping-index" class="course" target="_blank">Field Enablement: Ocean Shipping Index</a> <span style="font-size:12px;">(2021-11-04)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/845/field-enablement-solution-enablement-overview" class="course" target="_blank">Field Enablement: Solution Enablement Overview</a> <span style="font-size:12px;">(2021-11-04)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/849/field-enablement-training-at-the-heart-of-your-success" class="course" target="_blank">Field Enablement: Training: At The Heart of Your Success</a> <span style="font-size:12px;">(2021-10-28)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/902/field-enablement-e2open-connect-overview" class="course" target="_blank">Field Enablement: E2open CONNECT Overview</a> <span style="font-size:12px;">(2021-10-16)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/840/field-enablement-solutions-consultant-request-processes" class="course" target="_blank">Field Enablement: Solutions Consultant Request Processes</a> <span style="font-size:12px;">(2021-10-14)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/841/field-enablement-october-2021-product-marketing-content-update" class="course" target="_blank">Field Enablement: October 2021 Product Marketing Content Update</a> <span style="font-size:12px;">(2021-10-14)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/842/field-enablement-product-portfolio-update" class="course" target="_blank">Field Enablement: Product Portfolio Update</a> <span style="font-size:12px;">(2021-10-14)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/838/field-enablement-logistics-as-a-service-overview" class="course" target="_blank">Field Enablement: Logistics as a Service - Overview</a> <span style="font-size:12px;">(2021-10-07)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/826/field-enablement-genus-pricebook-release-213" class="course" target="_blank">Field Enablement: Genus Pricebook Release 21.3</a> <span style="font-size:12px;">(2021-09-30)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/798/field-enablement-2021-forecasting-and-inventory-benchmark-study" class="course" target="_blank">Field Enablement: 2021 Forecasting and Inventory Benchmark Study</a> <span style="font-size:12px;">(2021-09-23)</li>
+    <li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/787/field-enablement-vmware-success-story" class="course" target="_blank">Field Enablement: VMware Success Story</a> <span style="font-size:12px;">(2021-09-16)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/790/field-enablement-facebook-success-story" class="course" target="_blank">Field Enablement: Facebook Success Story</a> <span style="font-size:12px;">(2021-09-16)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/797/field-enablement-analyst-report-positioning-update" class="course" target="_blank">Field Enablement: Analyst Report Positioning Update</a> <span style="font-size:12px;">(2021-09-16)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/785/field-enablement-e2open-platform-overview-end-to-end" class="course" target="_blank">Field Enablement: E2open Platform Overview End-to-End</a> <span style="font-size:12px;">(2021-09-09)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/783/field-enablement-tesco-success-story" class="course" target="_blank">Field Enablement: Tesco Success Story</a> <span style="font-size:12px;">(2021-08-26)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/772/field-enablement-wl-gore-success-story" class="course" target="_blank">Field Enablement: W.L. Gore Success Story</a> <span style="font-size:12px;">(2021-08-19)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/782/field-enablement-lululemon-success-story" class="course" target="_blank">Field Enablement: Lululemon Success Story</a> <span style="font-size:12px;">(2021-08-19)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/793/field-enablement-demandbase-overview" class="course" target="_blank">Field Enablement: Demandbase Overview</a> <span style="font-size:12px;">(2021-08-05)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/763/field-enablement-enhanced-business-planning-view" class="course" target="_blank">Field Enablement: Enhanced Business Planning View</a> <span style="font-size:12px;">(2021-07-08)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/760/field-enablement-opportunity-engagement-model" class="course" target="_blank">Field Enablement: Opportunity Engagement Model</a> <span style="font-size:12px;">(2021-06-17)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/768/field-enablement-sap-add-on-adapters" class="course" target="_blank">Field Enablement: SAP Add-On Adapters</a> <span style="font-size:12px;">(2021-06-10)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/766/field-enablement-2021-multi-enterprise-supply-chain-business-network-gartner-magic-quadrant" class="course" target="_blank">Field Enablement: 2021 Multi-Enterprise Supply Chain Business Network Gartner Magic Quadrant</a> <span style="font-size:12px;">(2021-05-06)</li>
+    <li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/771/field-enablement-visibility-solutions-offerings-strategy" class="course" target="_blank">Field Enablement: Visibility Solutions Offerings & Strategy</a> <span style="font-size:12px;">(2021-04-22)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/765/field-enablement-2021-transportation-management-systems-gartner-magic-quadrant" class="course" target="_blank">Field Enablement: 2021 Transportation Management Systems Gartner Magic Quadrant</a> <span style="font-size:12px;">(2021-04-08)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/758/field-enablement-intel-success-story" class="course" target="_blank">Field Enablement: Intel Success Story</a> <span style="font-size:12px;">(2021-03-31)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/754/field-enablement-hp-inc-success-story" class="course" target="_blank">Field Enablement: HP Inc. Success Story</a> <span style="font-size:12px;">(2021-03-30)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/759/field-enablement-jaguar-land-rover-jlr-success-story" class="course" target="_blank">Field Enablement: Jaguar Land Rover (JLR) Success Story</a> <span style="font-size:12px;">(2021-03-30)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/753/field-enablement-dhl-success-story" class="course" target="_blank">Field Enablement: DHL Success Story</a> <span style="font-size:12px;">(2021-03-29)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/757/field-enablement-channel-sales-management" class="course" target="_blank">Field Enablement: Channel Sales Management</a> <span style="font-size:12px;">(2021-03-22)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/755/field-enablement-glv-and-logistics-control-tower-positioning" class="course" target="_blank">Field Enablement: GLV and Logistics Control Tower Positioning</a> <span style="font-size:12px;">(2021-03-18)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/761/field-enablement-global-trade-management-overview-and-sales-plays" class="course" target="_blank">Field Enablement: Global Trade Management Overview and Sales Plays</a> <span style="font-size:12px;">(2021-03-15)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/756/field-enablement-supply-management-overview-sales-plays" class="course" target="_blank">Field Enablement: Supply Management Overview & Sales Plays</a> <span style="font-size:12px;">(2021-03-11)</li>
+	<li><a href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/767/field-enablement-2021-supply-chain-planning-gartner-magic-quadrant" class="course" target="_blank">Field Enablement: 2021 Supply Chain Planning Gartner Magic Quadrant</a> <span style="font-size:12px;">(2021-03-04)</li>
+    </ul>
+    </ul>
+</div>
+</div>
+</div>
+<div id="product" class="tabcontent">
+<div class="row">
+<div class="column">
+ <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1743/field-enablement-gartner-recognizes-e2open-in-the-2023-magic-quadrant-for-tms" target="_blank">
+  <div class="card">
+    <h3>Field Enablement: Gartner Recognizes e2open in the 2023 Magic Quadrant for TMS</h3>
+     <p style="height: 155px;">You may have seen the announcement that Gartner recognizes e2open in the 2023 Magic Quadrant for Transportation Management. We’ll learn more about leveraging this information in your sales cycles.<br/><br/>
+	 <span class="session_duration"><i>Session Conducted on: 2023-03-30</i><br/></span><span class="session_duration"><i>Duration: 27 minutes</i></span></p>
+	</div>
+	</a>
+  </div>
+<div class="column">
+ <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1659/field-enablement-genus-price-book-updates-231" target="_blank">
+  <div class="card">
+    <h3>Field Enablement: Genus Price Book Updates 23.1</h3>
+     <p style="height: 155px;">In this session, your Sales Ops & Product Teams are covering the latest release of the Price Book.<br/><br/>
+	 <span class="session_duration"><i>Session Conducted on: 2023-02-02</i><br/></span><span class="session_duration"><i>Duration: 43 minutes</i></span></p>
+	</div>
+	</a>
+  </div>
+<div class="column">
+ <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1630/field-enablement-shippeo-strategic-partnership-updates-january-5-2023" target="_blank">
+  <div class="card">
+    <h3>Field Enablement: Shippeo - Strategic Partnership Updates January 5 2023</h3>
+     <p style="height: 155px;">In this session, we'll get some updates on our strategic partnership with Shippeo. <br/><br/>
+	 <span class="session_duration"><i>Session Conducted on: 2023-01-05</i><br/></span><span class="session_duration"><i>Duration: 30 minutes</i></span></p>
+	</div>
+	</a>
+  </div>
+<div class="column">
+ <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1546/field-enablement-working-with-partners-kpmg-update-tips-and-tricks" target="_blank">
+  <div class="card">
+    <h3>Field Enablement: Working With Partners - KPMG Update & Tips and Tricks</h3>
+     <p style="height: 155px;">Join our partner team to get updates on our latest partner KPMG, how we are working together, and some tips/tricks to effectively work with partners.<br/><br/>
+	 <span class="session_duration"><i>Session Conducted on: 2022-12-15</i><br/></span><span class="session_duration"><i>Duration: 35 minutes</i></span></p>
+	</div>
+	</a>
+  </div>
+<div class="column" style="margin-top: -160px;">
+ <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1525/field-enablement-how-to-pitch-restricted-party-screening-rps-better" target="_blank">
+  <div class="card">
+    <h3>Field Enablement: How to Pitch Restricted Party Screening (RPS) Better</h3>
+     <p style="height: 155px;">This session covers some key updates around Restricted Party Screening by our Product Marketing and Partner teams.<br/><br/>
+	 <span class="session_duration"><i>Session Conducted on: 2022-12-08</i><br/></span><span class="session_duration"><i>Duration: 1 hour</i></span></p>
+	</div>
+	</a>
+  </div>
+<div class="column" style="margin-top: -160px;">
+ <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1515/field-enablement-6sense-refresher-session-dec-2022" target="_blank">
+  <div class="card">
+    <h3>Field Enablement: 6Sense Refresher Session (Dec 2022)</h3>
+     <p style="height: 155px;">This session focuses on a 6Sense training refresher that builds upon the initial training from May 2022.<br/><br/>
+	 <span class="session_duration"><i>Session Conducted on: 2022-12-01</i><br/></span><span class="session_duration"><i>Duration: 42 minutes</i></span></p>
+	</div>
+	</a>
+  </div>
+<div class="column" style="margin-top: -160px;">
+ <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1516/field-enablement-carrier-marketplace-program-updates-dec-2022" target="_blank">
+  <div class="card">
+    <h3>Field Enablement: Carrier Marketplace Program Updates (Dec 2022)</h3>
+     <p style="height: 155px;">The Carrier Marketplace team provides some updates to the program, what it is, how Carriers can self-enroll, updated pricing, and how to get more information.<br/><br/>
+	 <span class="session_duration"><i>Session Conducted on: 2022-12-01</i><br/></span><span class="session_duration"><i>Duration: 16 minutes</i></span></p>
+	</div>
+	</a>
+  </div>
+<div class="column" style="margin-top: -160px;">
+ <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1425/field-enablement-introduction-to-loadsmart-partnership" target="_blank">
+  <div class="card">
+    <h3>Field Enablement: Introduction to Loadsmart Partnership</h3>
+     <p style="height: 155px;">In this session, you will learn more about a new partnership with Loadsmart<br/><br/>
+	 <span class="session_duration"><i>Session Conducted on: 2022-11-03</i><br/></span><span class="session_duration"><i>Duration: 45 minutes</i></span></p>
+	</div>
+	</a>
+  </div>
+<div class="column" style="margin-top: -160px;">
+ <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1252/field-enablement-shippeo" target="_blank">
+  <div class="card">
+    <h3>Field Enablement: Shippeo</h3>
+     <p style="height: 155px;">In this session, we will learn more about the newly enhanced and expanded strategic partnership with Shippeo<br/><br/>
+	 <span class="session_duration"><i>Session Conducted on: 2022-09-29</i><br/></span><span class="session_duration"><i>Duration: 1 hour</i></span></p>
+	</div>
+	</a>
+  </div>
+ <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1142/field-enablement-tms-positioning-focusing-on-rail-aka-raven" target="_blank">
+ <div class="column" style="margin-top: -160px;">
+    <div class="card">
+      <h3>Field Enablement: TMS Positioning - focusing on Rail (aka Raven)</h3>
+     <p style="height: 137px;">In this session, we will learn more about selling TMS with a specific focus on Rail (aka Raven).The session includes a cross-collaboration team of subject matter experts to answer your questions to start selling right away.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-08-04</i><br/></span><span class="session_duration"><i>Duration: 1 hour</i></span></p>
+    </div></a>
+  </div>
+ <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1137/field-enablement-genus-tool-update" target="_blank">
+ <div class="column" style="margin-top: -160px;">
+    <div class="card">
+      <h3>Field Enablement: Genus Tool Update</h3>
+     <p style="height: 137px;">Are you ready for some great updates??? The team has been working hard to continuously improve the pricing experience and has some great updates to Genus for you.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-07-28</i><br/></span><span class="session_duration"><i>Duration: 1 hour</i></span></p>
+</div>
+</a>
+</div>
+<a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1096/field-enablement-gartner-mq-multi-enterprise-supply-chain-business-networks-mescbn" target="_blank">
+<div class="column" style="margin-top: -160px;">
+    <div class="card">
+      <h3>Field Enablement: Gartner MQ Multi-Enterprise Supply Chain Business Networks (MESCBN)</h3>
+     <p style="height: 121px;">This course consists of a video that walks you through recent updates from Gartner as they have named e2open as the leader of the MESCBN.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-06-16</i><br/></span><span class="session_duration"><i>Duration: 38 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1086/field-enablement-learning-about-our-new-brand-and-what-you-need-to-know-for-launch-day" target="_blank">
+  <div class="column" style="margin-top: -160px;">
+    <div class="card">
+      <h3>Field Enablement: Learning About Our New Brand And What You Need to Know for Launch Day</h3>
+     <p style="height: 121px;">The webinar speaks about the brand launch, its purpose, availability of resources, and things to be aware of in order to be prepared.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-06-02</i><br/></span><span class="session_duration"><i>Duration: 1 hour</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1060/field-enablement-gartner-magic-quadrant-for-scp" target="_blank">
+ <div class="column" style="margin-top: -160px;">
+    <div class="card">
+      <h3>Field Enablement: Gartner Magic Quadrant for SCP</h3>
+     <p style="height: 138px;">The webinar walks you through the Gartner Supply Chain Magic Quadrant 2022 results, what does it mean, how to position it with the customers and prospects.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-05-26</i><br/></span><span class="session_duration"><i>Duration: 1 hour</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1057/field-enablement-helping-clients-meet-their-esg-goals" target="_blank">
+ <div class="column" style="margin-top: -160px;">
+    <div class="card">
+      <h3>Field Enablement: Helping Clients Meet Their ESG Goals</h3>
+     <p style="height: 138px;">This course consists of a video that will walk you through how e2open is helping clients to meet their ESG goals.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-05-19</i><br/></span><span class="session_duration"><i>Duration: 1 hour</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1015/field-enablement-four-new-quadrants-to-power-your-sales" target="_blank">
+<div class="column" style="margin-top: -160px;">
+    <div class="card">
+      <h3>Field Enablement: Four New Quadrants to Power Your Sales</h3>
+     <p style="height: 138px;">This webinar provides an overview of how to interpret the quadrants and use the same with clients.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-04-21</i><br/></span><span class="session_duration"><i>Duration: 1 hour</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1007/opportunities-to-win-through-analyst-support-fko-fy23" target="_blank">
+<div class="column" style="margin-top: -160px;">
+    <div class="card">
+      <h3>Opportunities to Win through Analyst Support (FKO FY23)</h3>
+     <p style="height: 138px;">This webinar is a part of the Field Sales and Marketing Kickoff Event (ELEVATE 2022).<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-04-07</i><br/></span><span class="session_duration"><i>Duration: 50 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/963/field-enablement-221-price-book-update" target="_blank">
+<div class="column" style="margin-top: -160px;">
+    <div class="card">
+      <h3>Field Enablement: 22.1 Price Book Update</h3>
+     <p style="height: 138px;">This webinar provides an overview of the 22.1 pricebook release, the custom SKU approval process, and how it will help from an opportunity management perspective.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-03-24</i><br/></span><span class="session_duration"><i>Duration: 1 hour</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/962/field-enablement-fy22-recap-fy23-bookings-plan-and-pricing-basics" target="_blank">
+<div class="column" style="margin-top: -160px;">
+    <div class="card">
+      <h3>Field Enablement: FY22 Recap, FY23 Bookings Plan, and Pricing Basics</h3>
+     <p style="height: 120px;">This webinar provides an overview of reflections of FY22 performance, a sneak peak of FY23 booking plan, and pricing basics<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-03-10</i><br/></span><span class="session_duration"><i>Duration: 45 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/925/field-enablement-supply-sensing-overview" target="_blank">
+<div class="column" style="margin-top: -160px;">
+    <div class="card">
+      <h3>Field Enablement: Supply Sensing Overview</h3>
+     <p style="height: 138px;">This webinar provides an overview of Supply Sensing with E2open. The webinar covers topics such as Setting the stage, Addressing the issue and Where Supply Sensing fits.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-01-27</i><br/></span><span class="session_duration"><i>Duration: 45 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/844/field-enablement-ocean-shipping-index" target="_blank">
+<div class="column" style="margin-top: -160px;">
+    <div class="card">
+      <h3>Field Enablement: Ocean Shipping Index</h3>
+     <p style="height: 138px;">This webinar provides an overview of the Ocean Shipping Index.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-11-04</i><br/></span><span class="session_duration"><i>Duration: 16 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/841/field-enablement-october-2021-product-marketing-content-update" target="_blank">
+<div class="column" style="margin-top: -160px;">
+    <div class="card">
+      <h3>Field Enablement: October 2021 Product Marketing Content Update</h3>
+     <p style="height: 138px;">This webinar provides an overview of the updates included in the October 2021 product marketing content.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-10-14</i><br/></span><span class="session_duration"><i>Duration: 4 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/826/field-enablement-genus-pricebook-release-213" target="_blank">
+<div class="column" style="margin-top: -160px;">
+    <div class="card">
+      <h3>Field Enablement: Genus Pricebook Release 21.3</h3>
+     <p style="height: 138px;">This webinar provides an overview of the Genus Pricebook optimization plan, what's new in the 21.3 release, Genus Procebook overview, and One-Stop Genus Site.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-09-30</i><br/></span><span class="session_duration"><i>Duration: 30 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/798/field-enablement-2021-forecasting-and-inventory-benchmark-study" target="_blank">
+<div class="column" style="margin-top: -160px;">
+    <div class="card">
+      <h3>Field Enablement: 2021 Forecasting and Inventory Benchmark Study</h3>
+     <p style="height: 121px;">This course consists of a webinar that walks you through a benchmark study on Forecasting and Inventory Management.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-09-23</i><br/></span><span class="session_duration"><i>Duration: 1 hour</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/797/field-enablement-analyst-report-positioning-update" target="_blank">
+<div class="column" style="margin-top: -160px;">
+    <div class="card">
+      <h3>Field Enablement: Analyst Report Positioning Update</h3>
+     <p style="height: 138px;">This webinar describes positioning of E2open with Gartner, IDC, and Nucleus Research quadrants.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-09-16</i><br/></span><span class="session_duration"><i>Duration: 6 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/793/field-enablement-demandbase-overview" target="_blank">
+<div class="column" style="margin-top: -160px;">
+    <div class="card">
+      <h3>Field Enablement: Demandbase Overview</h3>
+     <p style="height: 138px;">This webinar provides an overview of Demandbase platform.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-08-05</i><br/></span><span class="session_duration"><i>Duration: 60 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/766/field-enablement-2021-multi-enterprise-supply-chain-business-network-gartner-magic-quadrant" target="_blank">
+<div class="column" style="margin-top: -160px;">
+    <div class="card">
+      <h3>Field Enablement: 2021 Multi-Enterprise Supply Chain Business Network Gartner Magic Quadrant</h3>
+     <p style="height: 120px;">This webinar talks about the new multi-enterprise supply chain business network magic quadrant from Gartner.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-05-06</i><br/></span><span class="session_duration"><i>Duration: 55 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/765/field-enablement-2021-transportation-management-systems-gartner-magic-quadrant" target="_blank">
+<div class="column" style="margin-top: -160px;">
+    <div class="card">
+      <h3>Field Enablement: 2021 Transportation Management Systems Gartner Magic Quadrant</h3>
+     <p style="height: 120px;">This webinar talks about E2open's positioning in the TMS Gartner Magic Quadrant for the year 2021.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-04-08</i><br/></span><span class="session_duration"><i>Duration: 40 minutes</i></span></p>
+    </div></a>
+  </div> 
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/767/field-enablement-2021-supply-chain-planning-gartner-magic-quadrant" target="_blank">
+<div class="column" style="margin-top: -160px;">
+    <div class="card">
+      <h3>Field Enablement: 2021 Supply Chain Planning Gartner Magic Quadrant</h3>
+     <p style="height: 120px;">This webinar talks about the Magic Quadrant for supply chain planning solutions.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-03-04</i><br/></span><span class="session_duration"><i>Duration: 60 minutes</i></span>
+    </div></a>
+  </div>  
+</div>
+</div>
+
+<div id="app" class="tabcontent">
+<div class="row">
+<a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1190/field-enablement-freight-rating-functionality-launch-and-review" target="_blank">
+ <div class="column">
+    <div class="card">
+      <h3>Field Enablement: Freight Rating Functionality Launch and Review</h3>
+     <p style="height: 138px;">This course provides an overview of new functionality launching in the upcoming product release - freight real-time rating in the Transportation Management application.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-08-18</i><br/></span><span class="session_duration"><i>Duration: 26 minutes</i></span></p>
+</div></a></div>
+<a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1097/field-enablement-restricted-party-screening-updates-and-partnerships" target="_blank">
+<div class="column">
+    <div class="card">
+      <h3>Field Enablement: Restricted Party Screening Updates And Partnerships</h3>
+     <p style="height: 121px;">This course provides an overview of restricted party screening sales training and how its a robust one-stop shop for clients.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-06-23</i><br/></span><span class="session_duration"><i>Duration: 55 minutes</i></span></p>
+</div></a></div>
+<a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1087/field-enablement-parcel-positioning-update" target="_blank">
+<div class="column">
+    <div class="card">
+      <h3>Field Enablement: Parcel Positioning Update</h3>
+     <p style="height: 138px;">The webinar discusses parcels and shipping, including how to position them, the value they provide, and how to communicate with customers and markets about them.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-06-02</i><br/></span><span class="session_duration"><i>Duration: 1 hour 10 minutes</i></span></p>
+</div></a></div>
+<a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1053/field-enablement-end-to-end-supply-chain-playbook" target="_blank">
+<div class="column">
+    <div class="card">
+      <h3>Field Enablement: End-to-End Supply Chain Playbook</h3>
+     <p style="height: 138px;">This webinar provides an overview of the End-to-End Supply Chain Playbook and how to utilize the same.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-04-28</i><br/></span><span class="session_duration"><i>Duration: 1 hour</i></span></p>
+	 
+</div></a></div>
+<a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1008/strategy-and-product-update-fko-fy23" target="_blank">
+<div class="column">
+   <div class="card" style="margin-top:-145px;">
+      <h3>Strategy and Product Update (FKO FY23)</h3>
+     <p style="height: 138px;">This webinar is a part of the Field Sales and Marketing Kickoff Event (ELEVATE 2022).<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-04-07</i><br/></span><span class="session_duration"><i>Duration: 1 hour 15 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/845/field-enablement-solution-enablement-overview" target="_blank">
+<div class="column">
+    <div class="card" style="margin-top:-145px;">
+      <h3>Field Enablement: Solution Enablement Overview</h3>
+     <p style="height: 138px;">This webinar provides an overview and new updates of solution enablement perspectives. It covers aspects such as E2open's approach to solution enablement, new enablement tools, and how to put them into action.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-11-04</i><br/></span><span class="session_duration"><i>Duration: 45 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/842/field-enablement-product-portfolio-update" target="_blank">
+<div class="column">
+  <div class="card" style="margin-top:-145px;">
+      <h3>Field Enablement: Product Portfolio Update</h3>
+     <p style="height: 138px;">This webinar provides an overview of E2open's latest product portfolio.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-10-14</i><br/></span><span class="session_duration"><i>Duration: 41 minutes</i></span></p>
+
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/785/field-enablement-e2open-platform-overview-end-to-end" target="_blank">
+<div class="column">
+   <div class="card" style="margin-top:-145px;">
+      <h3>Field Enablement: E2open Platform Overview End-to-End</h3>
+     <p style="height: 138px;">This course consists of an overview of E2open's Connected Supply Chain Software Platform. This will help you recognize E2open's products, software architecture, and unique capabilities.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-09-09</i><br/></span><span class="session_duration"><i>Duration: 1 hour</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/768/field-enablement-sap-add-on-adapters" target="_blank">
+<div class="column">
+  <div class="card" style="margin-top:-290px;">
+      <h3>Field Enablement: SAP Add-On Adapters</h3>
+     <p style="height: 138px;">This webinar talks about the SAP add-on feature and exchange of data between SAP and E2open.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-06-10</i><br/></span><span class="session_duration"><i>Duration: 52 minutes</i></span></p>
+    </div></a>
+  </div>
+<a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/757/field-enablement-channel-sales-management" target="_blank">
+<div class="column">
+  <div class="card" style="margin-top:-290px;">
+      <h3>Field Enablement: Channel Sales Management</h3>
+     <p style="height: 125px;">This webinar discusses prospecting accounts/opportunities, our solutions and how we win and key customer stories<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-03-22</i><br/></span><span class="session_duration"><i>Duration: 1 hour 20 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/935/field-enablement-demand-sensing-overview" target="_blank">
+<div class="column">
+  <div class="card" style="margin-top:-290px;">
+      <h3>Field Enablement: Demand Sensing Overview</h3>
+     <p style="height: 125px;">This webinar provides an overview of Demand Sensing with E2open.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-02-11</i><br/></span><span class="session_duration"><i>Duration: 1 hour</i></span></p>
+    </div></a>
+  </div>
+  
+<a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/763/field-enablement-enhanced-business-planning-view" target="_blank">
+<div class="column">
+       <div class="card" style="margin-top:-290px;">
+      <h3>Field Enablement: Enhanced Business Planning View</h3>
+     <p style="height: 125px;">This webinar talks about the updates on the Business Planning View<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-07-08</i><br/></span><span class="session_duration"><i>Duration: 45 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/761/field-enablement-global-trade-management-overview-and-sales-plays" target="_blank">
+<div class="column">
+    <div class="card" style="margin-top:-430px;">
+      <h3>Field Enablement: Global Trade Management Overview and Sales Plays</h3>
+     <p style="height: 108px;">This course is a part of the field enablement series and will walk you through sales plays.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-03-15</i><br/></span><span class="session_duration"><i>Duration: 1 hour 30 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/881/field-enablement-parcel-management-overview" target="_blank">
+<div class="column">
+   <div class="card" style="margin-top:-430px;">
+      <h3>Field Enablement: Parcel Management Overview</h3>
+     <p style="height: 125px;">This webinar provides an overview of E2open's parcel management business.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-12-02</i><br/></span><span class="session_duration"><i>Duration: 60 minutes</i></span></p>
+    </div></a>
+  </div>
+<a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/838/field-enablement-logistics-as-a-service-overview" target="_blank">
+<div class="column">
+   <div class="card" style="margin-top:-430px;">
+      <h3>Field Enablement: Logistics as a Service - Overview</h3>
+     <p style="height: 142px;">This webinar provides an overview of logistics as a service. It includes qualifying opportunities and commercial engagement.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-10-07</i><br/></span><span class="session_duration"><i>Duration: 60 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/755/field-enablement-glv-and-logistics-control-tower-positioning" target="_blank">
+<div class="column">
+   <div class="card" style="margin-top:-430px;">
+      <h3>Field Enablement: GLV and Logistics Control Tower Positioning</h3>
+     <p style="height: 125px;">This webinar is related to the strategies that can be implemented in closing more Inbound Logistics Control Tower opportunities.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-03-18</i><br/></span><span class="session_duration"><i>Duration: 1 hour 20 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/771/field-enablement-visibility-solutions-offerings-strategy" target="_blank">
+<div class="column">
+    <div class="card" style="margin-top:-560px;">
+      <h3>Field Enablement: Visibility Solutions Offerings & Strategy</h3>
+     <p style="height: 141px;">This Webinar provides an overview of Visibility Solutions Offerings & Strategy.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-04-22</i><br/></span><span class="session_duration"><i>Duration: 45 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/756/field-enablement-supply-management-overview-sales-plays" target="_blank">
+<div class="column">
+    <div class="card" style="margin-top:-560px;">
+      <h3>Field Enablement: Supply Management Overview & Sales Plays</h3>
+     <p style="height: 125px;">This Webinar provides an introduction to Supply Management Overview & Sales Plays.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-03-11</i><br/></span><span class="session_duration"><i>Duration: 1 hour 30 minutes</i></span></p>
+    </div></a>
+  </div>
+</div>
+</div>
+
+<div id="process" class="tabcontent">
+<div class="row">
+<a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1730/field-enablement-connect-europe-2023-briefing" target="_blank">
+<div class="column">
+    <div class="card">
+      <h3>Field Enablement: Connect Europe 2023 Briefing</h3>
+     <p style="height: 159px;">This session covers a briefing from our Marketing & Events team on Connect Europe 2023.<br/><br/><span class="session_duration"><i>Session Conducted on: 2023-03-16</i><br/></span><span class="session_duration"><i>Duration: 60 minutes</i></span></p>
+    </div></a>
+  </div>
+<a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1678/field-enablement-bookings-policy" target="_blank">
+<div class="column">
+    <div class="card">
+      <h3>Field Enablement: Bookings Policy</h3>
+     <p style="height: 159px;">This session covers the newly formalized Bookings Policy and what that means for you. <br/><br/><span class="session_duration"><i>Session Conducted on: 2023-02-16</i><br/></span><span class="session_duration"><i>Duration: 20 minutes</i></span></p>
+    </div></a>
+  </div>
+<a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1547/field-enablement-sales-ops-quizbowl" target="_blank">
+<div class="column">
+    <div class="card">
+      <h3>Field Enablement: Sales Ops Quizbowl</h3>
+     <p style="height: 159px;">Join us for a quick competition to test your knowledge of sales operations tips & tricks in a challenge of knowledge and speed! This fast-paced session will have you smiling and laughing by the end.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-12-15</i><br/></span><span class="session_duration"><i>Duration: 25 minutes</i></span></p>
+    </div></a>
+  </div>
+<a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1407/field-enablement-esg-updates" target="_blank">
+<div class="column">
+    <div class="card">
+      <h3>Field Enablement: ESG Updates</h3>
+     <p style="height: 159px;">This session covers e2open’s ESG strategy and insights and spend some time helping you communicate ESG benefits to our clients and prospects<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-10-27</i><br/></span><span class="session_duration"><i>Duration: 35 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1408/field-enablement-new-training-program-packages" target="_blank">
+ <div class="column" style="margin-top:-160px;">
+    <div class="card">
+      <h3>Field Enablement: New Training Program Packages</h3>
+     <p style="height: 142px;">This session discusses a new training package approach and the benefits of that package that you can easily include in your proposals and conversations with prospects and clients<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-10-27</i><br/></span><span class="session_duration"><i>Duration: 30 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1375/field-enablement-professional-services-advisory-e2e-best-practices-walkthrough" target="_blank">
+<div class="column" style="margin-top:-160px;">
+    <div class="card">
+      <h3>Field Enablement: Professional Services Advisory E2E Best Practices Walkthrough</h3>
+     <p style="height: 125px;">In this session, the Professional Services Advisory E2E team shares how they can impact your customers' success and their KPI realization, how to discuss those benefits in a sales conversation.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-10-20</i><br/></span><span class="session_duration"><i>Duration: 45 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1261/field-enablement-idc-and-nucleus-supply-planning-and-control-tower" target="_blank">
+<div class="column" style="margin-top:-160px;">
+    <div class="card">
+      <h3>Field Enablement: IDC And Nucleus – Supply Planning And Control Tower</h3>
+     <p style="height: 125px;">In this session, our Marketing team shares some exciting analyst updates and how to leverage those accolades and information in your pursuit cycles.	<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-10-06</i><br/></span><span class="session_duration"><i>Duration: 1 hour</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1247/field-enablement-idc-and-uflpa" target="_blank">
+<div class="column" style="margin-top:-160px;">
+    <div class="card">
+      <h3>Field Enablement: IDC And UFLPA</h3>
+     <p style="height: 159px;">This course covers two topics: IDC and UFLPA updates and e2open supporting the Global Trade Academy session stating how to mitigate risks as a result of the updated policies.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-09-22</i><br/></span><span class="session_duration"><i>Duration: 55 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1231/field-enablement-branding-wave-2-idc-updates-e2u-updates" target="_blank">
+<div class="column" style="margin-top:-160px;">
+    <div class="card">
+      <h3>Field Enablement: Branding Wave 2, IDC Updates, + e2u Updates</h3>
+     <p style="height: 142px;">This video covers a powerhouse of topics: Key updates to our Branding Progress and IDC Analyst Updates<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-09-15</i><br/></span><span class="session_duration"><i>Duration: 55 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1206/field-enablement-blujay-sfdc-migration-update-sept-2022" target="_blank">
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1202/field-enablement-co-selling-with-partners" target="_blank">
+<div class="column" style="margin-top:-160px;">
+    <div class="card">
+      <h3>Field Enablement: Co-Selling with Partners</h3>
+     <p style="height: 142px;">This video provides a review of co-selling with partners. This is an important evolution for e2open and will drive our business success.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-08-25</i><br/></span><span class="session_duration"><i>Duration: 40 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1189/field-enablement-leaders-forum-2022-call-to-action" target="_blank">
+<div class="column" style="margin-top:-160px;">
+    <div class="card">
+      <h3>Field Enablement: Leaders Forum 2022 - Call To Action</h3>
+     <p style="height: 142px;">This video provides a review of the 2022 Leaders Forum and key activities that we need to focus on to ensure a successful event. Peter and Teri will share the most up-to-date information and key actions for the top account invite list.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-08-18</i><br/></span><span class="session_duration"><i>Duration: 25 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1177/field-enablement-extreme-ownership-and-other-success-behaviors-presented-by-peter-hantman" target="_blank">
+<div class="column" style="margin-top:-160px;">
+   <div class="card">
+      <h3>Field Enablement: Extreme Ownership and Other Success Behaviors Presented by Peter Hantman</h3>
+     <p style="height: 108px;">In this session, Peter Hantman, e2open COO, will cover an important topic that can help drive our business forward toward success and revenue growth.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-08-11</i><br/></span><span class="session_duration"><i>Duration: 1 hour</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1135/field-enablement-demand-management-lead-process-change-update-july-2022" target="_blank">
+<div class="column" style="margin-top:-160px;">
+     <div class="card">
+      <h3>Field Enablement: Demand Management Lead Process Change Update</h3>
+     <p style="height: 125px;">The demand management changes are in place, and we can now walk through how these changes benefit us.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-07-21</i><br/></span><span class="session_duration"><i>Duration: 1 hour</i></span></p>
+
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1044/field-enablement-heroku-introduction" target="_blank">
+<div class="column" style="margin-top:-160px;">
+ <div class="card">
+      <h3>Field Enablement: Heroku Introduction</h3>
+     <p style="height: 142px;">This webinar provides a short overview of Heroku and the purpose of connecting the same.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-05-05</i><br/></span><span class="session_duration"><i>Duration: 25 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1010/field-enablement-sdr-sales-6sense-training" target="_blank">
+<div class="column" style="margin-top:-160px;">
+   <div class="card">
+      <h3>Field Enablement: SDR & Sales 6sense Training</h3>
+     <p style="height: 142px;">This webinar provides an overview of 6sense for sales organizations, walks you through using 6sense in Salesforce, and explains the next steps with 6sense.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-04-14</i><br/></span><span class="session_duration"><i>Duration: 1 hour</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1006/fy23-sales-vision-fko-fy23" target="_blank">
+<div class="column" style="margin-top:-160px;">
+  <div class="card">
+      <h3>FY23 Sales Vision (FKO FY23)</h3>
+     <p style="height: 142px;">This webinar is a part of the Field Sales and Marketing Kickoff Event (ELEVATE 2022).<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-04-06</i><br/></span><span class="session_duration"><i>Duration: 1 hour 50 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1001/creating-opportunity-through-marketing-fko-fy23" target="_blank">
+<div class="column" style="margin-top:-160px;">
+     <div class="card">
+      <h3>Creating Opportunity through Marketing (FKO FY23)</h3>
+     <p style="height: 125px;">This webinar is a part of the Field Sales and Marketing Kickoff Event (ELEVATE 2022).<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-04-06</i><br/></span><span class="session_duration"><i>Duration: 15 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1000/buying-groups-fko-fy23" target="_blank">
+<div class="column" style="margin-top:-160px;">
+   <div class="card">
+      <h3>Buying Groups (FKO FY23)</h3>
+     <p style="height: 142px;">This webinar is a part of the Field Sales and Marketing Kickoff Event (ELEVATE 2022).<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-04-06</i><br/></span><span class="session_duration"><i>Duration: 30 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/981/field-enablement-introduction-to-6sense" target="_blank">
+<div class="column" style="margin-top:-160px;">
+ <div class="card">
+      <h3>Field Enablement: Introduction to 6sense</h3>
+     <p style="height: 125px;">The webinar is an introduction to the 6sense account engagement platform. It shines light on the B2B buying journey that helps the sales and marketing teams know exactly when to engage.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-03-31</i><br/></span><span class="session_duration"><i>Duration: 20 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/927/field-enablement-connect-event-update" target="_blank">
+<div class="column" style="margin-top:-160px;">
+ <div class="card">
+      <h3>Field Enablement: CONNECT Event Update</h3>
+     <p style="height: 125px;">This webinar provides an update on the CONNECT 2022 Event.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-02-03</i><br/></span><span class="session_duration"><i>Duration: 35 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/923/field-enablement-channel-and-strategic-partners-overview" target="_blank">
+<div class="column" style="margin-top:-160px;">
+   <div class="card">
+      <h3>Field Enablement: Channel and Strategic Partners Overview</h3>
+     <p style="height: 125px;">This webinar provides an overview of roles and responsibilities of the Channel and Growth BU team.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-01-13</i><br/></span><span class="session_duration"><i>Duration: 31 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/902/field-enablement-e2open-connect-overview" target="_blank">
+<div class="column" style="margin-top:-160px;">
+    <div class="card">
+      <h3>Field Enablement: E2open CONNECT Overview</h3>
+     <p style="height: 125px;">This webinar provides an overview of E2open Connect.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-12-16</i><br/></span><span class="session_duration"><i>Duration: 23 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/899/field-enablement-pmi-webinar-how-to-use-it-in-practice" target="_blank">
+<div class="column" style="margin-top:-160px;">
+     <div class="card">
+      <h3>Field Enablement: PMI Webinar: How to Use It in Practice</h3>
+     <p style="height: 125px;">This is a virtual case study based on the webinar conducted at Philip Morris International (PMI) in June 2021.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-12-09</i><br/></span><span class="session_duration"><i>Duration: 40 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/748/field-enablement-e2data-overview" target="_blank">
+<div class="column" style="margin-top:-160px;">
+       <div class="card">
+      <h3>Field Enablement: E2data Overview</h3>
+     <p style="height: 142px;">This webinar gives an overview of E2data, the products and solutions covered by E2data, use cases for the sales team, and how to access it.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-11-11</i><br/></span><span class="session_duration"><i>Duration: 60 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/848/contracts-training-for-ps" target="_blank">
+<div class="column" style="margin-top:-160px;">
+    <div class="card">
+      <h3>Contracts Training for PS</h3>
+     <p style="height: 142px;">This webinar provides an overview of the professional services (PS) training manual.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-10-22</i><br/></span><span class="session_duration"><i>Duration: 40 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/843/contracts-training-for-sales" target="_blank">
+<div class="column" style="margin-top:-160px;">
+     <div class="card">
+      <h3>Contracts Training for Sales</h3>
+     <p style="height: 142px;">This webinar provides an overview of contracts training for sales.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-10-19</i><br/></span><span class="session_duration"><i>Duration: 25 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/849/field-enablement-training-at-the-heart-of-your-success" target="_blank">
+<div class="column" style="margin-top:-160px;">
+ <div class="card">
+      <h3>Field Enablement: Training: At The Heart of Your Success</h3>
+     <p style="height: 125px;">This webinar provides an overview of how E2open sells Training services and Global Trade Academy services.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-10-28</i><br/></span><span class="session_duration"><i>Duration: 40 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/840/field-enablement-solutions-consultant-request-processes" target="_blank">
+<div class="column" style="margin-top:-160px;">
+    <div class="card">
+      <h3>Field Enablement: Solutions Consultant Request Processes</h3>
+     <p style="height: 125px;">This webinar provides an overview of Solutions Consultant request processes.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-10-14</i><br/></span><span class="session_duration"><i>Duration: 5 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/760/field-enablement-opportunity-engagement-model" target="_blank">
+<div class="column" style="margin-top:-160px;">
+      <div class="card">
+      <h3>Field Enablement: Opportunity Engagement Model</h3>
+     <p style="height: 125px;">This webinar talks about opportunity engagement model in detail.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-06-17</i><br/></span><span class="session_duration"><i>Duration: 30 minutes</i></span></p>
+    </div></a>
+  </div>
+</div>
+</div>
+
+<div id="customer" class="tabcontent">
+<div class="row">
+<a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1122/field-enablement-understanding-the-end-to-end-e2open-story-plus-customer-stories">
+<div class="column">
+    <div class="card">
+      <h3>Field Enablement: Understanding the End-to-End e2open Story plus Customer Stories</h3>
+     <p style="height: 108px;">This session reviews the e2open end-to-end story & how that can set the foundation for building the vision of transformation for a client/prospect's business.<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-07-14</i><br/></span><span class="session_duration"><i>Duration: 1 hour</i></span></p>
+</div></a></div>
+<a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1004/customer-win-story-kuehne-and-nagel-fko-fy23" target="_blank">
+<div class="column">
+    <div class="card">
+      <h3>Customer Win Story - Kuehne & Nagel (FKO FY23)</h3>
+     <p style="height: 125px;">This webinar is a part of the Field Sales and Marketing Kickoff Event (ELEVATE 2022).<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-04-06</i><br/></span><span class="session_duration"><i>Duration: 30 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1003/customer-win-story-caterpillar-fko-fy23" target="_blank">
+   <div class="column">
+    <div class="card">
+      <h3>Customer Win Story - Caterpillar (FKO FY23)</h3>
+     <p style="height: 125px;">This webinar is a part of the Field Sales and Marketing Kickoff Event (ELEVATE 2022).<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-04-06</i><br/></span><span class="session_duration"><i>Duration: 30 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1005/customer-win-story-reyes-holdings-fko-fy23" target="_blank">
+   <div class="column">
+    <div class="card">
+      <h3>Customer Win Story - Reyes Holdings (FKO FY23)</h3>
+     <p style="height: 125px;">This webinar is a part of the Field Sales and Marketing Kickoff Event (ELEVATE 2022).<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-04-07</i><br/></span><span class="session_duration"><i>Duration: 25 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1002/customer-win-story-amazon-kuiper-fko-fy23" target="_blank">
+ <div class="column" style="margin-top: -145px;">
+    <div class="card">
+      <h3>Customer Win Story - Amazon Kuiper (FKO FY23)</h3>
+     <p style="height: 125px;">This webinar is a part of the Field Sales and Marketing Kickoff Event (ELEVATE 2022).<br/><br/><span class="session_duration"><i>Session Conducted on: 2022-04-07</i><br/></span><span class="session_duration"><i>Duration: 25 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/790/field-enablement-facebook-success-story" target="_blank">
+<div class="column" style="margin-top: -145px;">
+    <div class="card">
+      <h3>Field Enablement: Facebook Success Story</h3>
+     <p style="height: 135px;">This webinar describes the success story of how E2open came up with innovative ideas and strategies to become Facebook's vendor.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-09-16</i><br/></span><span class="session_duration"><i>Duration: 30 minutes</i></span></p>
+    </div></a>
+  </div>
+<a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/787/field-enablement-vmware-success-story" target="_blank">
+<div class="column" style="margin-top: -145px;">
+    <div class="card">
+      <h3>Field Enablement: VMware Success Story</h3>
+     <p style="height: 135px;">This course consists of a recorded webinar session conducted by Vas Nikolaev and provides an overview of VMware.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-09-16</i><br/></span><span class="session_duration"><i>Duration: 30 minutes</i></span></p>
+
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/783/field-enablement-tesco-success-story" target="_blank">
+<div class="column" style="margin-top: -145px;">
+    <div class="card">
+      <h3>Field Enablement: Tesco Success Story</h3>
+     <p style="height: 135px;">This webinar describes the success story of how E2open came up with innovative ideas and strategies to become Tesco's vendor.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-08-26</i><br/></span><span class="session_duration"><i>Duration: 30 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/772/field-enablement-wl-gore-success-story" target="_blank">
+<div class="column" style="margin-top: -145px;">
+    <div class="card">
+      <h3>Field Enablement: W.L. Gore Success Story</h3>
+     <p style="height: 135px;">This webinar describes the success story of how E2open solved the many challenges faced by W.L. Gore by identifying product gaps and integration points necessary for the project to work using our GLV and TMS.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-08-19</i><br/></span><span class="session_duration"><i>Duration: 20 minutes</i></span></p>
+    </div></a>
+  </div> 
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/782/field-enablement-lululemon-success-story" target="_blank">
+ <div class="column">
+     <div class="card" style="margin-top:-145px;">
+      <h3>Field Enablement: Lululemon Success Story</h3>
+     <p style="height: 120px;">This course consists of a video that walks you through the success story of a new customer.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-08-19</i><br/></span><span class="session_duration"><i>Duration: 45 minutes</i></span></p>
+    </div></a>
+	</div>
+	<a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/758/field-enablement-intel-success-story" target="_blank">
+<div class="column">
+   <div class="card" style="margin-top:-145px;">
+      <h3>Field Enablement: Intel Success Story</h3>
+     <p style="height: 120px;">This webinar talks about the success story of how E2open came up with innovative ideas and strategies to become Intel's vendor.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-03-31</i><br/></span><span class="session_duration"><i>Duration: 60 minutes</i></span></p>
+    </div></a>
+  </div>
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/754/field-enablement-hp-inc-success-story" target="_blank">
+<div class="column">
+    <div class="card" style="margin-top:-145px;">
+     <h3>Field Enablement: HP Inc. Success Story</h3>
+     <p style="height: 120px;">This webinar talks about the steps taken by  E2open to turn HP Inc, a red account, into a successful $10 million account.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-03-30</i><br/></span><span class="session_duration"><i>Duration: 35 minutes</i></span></p>
+    </div></a>
+  </div>  
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/759/field-enablement-jaguar-land-rover-jlr-success-story" target="_blank">
+<div class="column">
+     <div class="card" style="margin-top:-290px;">
+      <h3>Field Enablement: Jaguar Land Rover (JLR) Success Story</h3>
+     <p style="height: 120px;">This webinar talks about the success story of how E2open came up with innovative ideas and strategies to become Jaguar Land Rover (JLR) vendor.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-03-30</i><br/></span><span class="session_duration"><i>Duration: 45 minutes</i></span></p>
+    </div></a>
+  </div>  
+  <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/753/field-enablement-dhl-success-story" target="_blank">
+<div class="column">
+    <div class="card" style="margin-top:-290px;">
+      <h3>Field Enablement: DHL Success Story</h3>
+     <p style="height: 120px;">This webinar talks about the success story of how E2open came up with innovative ideas and strategies to become DHL's vendor.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-03-29</i><br/></span><span class="session_duration"><i>Duration: 20 minutes</i></span></p>
+    </div></a>
+  </div>
+  </div>
+</div>
+<div id="Podcasts" class="tabcontent">
+<div class="row">
+<a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1529/inditex-winloss-podcast-october-2022" target="_blank">
+<div class="column">
+    <div class="card">
+      <h3>Inditex Win/Loss Podcast October 2022</h3>
+     <p style="height: 108px;">This course provides an understanding of deal tactics and the success of repeatability.<br/><br/><span class="session_duration"><i>Duration: 35 minutes</i></span></p>
+</div></a>
+</div>
+<a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/1530/motorola-podcast-december-2022" target="_blank">
+<div class="column">
+    <div class="card">
+      <h3>Motorola Podcast December 2022</h3>
+     <p style="height: 108px;">This course gives an understanding of the details of deal tactics and the success of repeatability.<br/><br/><span class="session_duration"><i>Duration: 21 minutes</i></span></p>
+    </div></a>
+  </div>
+</div>
+</div>
+
+
+<script>
+function openApp(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+
+
+
+</script>
+</body>
+</html>
