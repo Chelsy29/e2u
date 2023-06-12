@@ -30,7 +30,7 @@ label {
   cursor: pointer;
   padding: 10px;
   font-size: 14px;
-  width: 14.58%;
+  width: calc((100% / 6) - 24px);
   text-align: center;
 }
 
@@ -76,16 +76,15 @@ label:active {
 
 .sub-tabs-container label {
   color: #282828;
-  width: 14.44%;
-  min-width: 150px;
+  width: calc((100% / 7) - 24.1px);
   text-align: center;
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 
 .sub-tabs-container label:first-child {
-  background-color:  #1e5b67;
-  color:#ffffff;
+  background-color:  #cccccc;
+  color:#282828;
 }
 .sub-tabs-container label:nth-child(2){
   background-color:  #8e7029;
@@ -107,12 +106,16 @@ label:active {
   background-color:  #1e5b67;
   color:#ffffff;
 }
+.sub-tabs-container label:nth-child(7) {
+  background-color:  #cccccc;
+  color:#282828;
+}
 .sub-tabs-container label:hover {
   background-color: #ffccbc;
 }
 
 .sub-tabs-container label:first-child:hover {
-  background-color: #97baba;
+  background-color: #ebebeb;
   Color:#282828;
 }
 .sub-tabs-container label:nth-child(2):hover{
@@ -134,6 +137,10 @@ label:active {
 .sub-tabs-container label:nth-child(6):hover{
   background-color: #97baba;
  Color:#282828;
+}
+.sub-tabs-container label:nth-child(7):hover{
+background-color: #ebebeb;
+  Color:#282828;
 }
 
 .sub-tabs-container label:nth-child(1).active {
@@ -164,6 +171,10 @@ color: #517222;
 .sub-tabs-container label:nth-child(6).active {
  background-color: #ffffff;
  color: #1e5b67; 
+}
+.sub-tabs-container label:nth-child(7).active {
+background-color: #ffffff;
+ color: #1e5b67;  
 }
 /* Tabs Content */
 
@@ -733,6 +744,7 @@ a{
 	<label for="sub-tab4-4">Global Trade</label>
 	<label for="sub-tab4-5">Logistics</label>
 	<label for="sub-tab4-6">Supply</label>
+	<label for="sub-tab4-7">E2NET</label>
     </div>
     
    <!-- Sub Tab -->
@@ -909,6 +921,21 @@ a{
     </div>
 	
     </div>
+	
+	 <!-- Sub Tab -->
+   <input class="tab-radio" id="sub-tab4-7" name="sub-group4" type="radio">
+   <div class="sub-tab-content">
+   <div class="row">
+   <a class=".btn1" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/768/field-enablement-sap-add-on-adapters" target="_blank">
+   <div class="column">
+   <div class="card">
+   <h3>Field Enablement: SAP Add-On Adapters</h3>
+   <p style="height: 138px;">This webinar talks about the SAP add-on feature and exchange of data between SAP and E2open.<br/><br/><span class="session_duration"><i>Session Conducted on: 2021-06-10</i><br/></span><span class="session_duration"><i>Duration: 52 minutes</i></span></p>
+    </div></a>
+   </div>
+   
+   </div>
+   </div>
     </div>
 	
    <!-- Tab Container 5 -->
