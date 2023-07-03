@@ -1599,7 +1599,6 @@ border-top: 1px solid #C4C4C4;
 					Managed Services analyze agreed number of partner-SKU level Inventory delta/variances shown on the AIA dashboard and follow up with customer/partner to resolve the variances.
 <hr>
 <h3>Unit of Measure: Annual Load (Genus price book Transportation and Logistics - Gatehouse)
-
 </h3></br>
 					The count of annual shipments that are not in a voided state.	
 <hr>
@@ -1610,6 +1609,21 @@ border-top: 1px solid #C4C4C4;
 <h3>Unit of Measure: Batch (Genus price book Managed Services - Channel Managed Services Payment Processing)
 </h3></br>
 					A collection of payments to be made to Partners. Payments are typically grouped by payment mode (e.g., ACH, Wire, Check) and currency. Payments to several Partners can be processed as one Batch if the payment mode and currency are identical.					
+<hr>
+<h3>Unit of Measure: Block of Transactions (Genus price book Transportation and Logistics - TM - LSP)
+</h3></br>
+250,000 transactions. A Transaction is defined as a record created in the system resulting in the creation of a File where the File number can be the unique 
+  Order Management identifier for:
+
+- Consignment for Road Transportation and/or
+- Trip for Road Transportation and/or
+- Bordero for Road Transportation and/or
+- House / Master Airwaybill for Air and/or
+- Master / Consol for Sea and/or
+- Inbound / Outbound for WMS and/or
+- Miscellaneous for other data capturing and processing purposes (e.g. Claims)
+
+Any subsequent modifications or changes to the existing record or additions of complimentary data elements related to the original record created are considered part of the original transaction and are not counted as an additional Transaction.  The Transaction count will be the greater of the total number of Files.
 <hr>
 <h3>Unit of Measure: Claim (Genus price book Managed Services - Channel Managed Services Claims Auditing - Region: Global , Complexity: 1)
 </h3></br>
@@ -1629,15 +1643,32 @@ The actual number of shipping containers that Customer uses to manage shipments 
 <hr>
 <h3>Unit of Measure: Country (Genus price book Global Trade Management - Global Knowledge  Country)
 </h3></br>
-Represents Exporting and/or Importing countries that includes Harmonized Tariff schedule, ECCN, Import & Export controls, embargoes, licenses, government agency controls where applicable.  Detailed coverage information is available as of e2open's country coverage document .
+A single identity provider system (IdP) at Customer’s location. Each SKU includes connectivity with the test and production instances of the IdP.
 <hr>
+<h3>Unit of Measure: Courses (Genus price book Global Trade Management - eLearning - Awareness course(s))
+</h3></br>
+A program of learning a User could take on a topic offered in the eLearning curriculum.
+<hr>
+
 <h3>Unit of Measure: Credit (Genus price book Channel Shaping - Lead Essentials)
 </h3></br>
 Partner paid for this 3rd party service using their credit card.
 <hr>
+<h3>Unit of Measure: Declarations (Genus price book Global Trade Management - Global Customs Management - SaaS Declarations (CM-G))
+</h3></br>
+Each separate declaration or parent message toward customs authorities, as such declarations are defined by county. Each individual Transaction created and sent to Customs or similar authorities (as applicable) is counted as an individual Transaction. Amended submissions are not counted as additional Transactions. The document generated as part of the normal Customs workflow and included within the associated declaration is part of the Transaction as defined. Each document complementary to the Customs workflow is counted as a separate billable Transaction.
+<hr>
 <h3>Unit of Measure: Declared Value (Genus price book Transportation and Logistics - TM - Insurance)
 </h3></br>
 Declared value units of $100 per shipment, rounded up.
+<hr>
+<h3>Unit of Measure: Documents (Genus price book Supply Management - Purchase Order Collaboration-Express)
+</h3></br>
+The number of purchase orders that Customer can transact within the Subscription Services in a given Year.
+<hr>
+<h3>Unit of Measure: Entities (Genus price book Global Trade Management - Export and Export Management - all versions)
+</h3></br>
+Any combination of Partners, Products, and Transactions where (a) a “Partner” is a single name and address along with its related contacts with a unique Partner ID; (b) a “Product” is an item or part with a unique Product ID. A product can have multiple suppliers and classification records for various countries based on country subscription. Note: A product record does not represent a Bill of Material (wherein “Bill of Material” or “BOM” means lines/components for all Bill of Material types associated with each unique BOM that was qualified during a Year); and (c) a “Transaction” is a unique Sales Order/Delivery/Purchase Order/Shipment/Commercial Invoice/Customs Entry that includes header level information, line level information, transactional partner either at header and/or line level along with reference to product(s).
 <hr>
 <h3>Unit of Measure: Fleet Size (Genus price book Transportation and Logistics - Fleet Management)
 </h3></br>
@@ -1651,9 +1682,17 @@ Full Time Equivalent; the full time equivalent of 156 hours per month or 1,872 h
 </h3></br>
 Freight Under Management; transportation costs incurred by Customer for transportation services that are managed by the Subscription Services during Customer’s fiscal year.
 <hr>
+<h3>Unit of Measure: GB/Year (Genus price book Add-On - Offline Message Download E2net)
+</h3></br>
+The total amount of compressed data transferred from e2net to Customer in a given Year. Raw transaction payload data is compressed before transport from e2net to the off-line storage connection.
+<hr>
 <h3>Unit of Measure: GTIN (Genus price book Add-On - GS1 Item Catalog)
 </h3></br>
 Global Trade Item Number; a unique and internationally recognized identifier for a product.
+<hr>
+<h3>Unit of Measure: Hub Documents (Genus price book Supply Management - Drop/Ship Management-Hub Express)
+</h3></br>
+The number of orders that a hub customer can load into the Subscription Services in a given Year.
 <hr>
 <h3>Unit of Measure: Instance (Genus price book Add-On - Additional Production Environment)
 </h3></br>
@@ -1669,19 +1708,27 @@ The number of label images that are generated by the system in a given year
 <hr>
 <h3>Unit of Measure: List Entity (Genus price book Global Trade Management - Acuris Adverse Media)
 </h3></br>
-Represents 3rd Party content subscription for Restricted Party List
-<hr>
-<h3>Unit of Measure: List Entity (Genus price book Global Trade Management - Acuris Adverse Media)
-</h3></br>
 Standard Lists and/or Premium Lists (as specified in Table 1) where (i) “Standard Lists” include 600+ government-issued restricted party lists including but not limited to those issued by Canada, Japan, the European Union, the United Nations, and the United States; and (ii) “Premium Lists” include government-issued restricted party lists, such as DHHS and GSA.
 <hr>
 <h3>Unit of Measure: Load Volume (Genus price book Transportation and Logistics - Road Carrier API Connector)
 </h3></br>
-The annual count of loads in Transportation Management.  A load constitutes a transportation movement from pickup to delivery.  The movement could have one or more shipments as well as one or more pick and delivery stops.  Each load will have a unique identification number that shall serve as the common reference number for load transaction summation.  For the specified reporting period, the status of these transactions shall be in 'Accepted' or 'Completed only.  All other statuses are removed from summation (i.e. 'Voided').
-	<hr>
-<h3>Unit of Measure: Partner (Genus price book Channel Shaping - Channel Marketing Automation)
+The annual count of loads in Transportation Management.  A load constitutes a transportation movement from pickup to delivery.  The movement could have one or more shipments as well as one or more pick and delivery stops.  Each load will have a unique identification number that shall serve as the common reference number for load transaction summation.  For the specified reporting period, the status of these transactions shall be in 'Accepted' or 'Completed only.  All other statuses are removed from summation (i.e. 'Voided').	
+<hr>
+<h3>Unit of Measure: Message and direction (Genus price book B2B UK - Data Mapping (message.type))
 </h3></br>
-A single name and address along with its related contacts with a unique Partner ID.
+A translation map is required to convert data received in one format to another format.   The translation map is created assuming a single input format (message) and will convert that message into a second format.  For example, if a translation map is created assuming the receipt of message A and it is converted to message B that implies a direction (A to B).   If later a translation map is also required for converting message type B into A, that would require another translation map as that direction of translation is not supported by the first translation map.
+<hr>
+<h3>Unit of Measure: Message Type (Genus price book B2B UK - NB & TVG (Integrated) Message Annual Fee, Configuration)
+</h3></br>
+When integrating a company to an e2open application using a system-to-system (or B2B) integration approach the project scope will vary and include different data feeds.   For example, one project scope may include enabling the exchange of purchase orders and invoices, whereas another may include purchase orders, purchase order acknowledgements, goods receipts and invoices.   These different business documents are considered Message Types and the order form will include a number of them that are assumed to be in scope.
+<hr>
+<h3>Unit of Measure: Orders (Genus price book B2B UK - Portal Tariff)
+</h3></br>
+Individual Orders as sent by the retailer/hub.
+<hr>
+<h3>Unit of Measure: Partners (Genus price book Channel Shaping - Channel Marketing Automation)
+</h3></br>
+The number of partners provisioned. Each Partner is defined as a single name and address along with its related contacts with a unique Partner ID.
 <hr>
 <h3>Unit of Measure: Program (Genus price book Global Trade Management - FTZ/Bonded Warehouse/Duty Drawback)
 </h3></br>
@@ -1695,6 +1742,14 @@ A Vendor Data Stewards research for records not matched automatically with the a
 </h3></br>
 Any of the following in the XML request: Classification, Party Screening, Export Control, Import Control, Landed Cost or Document Explorer. For each Classification & Party Screening, the XML request counts as a separate query while Export/Import Controls, Landed Cost or Document Explorer counts as a separate query for each transaction line.
 <hr>
+<h3>Unit of Measure: Retained Data Days (Genus price book Add-On - Online Audit Data Retention for E2net)
+</h3></br>
+The number of days that online audit data is visible in the E2net console. Transaction data older than this will be purged from the system and inaccessible by Customer.
+<hr>
+<h3>Unit of Measure: Revenue ($B/M) (Genus price book Various - Various SKUs)
+</h3></br>
+The amount of Customer’s revenue managed or supported by the applicable Subscription Services for each Year, as measured in [billions/millions] of US dollars. 
+<hr>
 <h3>Unit of Measure: Shipments (Genus price book Transportation and Logistics - TM - Rail Rating, Billing, & Audit)
 </h3></br>
 The number of rail cars booked and/or traced in each Year of the Term.
@@ -1703,20 +1758,43 @@ The number of rail cars booked and/or traced in each Year of the Term.
 </h3></br>
 Data Steward research services to identify & enrich Standard Industry Classification (SIC) codes for agreed number of reseller records.
 <hr>
-<h3>Unit of Measure: Super User (Genus price book Transportation and Logistics - TM- LaaS - Logistics Analyst)
+<h3>Unit of Measure: SIC (Genus price book Managed Services - Channel Managed Services SIC)
 </h3></br>
-A named authorized super user of the applicable Subscription Services.
+Data Steward research services to identify & enrich Standard Industry Classification (SIC) codes for agreed number of reseller records.
+<hr>
+<h3>Unit of Measure: Spend ($B/M) (Genus price book Various - Various SKUs)
+</h3></br>
+The amount of goods and services managed or supported by the applicable Subscription Services for each Year, as measured in [billions/millions] of US dollars.
+<hr>
+<h3>Unit of Measure: Supplier Documents (Genus price book Supply Management - Drop/Ship Management-Supplier Express)
+</h3></br>
+Number of orders that a supplier can access in the system within a given calendar year.
 <hr>
 <h3>Unit of Measure: Trade Agreement (Genus price book Global Trade Management - United Kingdom-Côte d'Ivoire Stepping Stone Economic Partnership Agreement)
-
 </h3></br>
 The agreement between two or more countries for preferential trade programs designed to reduce or eliminate duties assessed for products that are qualified for free trade agreements. Free trade agreements are also known as special trade programs which result in reduced import costs, where the applicable duties/taxes/fees are generally lower on specified goods originating in a particular country.
 	<hr>
+<h3>Unit of Measure: Trading Partner (Genus price book B2B UK - various SKUs)
+</h3></br>
+A company that the Business Integration team work with to onboard them onto e2net.
+	<hr>
+<h3>Unit of Measure: Transactions (Genus price book Transportation and Logistics - TM - Forwarders Enterprise)
+</h3></br>
+Each record created in the system resulting in the creation of a Master Bill of Lading (MBL) (e.g., shipment, Bill of Lading (BOL), invoice, job). Any subsequent touches or changes to the existing record or additions of complimentary data elements related to the original record created are considered part of the original transaction and are not counted as an additional transaction. The transaction count will be the greater of the total number of Master Bills of Lading or House Bills of Lading.
+	<hr>
+<h3>Unit of Measure: Transactions (Genus price book Transportation and Logistics - China Trade Management (Enterprise and Express))
+</h3></br>
+Each unique Sales Order/Delivery/Purchase Order/Shipment/Commercial Invoice/Customs Entry that includes header level information, line level information, transactional partner either at header and/or line level along with reference to product(s).
+<hr>
 <h3>Unit of Measure: Transport Orders (Genus price book Transportation and Logistics - Air Tracking)
 </h3></br>
 A delivery reference coming from a unique loading place and going to a unique delivery place.
 <hr>
-<h3>Unit of Measure: User (Genus price book Add-On - World Customs Org Explanatory Notes)
+<h3>Unit of Measure: Usage (Genus price book Transportation and Logistics -TM - Postal)
+</h3></br>
+A named authorized User of the applicable Subscription Services.
+	<hr>
+<h3>Unit of Measure: Users (Genus price book Add-On - World Customs Org Explanatory Notes)
 </h3></br>
 A named authorized User of the applicable Subscription Services.
 	<hr>				
