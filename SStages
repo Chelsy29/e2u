@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../css/font-awesome.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
+<body>
 <div class="Heading">Sales Training by Sales Stage</div><br/>
 <div class="tab">
   <button class="tablinks" onclick="openApp(event, '20-qualify')" id="defaultOpen" style="background-color: #517222;color: #ffffff;">20 - Qualify</button>
@@ -14,7 +14,6 @@
   <button class="tablinks" onclick="openApp(event, '50-negotiation')" style="background-color: #c69a3f;color: #ffffff;">50 - Negotiation</button>
   <button class="tablinks" onclick="openApp(event, '60-closed/won')" style="background-color: #80994d;color: #ffffff;">60 - Closed/Won</button>
 </div>
-
 
 <script>
 function openApp(evt, appName) {
