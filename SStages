@@ -233,8 +233,9 @@ color: #1e5b67;
     <p style="font-size: 14px;">Prospect doesn't agree to engage in BANT and value hypothesis discussions, has no identified pain points, or isn't willing to assign a Coach/Sponsor</p>
   
   </div>
+   </div>
   <h3 class="align-center">Sales Aids</h3>
- </div>
+
   <div class="row">
   <div class="column">
     <div class="card">
@@ -318,7 +319,7 @@ color: #1e5b67;
   </div>
   </div>
   </div>
-  </div>
+ 
 <div id="30-discovery" class="tabcontent">
      <div class="row">
 <div class="columns" style=" background-color: #97baba;">
