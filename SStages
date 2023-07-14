@@ -210,8 +210,8 @@ color: #1e5b67;
   <button class="tablinks" onclick="openApp(event, '20-qualify')" id="defaultOpen" style="background-color: #517222;color: #ffffff;">20 - Qualify</button>
   <button class="tablinks" onclick="openApp(event, '30-discovery')" style="background-color: #1e5b67;color: #ffffff;">30 - Discovery</button>
   <button class="tablinks" onclick="openApp(event, '40-tech/prove')" style="background-color: #4d3075;color: #ffffff;">40 - Tech/Prove</button>
-   <button class="tablinks" onclick="openApp(event, '50-negotiation')" style="background-color: #c69a3f;color: #ffffff;">50 - Negotiation</button>
-   <button class="tablinks" onclick="openApp(event, '60-closed/won')" style="background-color: #80994d;color: #ffffff;">60 - Closed/Won</button>
+  <button class="tablinks" onclick="openApp(event, '50-negotiation')" style="background-color: #c69a3f;color: #ffffff;">50 - Negotiation</button>
+  <button class="tablinks" onclick="openApp(event, '60-closed/won')" style="background-color: #80994d;color: #ffffff;">60 - Closed/Won</button>
 </div>
 
 
@@ -219,16 +219,16 @@ color: #1e5b67;
 
 <div class="rows">
   
-  <div class="columns" style=" background-color: #97baba;">
+   <div class="columns" style=" background-color: #97baba;">
     <h3>Goals</h3>
     <p style="font-size: 14px;"><b>Decide whether to participate.</b>Assess prospect's pain points, solution fit, and willingness to engage in BANT and value hypothesis discussions.</p>
+   </div>
    
-  </div>
-  <div class="columns" style=" background-color: #b9ace8;">
+   <div class="columns" style=" background-color: #b9ace8;">
     <h3>Qualification</h3>
    <p style="font-size: 14px;">Mutual Evaluation Plan delivered to Coach/Sponsor, BANT plan discussed with Coach, and BANT issues identified</p>
-  </div>
-  <div class="columns" style=" background-color: #a3ca8c;">
+   </div>
+   <div class="columns" style=" background-color: #a3ca8c;">
     <h3>Dis-qualification</h3>
     <p style="font-size: 14px;">Prospect doesn't agree to engage in BANT and value hypothesis discussions, has no identified pain points, or isn't willing to assign a Coach/Sponsor</p>
   
