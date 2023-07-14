@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/font-awesome.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 0px;
+  transition: 0.3s;
+  font-size: 14px;
+    WIDTH: calc((100% / 5) - 0px);
+	height: 60px;
+    FONt-FAMILY: Arial;
+    text-align: center;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+ .box {
+    width: 33%;
+    margin-left: 0%;
+	height:215px;
+    background-color: #ffffff;
+    text-align: center;
+    color: #282828;
+	float: left;
+  }
+  .container{
+      display: inline-block;
+justify-content:space-between;
+}
+li{
+text-align: left;
+    
+	font-size: 13.5px;
+	line-height: 20px;
+	}
+a{
+text-decoration:none;
+color:#282828;
+}
+a.channel:hover {
+color: #8e7029;
+font-size:13.7px;
+}
+a.planning:hover {
+color: #517222;
+font-size:13.7px;
+}
+a.globaltrade:hover {
+color: #7239a4;
+font-size:13.7px;
+}
+a.logistics:hover {
+color: #4d3075;
+font-size:13.7px;
+}
+a.supply:hover {
+color: #1e5b67;
+font-size:13.7px;
+}
+.tab button{
+ opacity: 0.5;
+}
+.tab button.active {
+
+   opacity: 1;
+}
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.Heading{
+text-align:center;
+color: #282828;
+font-weight: 100 !important;
+font-size: 24px;
+}
+.card {
+  transition: 0.3s;
+width: 90%;
+    height: 115px;
+	background: #ffffff;
+    border: 1px solid #ebebeb;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
+	    margin-top: 4%;
+}
+
+.card:hover {
+ box-shadow: 0px 1px 20px rgb(0 0 0 / 10%);
+    transform: translate(0, -5px);
+}
+
+i.fa {
+    display: inline-block;
+    border-radius: 50%;
+    padding: 0.5em 0.6em;
+    color: #ffff;
+    background-color: #1e5b67;
+    margin-top: 5%;
+}
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  padding: 9px;
+  background-color: #ffff;
+}
+* {
+  box-sizing: border-box;
+}
+.rows{
+  width: 100%;
+  text-align: center;
+
+}
+
+.columns {
+  width: 33%;
+  min-width: 280px;
+  height:125px;
+  vertical-align: top;/*Fix for different     height elements*/
+  margin-bottom: 10px;
+  text-align: center;
+  display: inline-block;
+  color: #282828;
+ }
+.align-right {
+  text-align: right;
+}
+@media screen and (max-width: 680px) {
+  .columns {
+    width: 100%; 
+  }
+}
+
+a.sales:hover {
+color: #7239a4;
+text-decoration:underline;
+}
+
+a.sales {
+color: #1e5b67;
+}
+	
+</style>
+</head>
+<body>
+<div class="Heading">Sales Training by Sales Stage</div><br/>
+<div class="tab">
+  <button class="tablinks" onclick="openApp(event, '20-qualify')" id="defaultOpen" style="background-color: #517222;color: #ffffff;">20 - Qualify</button>
+  <button class="tablinks" onclick="openApp(event, '30-discovery')" style="background-color: #1e5b67;color: #ffffff;">30 - Discovery</button>
+  <button class="tablinks" onclick="openApp(event, '40-tech/prove')" style="background-color: #4d3075;color: #ffffff;">40 - Tech/Prove</button>
+   <button class="tablinks" onclick="openApp(event, '50-negotiation')" style="background-color: #c69a3f;color: #ffffff;">50 - Negotiation</button>
+   <button class="tablinks" onclick="openApp(event, '60-closed/won')" style="background-color: #80994d;color: #ffffff;">60 - Closed/Won</button>
+</div>
+
+
+<div id="20-qualify" class="tabcontent">
+
+<div class="rows">
+  
+  <div class="columns" style=" background-color: #97baba;">
+    <h3>Goals</h3>
+    <p style="font-size: 14px;"><b>Decide whether to participate.</b>Assess prospect's pain points, solution fit, and willingness to engage in BANT and value hypothesis discussions.</p>
+   
+  </div>
+  <div class="columns" style=" background-color: #b9ace8;">
+    <h3>Qualification</h3>
+   <p style="font-size: 14px;">Mutual Evaluation Plan delivered to Coach/Sponsor, BANT plan discussed with Coach, and BANT issues identified</p>
+  </div>
+  <div class="columns" style=" background-color: #a3ca8c;">
+    <h3>Dis-qualification</h3>
+    <p style="font-size: 14px;">Prospect doesn't agree to engage in BANT and value hypothesis discussions, has no identified pain points, or isn't willing to assign a Coach/Sponsor</p>
+  
+  </div>
+  <h3 class="align-center">Sales Aids</h3>
+ </div>
+  <div class="row">
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#517222;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">RFx</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+
+   <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#517222;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Sales Discovery</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+     <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#517222;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Qualification</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#517222;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">BANT</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+    <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#517222;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Mutual Evaluation Plan</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+   <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#517222;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">NDA</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  </div>
+  
+   <h3 class="align-center" style="text-align: center;">Sales Tools</h3>
+   
+    <div class="row">
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#517222;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Paperflite</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Training 1</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Training 2</a></li>
+    </ul>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+<div id="30-discovery" class="tabcontent">
+     <div class="row">
+<div class="columns" style=" background-color: #97baba;">
+    <h3>Goals</h3>
+    <p style="font-size: 14px;"><b>Figure out how to win and to develop a “Coach”.</b>Discover customer pain points, business objectives, and organizational structure to frame the solution’s value proposition.</p>
+   
+  </div>
+  <div class="columns" style=" background-color: #b9ace8;">
+    <h3>Qualification</h3>
+   <p style="font-size: 14px;">Discovery meetings complete, next steps scheduled, org chart & power base chart developed, decision-maker known, and evaluation plan confirmed (verbally or in writing).</p>
+  </div>
+  <div class="columns" style=" background-color: #a3ca8c;">
+    <h3>Dis-qualification</h3>
+    <p style="font-size: 14px;">Prospect doesn't confirm their pain points, doesn't engage key stakeholders, or doesn't commit to the evaluation plan.	</p>
+  
+  </div>
+  </div>
+  <h3 style="text-align:center;">Sales Aids</h3>
+ 
+  <div class="row">
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#1e5b67;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Initial SC Support Request</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+
+   <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#1e5b67;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Technical Discovery</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+     <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#1e5b67;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Look & Feel Demo</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#1e5b67;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Opportunity Scoping Document</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+  </div>
+   <h3 class="align-center" style="text-align: center;">Sales Tools</h3>
+   
+    <div class="row">
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#1e5b67;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Paperflite</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Training 1</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Training 2</a></li>
+    </ul>
+    </div>
+  </div>
+  </div>
+  
+  </div>
+
+<div id="40-tech/prove" class="tabcontent">
+      <div class="row">
+<div class="columns" style=" background-color: #97baba;">
+    <h3>Goals</h3>
+    <p style="font-size: 14px;"><b>Prove our value is best.</b>Convince the customer that the solution can address their pain points and provide superior capabilities.</p>
+   
+  </div>
+  <div class="columns" style=" background-color: #b9ace8;">
+    <h3>Qualification</h3>
+   <p style="font-size: 14px;">Close Plan agreed upon by Sponsor, E2open selected or shortlisted to two, pricing submitted for approval, and formal proposal or term sheet provided with the customer negotiating back.</p>
+  </div>
+  <div class="columns" style=" background-color: #a3ca8c;">
+    <h3>Dis-qualification</h3>
+    <p style="font-size: 14px;">Prospect doesn't see the solution’s value, doesn't agree to the pricing, or doesn't engage in contract negotiations.</p>
+  
+  </div>
+  </div>
+  <h3 style="text-align:center;">Sales Aids</h3>
+ 
+  <div class="row">
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#4d3075;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 1</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+
+   <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#4d3075;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 2</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+     <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#4d3075;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 3</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#4d3075;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 4</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+  </div>
+   <h3 class="align-center" style="text-align: center;">Sales Tools</h3>
+   
+    <div class="row">
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#4d3075;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Paperflite</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Training 1</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Training 2</a></li>
+    </ul>
+    </div>
+  </div>
+  </div>
+  
+  </div>
+
+
+<div id="50-negotiation" class="tabcontent">
+    <div class="row">
+<div class="columns" style=" background-color: #97baba;">
+    <h3>Goals</h3>
+    <p style="font-size: 14px;"><b>Finalise the deal, Capturing a fair share of the value.</b>Negotiate business and legal terms, including Press Releases and Case Studies.</p>
+   
+  </div>
+  <div class="columns" style=" background-color: #b9ace8;">
+    <h3>Qualification</h3>
+   <p style="font-size: 14px;">MSA, OF, SLA, SOW signed; Involvement of all necessary Stakeholders in the commitment to the Close Plan.</p>
+  </div>
+  <div class="columns" style=" background-color: #a3ca8c;">
+    <h3>Dis-qualification</h3>
+    <p style="font-size: 14px;">Failure to reach an agreement on business and legal terms or lack of stakeholder commitment to the Close Plan.</p>
+  
+  </div>
+  </div>
+  <h3 style="text-align:center;">Sales Aids</h3>
+ 
+  <div class="row">
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#c69a3f;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 1</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+
+   <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#c69a3f;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 2</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+     <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#c69a3f;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 3</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#c69a3f;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 4</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+  </div>
+   <h3 class="align-center" style="text-align: center;">Sales Tools</h3>
+   
+    <div class="row">
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#c69a3f;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Paperflite</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Training 1</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Training 2</a></li>
+    </ul>
+    </div>
+  </div>
+  </div>
+  
+  </div>
+
+<div id="60-closed/won" class="tabcontent">
+  <div class="row">
+<div class="columns" style=" background-color: #97baba;">
+    <h3>Goals</h3>
+    <p style="font-size: 14px;"><b>Ensure value is achieved.</b>Transition to Services and Customer Success.</p>
+   
+  </div>
+  <div class="columns" style=" background-color: #b9ace8;">
+    <h3>Qualification</h3>
+   <p style="font-size: 14px;">Finance moves the deal to Backlog once documents are fully executed.</p>
+  </div>
+  <div class="columns" style=" background-color: #a3ca8c;">
+    <h3>Dis-qualification</h3>
+    <p style="font-size: 14px;">Contract not fully executed or implementation issues arise.</p>
+  
+  </div>
+  </div>
+  <h3 style="text-align:center;">Sales Aids</h3>
+ 
+  <div class="row">
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#80994d;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 1</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+
+   <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#80994d;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 2</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+     <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#80994d;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 3</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#80994d;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 4</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+  </div>
+   <h3 class="align-center" style="text-align: center;">Sales Tools</h3>
+   
+    <div class="row">
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#80994d;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Paperflite</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Training 1</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Training 2</a></li>
+    </ul>
+    </div>
+  </div>
+  </div>
+  
+  </div>
+<script>
+function openApp(evt, appName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(appName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
