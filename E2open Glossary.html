@@ -1,2073 +1,669 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>E2 Jargon Hub</title>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
-  <link rel="icon" href="https://www.e2open.com/wp-content/uploads/2022/06/e2open-Favicon-32x32-1.png">
-  <Style>
-body {font-family:Arial;font-size:14px;}
-label  {display:block;}
-input[type='text'] 
-{width:100%; font-size: 0.9em;
-    font-family: Arial;
-    font-style: italic;
-    padding: 5px 8px;}
-h3 {margin-top:30px;}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/font-awesome.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-.alphabet {display:block; width: 1210px;}
-.alphabet button {
-  font: inherit;
-  color: #1e5b67;
-  font-weight:600;
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
   cursor: pointer;
+  padding: 14px 0px;
+  transition: 0.3s;
+  font-size: 14px;
+    WIDTH: calc((100% / 5) - 0px);
+	height: 60px;
+    FONt-FAMILY: Arial;
+    text-align: center;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+ .box {
+    width: 33%;
+    margin-left: 0%;
+	height:215px;
+    background-color: #ffffff;
+    text-align: center;
+    color: #282828;
+	float: left;
+  }
+  .container{
+      display: inline-block;
+justify-content:space-between;
+}
+li{
+text-align: left;
+    
+	font-size: 13.5px;
+	line-height: 20px;
+	}
+a{
+text-decoration:none;
+color:#282828;
+}
+a.channel:hover {
+color: #8e7029;
+font-size:13.7px;
+}
+a.planning:hover {
+color: #517222;
+font-size:13.7px;
+}
+a.globaltrade:hover {
+color: #7239a4;
+font-size:13.7px;
+}
+a.logistics:hover {
+color: #4d3075;
+font-size:13.7px;
+}
+a.supply:hover {
+color: #1e5b67;
+font-size:13.7px;
+}
+.tab button{
+ opacity: 0.5;
+}
+.tab button.active {
+
+   opacity: 1;
+}
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.Heading{
+text-align:center;
+color: #282828;
+font-weight: 100 !important;
+font-size: 24px;
+}
+.card {
+  transition: 0.3s;
+width: 90%;
+    height: 115px;
+	background: #ffffff;
+    border: 1px solid #ebebeb;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
+	    margin-top: 4%;
+}
+
+.card:hover {
+ box-shadow: 0px 1px 20px rgb(0 0 0 / 10%);
+    transform: translate(0, -5px);
+}
+
+i.fa {
+    display: inline-block;
+    border-radius: 50%;
+    padding: 0.5em 0.6em;
+    color: #ffff;
+    background-color: #1e5b67;
+    margin-top: 5%;
+}
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  padding: 9px;
+  background-color: #ffff;
+}
+* {
+  box-sizing: border-box;
+}
+.rows{
+  width: 100%;
+  text-align: center;
+
+}
+
+.columns {
+  width: 33%;
+  min-width: 280px;
+  height:125px;
+  vertical-align: top;/*Fix for different     height elements*/
+  margin-bottom: 10px;
+  text-align: center;
   display: inline-block;
-  position: relative;
-  width:40px;
-  height:40px;
-  line-height:40px;
-  font-size:14px;
-  margin: 0 -6px 10px -5px;
-  border:none;
-  background: none;
-  padding:0;
-  box-shadow:0;
-  transition:all 0.3s ease-in-out;
-  outline:0;
+  color: #282828;
+ }
+.align-right {
+  text-align: right;
 }
-.alphabet:focus {outline:0;}
-.alphabet button:hover {background-color:#FFF; font-weight:bold;} 
-.alphabet button.active {background-color: #3d8080; font-weight:bold; color:#FFF; box-shadow:0px 0px 0px 2px #FFF inset; }
-
-.glossary {display:block; width:100%; clear:both;}
-.glossary .letter {display:none; width: 1115px;; clear:both; text-align:justify; padding-bottom:30px;}
-.glossary .letter.active {display:block;}
-.glossary h3 {font-size:18px; font-weight:300; margin-bottom:5px;}
-.glossary h3.found {font-weight:bold;color: #800020;}
-.glossary span.found {background-color:red;}
-
-h3.gloss{
-font-family: Arial;
-    font-size: 1.3rem;
-    font-weight: 600;
-	}
-h3.browse{
-    font-size: 1.1rem;
-    font-family: Arial;
-    font-weight: 600;
-	}
-hr{
-border-top: 1px solid #C4C4C4;
+@media screen and (max-width: 680px) {
+  .columns {
+    width: 100%; 
+  }
 }
+
+a.sales:hover {
+color: #7239a4;
+text-decoration:underline;
+}
+
+a.sales {
+color: #1e5b67;
+}
+	
 </style>
-
 </head>
 <body>
-<div class="container">
-  <div class="row">
-    <div class="col-lg-4 col-md-6">
-      <div class="sticky">
-        <h3 class="gloss">E2 Jargon Hub</h3>
-        <input type="text" placeholder="Enter search terms..." id="text-search" class="text-search" data-source="#glossary" data-alphabet="#alphabet" data-searchtitle="h3" data-offset="300"/>
+<div class="Heading">Sales Training by Sales Stage</div><br/>
+<div class="tab">
+  <button class="tablinks" onclick="openApp(event, '20-qualify')" id="defaultOpen" style="background-color: #517222;color: #ffffff;">20 - Qualify</button>
+  <button class="tablinks" onclick="openApp(event, '30-discovery')" style="background-color: #1e5b67;color: #ffffff;">30 - Discovery</button>
+  <button class="tablinks" onclick="openApp(event, '40-tech/prove')" style="background-color: #4d3075;color: #ffffff;">40 - Tech/Prove</button>
+  <button class="tablinks" onclick="openApp(event, '50-negotiation')" style="background-color: #c69a3f;color: #ffffff;">50 - Negotiation</button>
+  <button class="tablinks" onclick="openApp(event, '60-closed/won')" style="background-color: #80994d;color: #ffffff;">60 - Closed/Won</button>
+</div>
 
-        <h3 class="browse">Browse by alphabet</h3>
-		<label for="text-search">Browse the glossary using this index</label>
-        <div class="alphabet" id="alphabet">         
-        </div>
-      </div>
+
+<div id="20-qualify" class="tabcontent">
+
+<div class="rows">
   
-      <div class="glossary" id="glossary">
-				<div class="letter" id="A">
-				    <h3>3PL</h3></br>
-					Third-Party Logistics Provider
-				    <hr>
-					<h3>4PL</h3></br>
-					Fourth-Party Logistics
-				    <hr>
-					<h3>ABM</h3></br>
-					Account Based Marketing
-				    <hr>
-					<h3>Accessorial Percent</h3></br>
-					Total accessorials less fuel and taxes over total payable.
-				    <hr>
-					<h3>Actual Delivery Date</h3></br>
-					Date the goods are delivered to the customer.
-				    <hr>
-					<h3>Actual Ship Date</h3></br>   
-					Date the goods were shipped from the supplier to the customer.
-					<hr>
-					<h3>AD</h3></br> 
-					Additional demand. Represents demand for which neither a customer order nor a forecast quantity exists. It can be used for modeling special situations, such as promotions or special deals, or driving requirements without “real” demand. Additional demand is frequently used as demand input for what-if simulations; by entering additional demand and replanning, a planner can determine if and when on-top demands are feasible and ready to deliver.
-				    <hr>
-					<h3>Aggregated-Level Exception</h3></br>
-					An exception that’s defined at the aggregated level for a set of collaborations, based on product node and region node selections. Also called a product-level or private exception. See also SCPM.
-				    <hr>
-					<h3>Agile BOM</h3></br>
-					This type of BOM is used in planning and includes only the levels and pieces that were designed to go into the finished good. For example, a BOM for a ballpoint pen is designed to require three pieces: the barrel, the cap, and the ink, so the agile BOM only covers those three pieces, even if more pieces or levels are required to actually make the pen. See also BOM, Manufacturing BOM. 
-				    <hr>
-					<h3>AI/ML</h3></br>
-					Artificial Intelligence/Machine Learning
-				    <hr>
-					<h3>API</h3></br>
-					Application Programming Interface (API) is a set of routines, protocols, and tools for building software applications. The API specifies how software components should interact. APIs are utilized for programming graphical user interface (GUI) components.
-				    <hr>
-					<h3>APO</h3></br>
-					Advanced Planner and Optimizer (SAP planning applications)
-				    <hr>
-					<h3>APS</h3></br>
-					Advanced Planning Systems
-				    <hr>
-					<h3>ARR</h3></br>
-					Annual Recurring Revenue
-				    <hr>
-					<h3>Arriving Partners</h3></br>
-					Partners who have started selling products during the current period.
-				    <hr>
-					<h3>AS</h3></br>
-					Additional supply
-				    <hr>
-					<h3>ASD</h3></br>
-				    Account Sales Director
-				    <hr>
-					<h3>ASAP</h3></br>
-					Advanced system application packaging.
-				    <hr>
-					<h3>ASN</h3></br>
-					Advanced shipment notice (a type of B2B message). A notice prepared by the supplier to the customer. It contains shipment details, including the waybill or tracking number that can be used to track the shipment. Despite the word “advanced” in its name, an ASN is sent after the physical shipment has been done but before it arrives at the customer’s address, and information such as the waybill or tracking number is known. Because the ASN needs to be sent before the goods arrive at the customer location, it’s referred to as an “advanced” shipment notice. ASN is a common abbreviation in SCPM documentation. See also B2B, SCPM.
-				    <hr>
-					<h3>ASP</h3></br>
-					Average Selling Price
-				    <hr>
-					<h3>ATP</h3></br>
-					Available to promise.
-				    <hr>
-					<h3>Attach Rate</h3></br>
-					Attach rate is a concept used broadly in business to represent the number of units of a secondary product/service sold as a direct or implied consequence of the sale of a primary product/service (e.g. Dell server sold with a maintenance contract, or Bluetooth capabilities sold within electronic devices). 
-				    <hr>
-					<h3>Audit Trail</h3></br>
-					In SCPM, a record that captures collaboration, time, date, action, and user for point-intime (PIT) records. See also SCPM, Collaboration, PIT.
-				    <hr>
-					<h3>Autofill</h3></br>
-					A feature in Collaboration View in SCPM that copies values from one data measure to another data measure without attributes. See also SCPM, Data Measure, Collaboration, Attribute
-				    <hr>
-					<h3>AutoID</h3></br>
-					In SCPM, a flag that determines whether the point-in-time (PIT) IDs for the PITs belonging to a data measure are to be provided by the user or generated by the system. See also SCPM, PIT, Data Measure
-				    <hr>
-					<h3>Automation</h3></br>
-					Percent of loads moved built through automation.
-				    <hr>
-					<h3>Average Inventory</h3></br>
-					The average quantity or amount of inventory across multiple time periods. Inventory may be higher in certain seasons or quarters, and lower in others.
-				    <hr>
-					<h3>Average Selling Price (ASP)</h3></br>
-					Average Selling Price or ASP is the average price at which a particular product is sold across channels or markets. The term is especially used in the retail and technology sectors. ASP is calculated by dividing the total revenue by the total quantity sold. 
-				    <hr>
-					<h3>AVG</h3></br>
-					Average.
-					<hr>
-					<h3>AVL</h3></br>
-					Approved vendor list.
-				    <hr>
-					<h3>AVP</h3></br>
-					Area Vice President
-				    <hr>
-					
-				</div>
-
-
-				<div class="letter" id="B">
-					<h3>B2B</h3></br>
-						Business-to-business (B2B) refers to the segment in which one business makes a commercial transaction with another business. This typically occurs when:
-                        <br/>1. A business is sourcing materials for their production process, e.g. a food manufacturer purchasing salt.
-						<br/>2. A business needs the services of another for operational reasons, e.g. a food manufacturer employing an accountancy firm to audit their finances
-                        <br/>3. A business resells goods and services produced by others, e.g. a retailer buying the end product from the food manufacturer.
-					<hr>
-					<h3>B2B</h3></br>
-						Business-to-business; commonly used industry acronym. When referring to the client provided by E2open, use “B2B Client.” See also S2S.
-					<hr>
-					<h3>B2C</h3></br>
-						Business-to-consumer (B2C) refers to a sales model in which businesses target individuals/consumers who are the end users of the product/service. When a commercial transaction takes place between a business and end user, it is categorized as a B2C segment.
-						<br/>For example:
-						<br/>1. A business (for instance Amazon) sells online merchandise (say books) to individual consumers.
-						<br/>2. A person buying a gaming console from a nearby electronics gadgets stores
-
-					<hr>
-					<h3>Back End Rebate</h3></br>
-						A cash or credit rebate from a Vendor/manufacturer to a partner for achieving a specified goal within a designated time period. Rebates may require proof of performance.
-					<hr>
-					<h3>Back Order</h3></br>
-						An order for a product which is temporarily out of stock with the Vendor.
-					<hr>
-					<h3>Barcode</h3></br>
-						Barcode is a machine-readable code, in the form of numbers and a group of parallel lines, with varying width and spacing, which is generally used for identifying a product.
-					<hr>
-					<h3>BCO</h3></br>
-						Beneficial Cargo Owner
-					<hr>
-					<h3>BI</h3></br>
-						Business intelligence (reporting database).
-					<hr>
-					<h3>Biz Intelligence</h3></br>
-						Biz intelligence or Business intelligence (BI) is a technology-driven process for analyzing data and presenting actionable information to help Vendors and their partners make better-informed business decisions.
-					<hr>
-					<h3>Blanket Order</h3></br>
-						A long-term commitment to a supplier for material against which short-term releases are generated to satisfy requirements. This term is used in SCPM documentation. See also SCPM, Purchase Order.
-					<hr>
-					<h3>BOC</h3></br>
-						Bill of capacity. 
-					<hr>
-					<h3>BOD</h3></br>
-						Bill of distribution. 
-					<hr>
-					<h3>BOGO</h3></br>
-						Buy one get one free 
-					<hr>
-					<h3>BOL, B/L</h3></br>
-						Bill of Lading
-					<hr>
-					<h3>BOM</h3></br>
-						Bill of materials; see also Agile BOM, Manufacturing BOM.
-					<hr>
-					<h3>Bookmark</h3></br>
-						In SCPM, a marker that saves views on the UI to allow quick access to specific collaborations. See also SCPM, Collaboration.
-					<hr>
-					<h3>Boutique Retailers</h3></br>
-						Specialized and small sized retailer catering to a niche market or handling a very low volume of products. 
-					<hr>
-					<h3>BR</h3></br>
-						Business release.
-					<hr>
-					<h3>Break-fix Operations</h3></br>
-						Is a revenue stream of IT distributors who provide maintenance services to their end customers. 
-					<hr>
-					<h3>BTD</h3></br>
-						Bucket to date (shipments).
-					<hr>
-					<h3>BTO</h3></br>
-						Build to order. Sometimes referred to as make to order (MTO), BTO is a production approach where once a confirmed order for products is received, products are built. BTO is the oldest style of order fulfillment and is the most appropriate approach used for highly customized or low-volume products. As BTO products are made in relation to orders, they typically carry no inventory.
-					<hr>
-					<h3>BTS</h3></br>
-						Build to stock. A build-ahead production approach in which production plans are based on information of historical demand along with sales forecast information. BTS is typically what people associate with the industrial revolution mass production techniques where in anticipation of demand, vast quantities of goods are produced and stocked in warehouses. See also MTS.
-					<hr>
-					<h3>BU</h3></br>
-					Business unit
-					<hr>
-					<h3>Bucket</h3></br>
-						In SCPM, a grouping of one or more points-in-time (PITs). See alsoSCPM, PIT
-					<hr>
-					<h3>Bucket Size</h3></br>
-						Specifies the number of working days in the respective Planning Period.
-					<hr>	
-					<h3>Bulk Breaking</h3></br>
-						Breaking bulk refers to delivering single units from distribution centers to retail outlets. The focus is largely on shelf space management of the products and also allows for higher product variety within a store.
-					<hr>	
-					<h3>Bundled SKUs</h3></br>
-						Multiple products of the same manufacturer, sold together, often as a single SKU. A bundle SKU may contain a single SKU with multiple quantities, or multiple SKUs and multiple quantities, and may also be utilized for promotional activities, and / or enabling logistics orders with ease.
-					<hr>	
-					<h3>Bundling</h3></br>
-						Bundling is the practice of selling two or more products as a single unit with one price and sometimes as a single order item number (SKU).
-					<hr>	
-					<h3>Business Calendar</h3></br>
-						Defines business weeks, months, quarters and years which are typically aligned to fiscal periods of the organization.
-                    <hr>
-                    <h3>Business Location</h3></br>
-					    The physical place from which business is located for the Vendor, Customer, Partner etc.
-					<hr>	
-					<h3>Buying Tier</h3></br>
-					    In the channel architecture, buying tier establishes the relative position of the partner in the buying cycle, and the routes the product takes to reach the end user.
-					<hr>
-				</div>
-
-
-				<div class="letter" id="C">
-					
-					<h3>Calendar View</h3></br>
-					    In SCPM, a view that displays collaboration data on a timeline defined on a userdefined calendar. See also SCPM, Collaboration.
-					<hr>
-					<h3>CBP</h3></br>
-						Constraint-based planning. Takes the unconstrained planning approach one step forward, considering the constraints of parts and capacities. If a part or capacity is set to constrain the plan, it will not “overbook” any more. Instead, the material or capacity will only be scheduled once the specific constraint is resolved; for example, after the external lead time. See also Part.
-					<hr>
-					<h3>CC</h3></br>
-					   Contract Compliance; see also E2MC.
-					<hr>
-					<h3>CDM</h3></br>
-						Canonical data model; sometimes called common data model.
-					<hr>
-					<h3>CDOC</h3></br>
-						Customer Development Operations Center. Previous name for Sales Development Rep (SDR).
-					<hr>
-					<h3>CDP</h3></br>
-						Collaborative demand planning.
-					<hr>
-					<h3>Channel</h3></br>
-						Represent either sales channels or customers. The information is typically attached to customer orders and forecast. Channels can also be arranged hierarchically. 
-					<hr>
-					<h3>Channel Analytics</h3></br>
-						Channel analytics involves:
-						<ul>
-						<li>Designing and development of metrics to manage and monitor the channel performance.</li>
-						<li>Establishing a baseline to improve performance in the areas of sales, program management and partner compensation.</li></ul>
-                        <p>It also includes trend analysis, simulations and 'what if' scenarios which are essential elements to provide the business intelligence required to manage the channels.</p>
-					<hr>
-					<h3>Channel Capacity</h3></br>
-						Channel capacity refers to the total volume of a certain product that can be absorbed across all of the company’s (Vendor's) channel partners.
-					<hr>
-					<h3>Channel Compliance</h3></br>
-						It is a set of structured guidelines that channel partners must adhere to meet business objectives in accordance with established regulations and specific agreements between Vendor and partners. Channel compliance ensures smooth flow for the sale and distribution of products as compliance principals are generally based on established business practices by industry verticals.
-					<hr>
-					<h3>Channel Coverage</h3></br>
-						Channel coverage is the number of partners, resellers and retailer appointed in a specific geography to take care of the total addressable market or targeted market.
-					<hr>
-					<h3>Channel Data</h3></br>
-						Vendor requires reports / reporting of product sales and inventory originating from channel partners - for example, sales from a Tier 1 distributor to Tier 2 reseller, or inventory held both on shelves in a retail store and within a partner's distribution center). These reports are integral and are typically called as channel data.
-					<hr>
-					<h3>Channel Operations</h3></br>
-						It consists of defining the routes to market, building both human resources and IT Infrastructure to address market, manage coverage of market, ensure stakeholder within the vendor organization are aligned to sales and marketing goals, implement rules and regulations required to conduct business with partners.
-					<hr>
-					<h3>Channel Partner</h3></br>
-						A channel partner purchases a Vendor’s products or services either directly or indirectly. A Tier 1 channel partner purchases products directly from the Vendor. A Tier 2 partner buys products from a Tier 1 partner, and so on down to the final purchase from the end customer. Channel partners are usually governed by a Vendor’s contract or authorization mechanism.
-					<hr>
-					<h3>Channel Programs</h3></br>
-						Is the overarching framework the vendors work with the indirect channel. It includes appointing partners (distributors and reseller), design and development of sales and marketing strategy, partner compensation and relationship management elements and so on.
-						<p>For example, a channel program may include partner compensation programs such as rebates offered to partners on achieving a targeted goal transaction.</p>
-					<hr>
-					<h3>Channel Stakeholders</h3></br>
-						Groups or organizations that have a "stake" or interest in the channel business and its metrics. Within a specific company, channel stakeholders can include, product management, finance, marketing, supply management, sales, marketing, etc. Stakeholders are also represented across multiple companies like Vendors, distributors, resellers, retailers and other intermediaries.
-					<hr>
-					<h3>Channel Stuffing</h3></br>
-						The questionable business practice where a Vendor sells into the channel more than the actual demand. Stuffing usually occurs at the end of a quarter. Sometimes it is done in collusion with both the selling and buying partners.<br/>
-						It is also known as trade loading.
-					<hr>
-					<h3>Channel Stuffing</h3></br>
-						It is a business practice in which a company, or a sales force within a company, inflates its sales figures by forcing more products through a distribution channel, than the channel is capable of selling. 
-					<hr>
-					<h3>Channel Visibility</h3></br>
-						Channel Visibility is defined as the awareness of, and control over, downstream channel data across the globe that enables vendors to:
-                        <ul><li>Monitor sales performance.</li>
-						<li>Optimize inventory management.</li>
-						<li>Effectively manage marketing and program spend etc.</li>
-						<li>Understand price elasticity and trends.</li>
-						<li>Improve coverage and capacity thresholds.</li>
-						<li>Accelerate product throughput velocity from Vendor to end customer.</li></ul>
-					<hr>
-					<h3>Channel Visibility Mandate</h3></br>
-						It includes establishing executive sponsorship and operational ownership to derive value from the sales & inventory data collected channel partners, an aligned vision on how the data will be utilized within the Vendor’s company, partner agreements that contain Vendor data rights and reporting obligations, and incentives that are tied to partner reporting compliance. 
-					<hr>
-					<h3>CIM</h3></br>
-						Collaborative inventory management.
-					<hr>
-					<h3>Closing Stock</h3></br>
-						It is the ending inventory of any and all product SKUs, at the close of a fiscal period, expressed in units or values.
-					<hr>
-					<h3>CMA</h3></br>
-						Channel Marketing Automation
-					<hr>
-					<h3>CO</h3></br>
-						Customer order or sales order. 
-					<hr>
-					<h3>Co-Op</h3></br>
-						The Vendor builds a fund (Co-op accrual) based on the amount of purchases made from the Vendor, when the retailer or distributor runs a program or ads featuring vendor's products, all or part of the cost accrued is released.
-					<hr>
-					<h3>CoC</h3></br>
-						Certificate of Compliance
-					<hr>
-					<h3>CoC</h3></br>
-						Certificate of Conformity
-					<hr>
-					<h3>COGS / Cost Of Goods Sold</h3></br>
-						Cost Of Goods Sold (sometimes referred to as "cost of sales" or "COGS") refers to the cost of items purchased for resale.
-					<hr>
-					<h3>Collaboration</h3></br>
-						Also called a collab, in SCPM, the data exchange between a buyer and supplier for a specific item for delivery to a specific buyer site–a unique combination of a customersupplier-customer item-supplier item-customer site. See also SCPM, Collaboration Group, Attribute.
-					<hr>
-					<h3>Collaboration Group</h3></br>
-						In SCPM, a logical grouping of collaborations; a collaboration can belong to only one collaboration group. See also SCPM, Collaboration.
-						<hr>
-                 	<h3>Collaboration Level Exception</h3></br>
-						In SCPM, an exception that’s defined at the customer-customer item-customer site supplier-supplier item (collaboration) level. See also SCPM, Collaboration.
-					<hr>
-					<h3>Collaboration Level Messages</h3></br>
-						In SCPM, messages between customers and suppliers that are linked to a specific collaboration. These messages can be sent to internal users and external email addresses. See also SCPM, Collaboration.
-					<hr>
-					<h3>Collaborative Supply Planning</h3></br>
-						Also CSP. The E2open collaboration planning system. Enables collaboration among all the stakeholders, providing visibility to demand changes and allowing integration of up-to-date supply information back to E2 Planning and Response (E2PR) for a closed loop planning process. See also E2PR.
-					<hr>
-					<h3>COM</h3></br>
-						Collaborative order management.
-					<hr>
-					<h3>Commit Phase</h3></br>
-						In SCPM, the planning cycle phase used for near-term planning. See also SCPM. 
-					<hr>
-					<h3>Computed Data Measure</h3></br>
-					 In SCPM, a data measure generated by performing predefined calculations. See also SCPM, Data Measure. 
-					<hr>
-					<h3>Consignment</h3></br>
-						SA sales arrangement in which goods are held in the inventory of the partner, without charge or invoice. As products are sold by the partner (distributor or reseller), the Vendor invoices for the sold product at the time of sale. Partners are required to submit regular sales and inventory reports as proof of transactions.
-					<hr>
-					<h3>Consignment Inventory</h3></br>
-						Inventory that is in the possession of the channel partner (usually a distributor or retailer), under a consignment sale agreement. 
-					<hr>
-					<h3>Contra Revenue</h3></br>
-						Contra revenue is a deduction from the gross revenue reported by a business, which results in net revenue. The deductions are generally trade discounts.<br/>For example, sales rebates and SPIF program run by Vendors.
-					<hr>
-					<h3>Contribution Margin</h3></br>
-						Contribution margin is arrived at by deducting the cost of sale and variable costs from gross sales revenue. Contribution margin is a percentage of sales revenue.
-					<hr>
-					<h3>Coverage Model</h3></br>
-						Coverage Model, in Channel Management parlance, refers to the way the Vendor “covers” territories in terms of Sales support, and Partner reporting requirements. Coverage for reporting ensures visibility across geographies and vertical markets.
-					<hr>
-					<h3>CPG</h3></br>
-						Consumer packaged goods. A type of goods consumed every day by the average consumer. The goods that comprise this category are ones that need to be replaced frequently, compared to those that are usable for extended periods of time.
-					<hr>
-					<h3>CPM</h3></br>
-						Cost per Mile
-					<hr>
-					<h3>CR̀</h3></br>
-						Change Request
-					<hr>
-					<h3>CR̀</h3></br>
-						Capacity reservations. Demand elements that are used to simulate consumption of capacity without having a “real” primary or secondary demand behind. Capacity reservations reserve capacity to be allocated for a particular production or procurement order.
-					<hr>
-					<h3>CRM</h3></br>
-						Is an abbreviation for Customer Relationship Management. CRM refers to business practices, strategies, and technologies that Vendor companies use to manage and analyze customer interactions, and data, throughout the customer lifecycle, with the goal of improving business relationships with customers, assisting in customer retention, and driving sales growth.
-					<hr>
-					<h3>Cross Shipment</h3></br>
-						“A transaction between two partners within the same level or tier of a distribution channel”. Here are 2 examples for cross shipment: 
-<ul><li>Inter-Company Transfers: Cross shipments between two different partners within the same level/tier say Ingram Micro selling to Redington.</li>
-<li>Intra-Company Transfers: These are stock transfers between locations of same partner (which sometimes get reported as POS).</li></ul>
-					<hr>
-					<h3>CSE</h3></br>
-						Customer Success Engineer
-					<hr>
-					<h3>CSM</h3></br>
-						Customer Success Management
-					<hr>
-					<h3>CTB</h3></br>
-						Clear to build. An inventory control tool that tracks the accumulated quantity of material that’s available to build, typically from day 1 of the quarter. The number reflected on the CTB is the sum of all incoming quantities of supplier shipments minus yield. In other words, it’s the maximum number of units that can be built since day 1. The actual number built might or might not be the same as the CTB.
-					<hr>
-					<h3>CTO</h3></br>
-						Configure to order. A production approach where products are configured or assembled to meet unique customer requirements, such as computers.
-						<hr>
-					<h3>CTS</h3></br>
-						Cost to Serve
-						<hr>
-					<h3>Current Date</h3></br>
-						The planning engine uses the current date, if defined, as the date you want to start planning. This date could be today, or a date in the past or future. The system uses the specified current date as a fixed date; for example, it’s a firm date that remains set until you actively change it.
-					<hr>
-					<h3>Customer</h3></br>
-						In SCPM, the organization that purchases goods from the supplier. “Customer” is used interchangeably with “buyer.” See also SCPM, Supplier, Customer Site.
-					<hr>
-					<h3>Customer Mix</h3></br>
-						Is a marketing term indicating the sales driven by different types of customer segment, and the percentage of business’s total sales for each segment. It shows which customer segment is driving the highest sales, and which segment is lagging.
-					<hr>
-					<h3>Customer Orders</h3></br>
-						Orders from the execution system that are received by a business from a customer. A customer order might be for products and/or services.
-					<hr>
-					<h3>Customer Site</h3></br>
-						In SCPM, the receiving site in a buyer organization. “Customer site” is used interchangeably with “buyer site.” See also SCPM, Customer.
-						<hr>		
-					
-					<h3>Customer User</h3></br>
-						In SCPM, the person in the purchasing organization that assists the customer in purchasing goods from the supplier. The user in this case could be a real person or a system like an ERP system where the purchase order is processed. See also SCPM, Customer, Supplier.
-					<hr>
-					<h3>Cusu</h3></br>
-						In SCPM, a designation for customer-supplier. See also SCPM, Customer, Supplier.
-						<hr>				
-					
-					<h3>Cusugroup</h3></br>
-						In SCPM, a grouping of customer-supplier relationships based on certain criteria. See also SCPM, Customer, Supplier.
-<hr>
-				</div>
-
-
-				<div class="letter" id="D">
-					<h3>DA</h3></br>
-					Dimension attribute; this term is used in SCPM documentation. See also SCPM, Attribute.
-					<hr>
-					<h3>DB</h3></br>
-					Demand Base
-					<hr>
-					<h3>Data Enrichment</h3></br>
-					Data enrichment refers to processes used to enhance, refine, or otherwise improve data. In the context of CDM, the data enrichment is a process that adds additional attributes to normalized data, based on calculations and/or augmentation from additional trusted sources.
-<hr>
-					<h3>Data Field</h3></br>
-					An element of a database record that contains a single piece of information.
-<hr>
-					<h3>Data File</h3></br>
-					A series of data records, which each consist of a series of data fields. See also Data Field, Data Record.
-<hr>
-					<h3>Data Integrity</h3></br>
-					Data integrity is the overall accuracy, completeness, and consistency of data, and is a critical output of the design, implementation, and use of systems that retrieves, processes or stores data.
-<hr>
-					<h3>Data Measure</h3></br>
-					In SCPM, a representation of time-varying data; typically used for forecast collaboration. See also DM, SCPM, Collaboration.
-<hr>
-					<h3>Data Record</h3></br>
-					A collection of multiple pieces of information (fields) about a particular entity.
-<hr>
-					<h3>Dataset</h3></br>
-					A group of data files. See also Data File.
-<hr>
-                    <h3>DC</h3></br>
-					Distribution Center or Data Center
-<hr>
-                    <h3>DDSN</h3></br>
-					Demand Driven Supply Networks
-<hr>
-					<h3>Deal Registration</h3></br>
-					Deal registration is a form of compensation where a channel partner selling a product from a Vendor and is available only on registering their sales opportunity with the Vendor.
-<hr>
-					<h3>Demand</h3></br>
-					Represents the driving element in demand-supply matching. Different demand types are (input): customer order, forecast, additional demands, or inventory reservations. Demand can also arise from inventory targets, such as minimum inventory or other planning parameters, such as lot sizes. In planning, demand is considered the sum of primary demand and secondary demand.
-	<hr>				
-					<h3>Demand Generation</h3></br>
-					Demand generation is the focus of targeted marketing programs to drive awareness and interest in a company's products and/or services.
-<hr>
-					
-					<h3>Departing Partners</h3></br>
-					Partners who have stopped selling products during the current period.
-	<hr>				
-					<h3>Depot</h3></br>
-					Element of the supply chain structure that represents locations where materials are procured, transformed, stocked and/or distributed, such as manufacturing plants, distribution centers, or vendor hubs. A depot is a logical entity and does not necessarily refer to a physical site. The depot is a mandatory attribute to any demand and supply within the model. Fixed supply connections can be defined between depots.
-		<hr>			
-					<h3>DFM</h3></br>
-					Design for manufacturing; see also E2MC.
-			<hr>		
-					<h3>DH</h3></br>
-					Data hub
-				<hr>	
-					<h3>Direct Distribution</h3></br>
-					Vendors sell products directly to the end customer without the help of intermediaries (i.e. distributors, resellers, retailers).
-					<hr>
-					<h3>Discrete Industry</h3></br>
-					Discrete manufacturing industry involves products that can be counted and labeled on an individual basis. Examples of discrete manufacturing industries include automotive, equipment, appliances, apparel, toys, and electronics.
-					<hr>
-					<h3>Discrete Order</h3></br>
-					Purchase order; see also Discrete PO, Purchase Order, SCPM.
-					<hr>
-					<h3>Discrete PO</h3></br>
-					Discrete purchase order; see also Purchase Order, Discrete Order, SCPM.
-<hr>
-
-					<h3>Distribution Pass Through</h3></br>
-					Rebate programs providing preferential pricing to resellers. The distributor sells to the reseller at a reduced price, and then claims the rebate from the Vendor. 
-	<hr>				
-					<h3>DM</h3></br>
-					Data measure; this term is used in SCPM documentation. See alsoData Measure, SCPM.
-		<hr>			
-					<h3>DO</h3></br>
-					Discrete order; this term is used in SCPM documentation. See also SCPM.
-			<hr>		
-					<h3>DOS</h3></br>
-					Days of supply.
-				<hr>	
-					<h3>Downstream applications</h3></br>
-					They are applications further down in the product sales process that consume the data generated by applications that come earlier in the data flow. <br/>
-                    For example, POS data entry happens in an “upstream” application, this data could be consumed by other applications further down the process such as data warehouses, revenue calculators etc. which would be the downstream applications.
-				<hr>
-					<h3>DP</h3></br>
-				    Demand Planning
-					<hr>
-					<h3>DRP</h3></br>
-				    Distribution Requirements Planning
-					<hr>
-					<h3>Drop Shipment</h3></br>
-					Drop shipping is an order fulfillment method wherein a purchase order from a reseller is fulfilled by either a distributor or the vendor/manufacturer and shipped directly to the reseller's end customer. This allows resellers to shorten the delivery time to their customers and eliminates the risk of inventory handling for the reseller. 
-					<hr>
-					<h3>DSD</h3></br>
-					Direct Store Delivery 
-					<hr>
-					<h3>DTG</h3></br>
-					Data transfer guide.
-					<hr>
-					<h3>DUNS Number</h3></br>
-					The Data Universal Numbering System, abbreviated as DUNS or D-U-N-S, is a proprietary system developed and regulated by Dun & Bradstreet (D&B) that assigns a unique numeric identifier, referred to as a "DUNS number" to a single business entity. The DUNS number is a nine-digit number, issued by D&B, assigned to each business location in the D&B database. 
-<hr>
-
-				</div>
-
-
-				<div class="letter" id="E">
-					
-					<h3>E2A</h3></br>
-					E2open Analytics.
-	<hr>				
-					<h3>E2DX</h3></br>
-					E2open Data Exchange.
-
-		<hr>			
-					<h3>E2MC</h3></br>
-					E2open Manufacturing Collaboration; see also DFM, E2MV, and CC.
-			<hr>		
-					<h3>E2MV</h3></br>
-					E2open Manufacturing Visibility; see also E2MC. 
-				<hr>
-                    <h3>E2net</h3></br>
-					E2open Network
-					<hr>				
-					<h3>E2net</h3></br>
-					E2open Universal Cloud Connectivity; see also Universal Cloud Connectivity.
-					<hr>					
-					<h3>E2PR</h3></br>
-					E2open Planning & Response; the name of the E2open planning system. E2 Planning and Response is a system that integrates procurement, production, and distribution planning into one powerful tool, offering the flexibility needed for fast, accurate planning or replanning. E2 Planning and Response plans production well into the future and considers all inventory shortages or other critical situations. E2 Planning and Response always preserves the original demand pattern while a feasible plan is calculated on given constraints. This is very different from enterprise resource planning (ERP) systems, which usually delay the production and procurement processes while considering constraints.
-					<hr>
-					<h3>E2SC</h3></br>
-					E2open Supply Chain. The official name of the product is Supply Chain Process Manager (SCPM). It’s sometimes referred to as E2SC (E2 Supply Chain). SCPM documentation is published as part of the Standard Solution Product (SSP). See also SCPM, SSP.
-				<hr>
-				    <h3>EAD</h3></br>
-					Earliest acceptance date; earliest date a customer accepts a delivery. See also ERD.
-				<hr>
-				<h3>ECN</h3></br>
-					Export Control Number
-				<hr>
-				<h3>Ecommerce</h3></br>
-					Ecommerce or E-commerce (electronic commerce or EC) is the buying and selling of goods and services, or the transmitting of funds or data, over an electronic network, primarily the internet. These business transactions occur either business-to-business (B2B), business-to-consumer (B2C), consumer-to-consumer (C2C) or consumer-to-business (C2B).
-				<hr>
-				<h3>EDI</h3></br>
-					Electronic data interchange; a standard for exchanging information between computer systems.
-				<hr>
-				<h3>Electronic Data Interchange (EDI)</h3></br>
-					Electronic data interchange (EDI) entails intercompany, computer-to-computer transmission of business information in a standard format. “Computer-to-computer” means direct transmission from the originating application to a receiving (or processing) application. An EDI transmission consists only of business data, not any accompanying free-form messages.
-				<hr>
-				<h3>Embargoes Countries/Entities</h3></br>
-					An embargo is a government order that restricts commerce or exchange with a specified country or entity. Embargoed countries are the list of countries or entities impacted by the government order.
-				<hr>
-				<h3>Emerging Market</h3></br>
-					An emerging market is one that is undergoing a transition. Some of the characteristics of an emerging market are:
-                <ul><ol>1. Lower average per capita income when compared to mature market</ol>
-                <ol>2. Faster economic growth as measured by GDP and is characterized by rapid industrialization</ol>
-                <ol>3. High volatility – rapid social and economic change</ol>
-                <ol>4. Less mature capital markets – means higher risk for investors</ol>
-                <ol>5. Attractive Returns on Investment – stemming from rapid economic growth</ol>
-				<ol>6. Emerging markets initially have few players and offer tremendous opportunity to capture new customers as they make provider decisions</ol></ul>
-				<hr>
-				<h3>End Customer</h3></br>
-					End customer or end user is a person/entity who buys the product for consumption and not for resale.
-				<hr>
-				<h3>End Of Life (EOL)</h3></br>
-					EOL is a term used with respect to a product supplied to customers, indicating that the product is at the end of its useful life (from the vendor's point of view), and a vendor intends to stop marketing, selling or sustaining it.
-				<hr>
-				<h3>Enum</h3></br>
-					Enumerated attribute value; this term is used in SCPM documentation. See also SCPM.
-				<hr>
-				<h3>EOL</h3></br>
-					End of life.
-				<hr>
-				<h3>ERD</h3></br>
-					Earliest requested date. See also EAD.
-				<hr>
-				<h3>ERP</h3></br>
-					Enterprise Resource  Planning (ERP) is software that operates a system of integrated applications to manage the Vendor’s back office functional areas, such as human resources, product life cycle line, supply chain, procurement, inventory management, sales, marketing, finance, etc.
-				<hr>
-				<h3>ERP</h3></br>
-					Enterprise resource planning.
-				<hr>
-				<h3>ET</h3></br>
-					Exploratory testing
-				<hr>
-				<h3>ETA</h3></br>
-					Estimated Time of Arrival
-				<hr>
-				<h3>ETL</h3></br>
-					Extract, transform, and load. This term describes a database warehouse process that moves and transforms data.
-				<hr>
-				<h3>Exception</h3></br>
-					In SCPM, the difference between a buyer forecast quantity and a seller forecast quantity; also known as a mismatch or a problem. See also SCPM, Forecast, Mismatch, Problem.
-				<hr>
-				<h3>Exchange Rate/Currency Conversion Rate</h3></br>
-					The price of domestic currency in terms of foreign currency. The base currency is the currency against which exchange rates are generally quoted in a given country.
-				<hr>
-				<h3>Exec WSD</h3></br>
-					Schedule that describes the replenishment that E2 Planning and Response (E2PR) worked out at the work order start date (WSD). See also E2PR.
-				<hr>
-				<h3>Executable Work Order</h3></br>
-					Work orders in the proposed schedule, which can be executed at the time from the material point of view. There is no check on whether there’s sufficient capacity on the production line at the time of execution, unless the capacity check is activated. See Material Requirements.
-				<hr>
-				<h3>Execution Systems</h3></br>
-					Systems with which E2 Planning and Response (E2PR) exchanges data (opposed to planning systems). See also E2PR.
-				<hr>
-				<h3>Expected Receipts</h3></br>
-					Planned receipts. They include the sum of the planned goods receipts from firm supply, such as POs, IWTs, or proposals. See also PO, IWT, and Proposal.
-				<hr>
-				<h3>Extended Price</h3></br>
-					The extended price is the value of the transaction and is the quantity sold multiplied by the price.
-				<hr>
-				
-				</div>
-
-
-				<div class="letter" id="F">
-					
-					<h3>FC</h3></br>
-						Forecast. 
-					<hr>
-					<h3>FCL</h3></br>
-						Full Container Load 
-					<hr>
-					<h3>Feasible Schedule</h3></br>
-						The feasible production plan is determined from the proposed schedule, taking into account the material and capacity availability. The capacity is only checked if the capacity check is activated.
-
-					<hr>
-					<h3>FGI</h3></br>
-						(Finished goods inventory. This refers to the inventory at the end of a period.
-					<hr>
-					<h3>FIFO</h3></br>
-						First in, first out.
-					<hr>
-					<h3>Fill or Kill (FoK)</h3></br>
-						Term introduced by traders in the stock market to identify the option to buy or sell financial products immediately or not at all. A similar requirement has also become more popular in the consumer goods industry. FOK products have in common that they must be sold quickly at relatively low cost. Also, the high volume of sales orders makes it essential to avoid the need to handle back orders in case of stock shortages. Therefore, the demand needs to be satisfied in a certain time frame; otherwise, it will expire. E2 Planning and Response has introduced the “Expire Date” on demand level to free the allocated supply for other demands. See also E2PR.
-					<hr>
-					<h3>Filter</h3></br>
-						A method of selecting items based on certain criteria. Criteria might include priority (low, medium, high) or buyer/supplier code, buyer/supplier item, for example.
-					<hr>
-					<h3>Firm Planned Order</h3></br>
-						Defines a receipt of material without revealing how or from whom the material will be received. Firm planned orders therefore are process-unspecific. Solely the material, quantity, and the expected receipt date are known and fixed, but there is no information whether the material should be procured, produced, or transferred from another depot. See also Expected Receipts.
-					<hr>
-					<h3>Firm Supply (FS)</h3></br>
-						Refers to expected material receipts that originate from either firm planned orders, inter warehouse transfers, purchase orders, or work orders. Firm supply is the supply side equivalent of primary demand and is generated using the command, Create Firm Supply. Apart from its origin, firm supply is characterized by its scheduled date and its reserve flag. The scheduled date is the anticipated date of arrival but might not be met if, for example, it’s sent late from the supplier. The reserve flag can take the values: “Both,” “Material,” “Capacity,” and “None.” It refers to the resource and material reservations that still must be done to further process the orders. If material needs to be reserved, at least lead time plus follow-up time passes until it becomes available. If capacity needs to be reserved, times according to the Bill of Capacities setup pass until material is available. According to the process model, capacity reservations become effective at the receiving depot and add to the time due to material reservations. Consequently, “None” implies that material supplied by a firm order will be available at the scheduled date, notwithstanding calendar deferrals. See also Inter-Warehouse Transfer, Firmed Planned Order, Purchase Order, Primary Demand, and Reserve Flag.
-					<hr>
-					<h3>Fiscal Calendar</h3></br>
-						A fiscal calendar is a calendar indicating the timeframe or the period the Vendor uses for accounting purposes and preparing financial statements. The fiscal year/quarter/month/week may or may not be the same as a calendar year/quarter/month/week.
-					<hr>
-					<h3>Fiscal Period</h3></br>
-					Accounting period of a particular duration. Fiscal Year, quarter, month, week etc.
-					<hr>
-					<h3>FM</h3></br>
-						Forecast module; this term is used in SCPM documentation, such as the SCPM Forecast Module Implementation Guide. See also SCPM.
-					<hr>
-					<h3>FM</h3></br>
-						Field Marketing
-					<hr>
-					<h3>FMC</h3></br>
-						Federal Maritime Commission
-					<hr>
-					<h3>FMCG</h3></br>
-						Fast-Moving Consumer Goods 
-					<hr>
-					<h3>FOB</h3></br>
-						Freight On Board
-					<hr>
-					<h3>Follow Up Time</h3></br>
-						The time in days that normally elapses in a production process after capacity is booked. See also LT.
-					<hr>
-					<h3>Forecast</h3></br>
-						Planned sales volume; prediction of a customer’s demand.
-					<hr>
-					<h3>Front End Rebate</h3></br>
-						Front end rebates or discounts are offered at the time of invoicing to a partner. It is in the form of trade discounts and cash discounts. A trade discount is one offered for value of purchase while a cash discount is offered for the mode of settling the invoice.
-					<hr>
-					<h3>Frozen Period</h3></br>
-						A process attribute that determines the period of time during which expected receipts are limited to already firm orders. Planning will not create (propose) new process instances. For example, for a procurement part, planning would not create any PO Proposals and for an end product, planning would not propose any WO proposals within the frozen period. See also Expected Receipts, Non-Executable Work Orders, Part, and WO.
-					<hr>
-					<h3>FS</h3></br>
-                    Firm supply. See also Firm Supply.
-					<hr>
-					<h3>FSD</h3></br>
-						Functional specification document; it provides a high-level view of a solution.
-					<hr>
-					<h3>FT</h3></br>
-						Follow-up time. See also Follow-Up Time.
-					<hr>
-					<h3>FTA</h3></br>
-						Free Trade Agreement
-					<hr>
-					<h3>FTL or TL</h3></br>
-						Full Truckload or Truckload
-					<hr>
-					<h3>FTZ</h3></br>
-						Foreign Trade Zone
-					<hr>
-					<h3>Fulfillment Logistics</h3></br>
-						Fulfillment or order fulfillment or fulfillment logistics, in general, refers to the steps involved in receiving, processing and delivering orders to an end customers.
-					<hr>
-					<h3>FUM</h3></br>
-						Freight Under Management
-					<hr>
-					<h3>FWO</h3></br>
-						Firm work order
-					<hr>
-				</div>
-
-
-				<div class="letter" id="G">
-				
-				    <h3>GDPR</h3></br>
-					<p>General Data Protection Regulation</p>
-					<hr>
-					<h3>GLO</h3></br>
-					<p>Global Logistics Orchestration</p>
-					<hr>
-				    <h3>GLV</h3></br>
-					<p>Global Logistics Visibility</p>
-					<hr>
-					<h3>GM</h3></br>
-					General Manager
-					<hr>
-					<h3>Goods in transit</h3></br>
-					<p>Goods in transit refer to merchandise and other inventory items that have been shipped by the seller but have not yet been received by the buyer.</p><p>Example: On 30th December 2015, ABC Ltd ships the merchandise to PQR Ltd London to New York. PQR Ltd receives the goods on 10th January 2016. Between December 30 and January 10, the merchandise will be known as 'goods in transit'. When PQR Ltd prepares its financial statements on 31st December 2015, it will record the merchandise as goods in transit.</p>
-					<hr>
-					<h3>Gross Margin</h3></br>
-					Gross margin is Sales revenue less cost of sale
-					<hr>
-					<h3>GTM</h3></br>
-					Go to Market or Global Trade Management
-					<hr>
-				</div>
-				
-				<div class="letter" id="H">
-					
-					<h3>Headcount Subsidy</h3></br>
-						Vendor subsidizes the cost of staffing the partner with resources to run a specific marketing or support program.
-					<hr>
-					<h3>Headcount Subsidy Programs</h3></br>
-						Vendor subsides the cost of staffing the partner with resources to run a specific marketing or support program.
-					<hr>
-					<h3>HS</h3></br>
-						Harmonized System (codes used for trade classification)
-					<hr>
-					<h3>HTS</h3></br>
-						Harmonized Tariff Schedule
-					<hr>
-                 </div>
-
-
-
-				<div class="letter" id="I">
-					
-					<h3>IBP</h3></br>
-					Integrated Business Planning
-					<hr>
-					
-					<h3>ICD</h3></br>
-					Integration configuration document
-					<hr>
-					<h3>ICP</h3></br>
-					Ideal Customer Profile
-					<hr>
-					
-					<h3>IDD</h3></br>
-					Integration design document
-					<hr>
-					
-                    <h3>IDM</h3></br>
-					Integrated Data Model
-					<hr>					
-					
-					<h3>In-market Representation</h3></br>
-					It is a service offering from Distributors to Vendors providing cost effective, on-ground presence to promote the sale of Vendor’s products. Examples include geographic: country, region, or store-level and shelf space at retail stores.
-					<hr>
-					
-					<h3>In-transit Inventory</h3></br>
-					Vendor products moving between two or more locations, and usually separated geographically; for example, finished goods shipped from a Vendor to a distribution center.
-					<hr>
-					
-					<h3>Incentives</h3></br>
-					An incentive is something that motivates an individual to perform an action. Most commonly where an agent can expect some form of material reward – especially money – in exchange for acting in a particular way.
-					<hr>
-					
-					<h3>Indirect Distribution</h3></br>
-					Indirect distribution is sale of products to the end customer through an intermediary resales channel.
-					<hr>
-					
-					<h3>InfoSec</h3></br>
-					Information Security; an internal term that refers to the security team.
-					<hr>
-					
-					<h3>Inter Warehouse Transfer</h3></br>
-					<p>When determining the supplier, routing information that was stored in the MPS Supply Chain is evaluated. If parts are routinely obtained or can be balanced from another depot, E2 Planning and Response generates an inter-warehouse transfer (IWT). Proposals are for the expected receipts instead of PO proposals. These delivery requests are transferred to a separate output file and can be output via the IWT Proposals Report. The receiving depot’s IWT proposal generates demand in the delivery depot LT working days before the arrival date. The corresponding expected receipt in the receiving depot is adjusted if the delivery depot is unable or only partially able to deliver. An additional workday is added to the transfer time for parts that are produced in the delivery depot.</p> 
-                    <p>For expected receipts from binding IWTs that are passed over the interface, no demand is generated in the delivery depot, as the stock has already been debited in the delivery depot. As soon as the stock is entered in the receiving depot, the corresponding binding IWT is automatically deleted in the execution system. See also E2PR, Expected Receipts, Purchase Order, LT, and IWT.</p>
-					<hr>
-					
-					<h3>INV</h3></br>
-					Inventory.
-					<hr>
-					
-					<h3>Inventory Intelligence</h3></br>
-					Inventory Intelligence refers to the technologies, applications and practices for the collection, integration, analysis, and presentation of supply chain information for Vendors’ inventory management and analysis. Analysis examples include identifying the quantity of stock available at each stocking location, the weeks of on-hand inventory and replenish rates for each stocking location, and so on. With inventory intelligence, a Vendor can avoid stock out situations, and resulting revenue loss, and optimize their working capital, and avoid or eliminate costly inventory write-offs.
-					<hr>
-					
-					<h3>Inventory Reservation</h3></br>
-					Also called IR; a planning feature that simulates a withdrawal of inventory without primary or secondary demand. Inventory reservations take precedence over any other demand. They can be used to model negative starting inventory.
-					<hr>
-					
-					<h3>Inventory Turns</h3></br>
-					It is a popular metric used to measure the number of times inventory is turned over or sold through in a given year.
-                    <br/>A frequently used method to calculate inventory turns is to divide the Annual Cost of Sales by the Average Inventory Level.
-                    <br/>For example:
-                    <br/>Given that a company's cost of sales for the year 2014 is $36,000,000 and its average inventory is $6,000,000, the inventory turns is calculated as:  
-                    <br/>$36,000,000 / $6,000,000 = 6 Inventory Turns  
-					<hr>
-					
-					<h3>Invoice</h3></br>
-					An itemized list of shipped goods, usually specifying the price and terms of sale.
-					<hr>
-					
-					<h3>IO</h3></br>
-					Inventory Optimization
-					<hr>
-					
-					<h3>ISO</h3></br>
-					International Organization of Standardization.
-					<hr>
-					
-					<h3>ISV</h3></br>
-					Independent Software Vendor
-					<hr>
-					
-					<h3>ITC</h3></br>
-					International Trade Commission
-					<hr>
-					
-					<h3>Item</h3></br>
-					In SCPM, also called part or material. See also SCPM, Item Collaboration, Item Mapping, and Part. 
-					<hr>
-					
-					<h3>Item Collaboration</h3></br>
-					In SCPM, a collaboration that contains forecasting information about a [customer supplier-customer item-supplier item-customer site] combination. See also SCPM, Collaboration, Forecast, Item.
-					
-					<hr>
-					<h3>Item Mapping</h3></br>
-					In SCPM, the mapping between a customer item in a customer domain and a supplier item in a supplier domain. See also SCPM, Item.
-
-					<hr>
-					<h3>IWT</h3></br>
-					Inter-warehouse transfer. See also Expected Receipts and Inter-Warehouse Transfer.
-					<hr>
-				</div>
-				
-				<div class="letter" id="J">
-					<h3>JIT</h3></br>
-						Just in Time
-					<hr>
-                 </div>
-				 
-				<div class="letter" id="K">
-					
-					<h3>KC</h3></br>
-						Kilo-character; a unit of measurement for the size of a document or interchange. 1 KC = 1,000 characters; 1 character = 1 byte; 1 KC = 1,000 bytes.
-					<hr>
-					<h3>KPI</h3></br>
-						Key process indicator; similar to a metric.
-					<hr>
-                 </div>
-
-				<div class="letter" id="L">
-					
-					<h3>LCL</h3></br>
-						Lower control limit: dynamic minimum inventory level. The minimum safety stock expressed in weeks of supply (WOS). The buyer enters LCL.
-					<hr>
-					<h3>LCL</h3></br>
-						Less-than-Container Load
-					<hr>
-					<h3>LFD</h3></br>
-						Latest feasible date; the inventory at the LFD displays the inventory if all inward stock movements take place as late as possible, provided that all demand can be accommodated on time. The LFD is calculated from the independent top-level demand considering the lead time and follow-up time. Depending on the calendar settings, this considers only working days or all calendar days including non-working days.
-					<hr>
-					<h3>Line Item</h3></br>
-						A line item is a single item on the purchase order or invoice of any sales transaction.
-					<hr>
-					<h3>Line Item</h3></br>
-						On a purchase order, it contains information like item name, item number, description, and price. A purchase order can have multiple line items. See also Purchase Order, Item.
-					<hr>
-					<h3>List Price</h3></br>
-					List price is the price of a product or service as mentioned in the list issued by the vendor/manufacturer
-					<hr>
-					<h3>Loads Per Planner</h3></br>
-					Loads divided by distinct number of planners meeting minimum volume thresholds.
-					<hr>
-					<h3>LOC</h3></br>
-					Line of Credit
-					<hr>
-					<h3>Locale</h3></br>
-					All the culturally specific characteristics of a geographical region; typically synonymous for a country.
-					<hr>
-					<h3>LOE</h3></br>
-					Level of Effort
-					<hr>
-					<h3>Lot No./Batch No.</h3></br>
-					A lot number is an identification number assigned to a particular lot of products from a single vendor/manufacturer.
-					<hr>
-					<h3>LSP</h3></br>
-					Logistics Service Provider
-					<hr>
-					<h3>LSP</h3></br>
-					Lead Service Provider
-					<hr>
-					<h3>LT</h3></br>
-					Lead time. The time in days that normally elapses to perform a process such as production, stock transfer, or purchase. For all process types (production, stock transfer, purchase) LT describes the time before capacity is booked. See also Follow-Up Time.
-					<hr>
-					<h3>LTL</h3></br>
-					Less Than Truckload
-					<hr>
-				</div>
-
-
-				<div class="letter" id="M">
-				
-					<h3>Maintenance Renewals</h3></br>
-					A maintenance renewal refers to the process of extending an existing service contract before its expiration date
-					<hr>
-					<h3>Managed Service Provider</h3></br>
-					A managed service provider (MSP) is a company that manages information technology services for other companies via the Web. It may use internal operations or a delivery network, application, system and e-management services across a network to multiple enterprises, using a “pay as you go” pricing model.
-
-
-<hr>
-					<h3>Manufacturing BOM</h3></br>
-					This type of BOM is used in planning and includes only the levels and pieces that were designed to go into the finished good. For example, a BOM for a ballpoint pen is designed to require three pieces: the barrel, the cap, and the ink, but four pieces are required to actually make the pen. The manufacturing BOM includes all of the levels and parts required to create the final finished good that is sold to the customer. See also BOM, Agile BOM. 
-<hr>
-					<h3>MAPE</h3></br>
-					Mean Absolute Percent Error
-<hr>
-					<h3>MARCOM</h3></br>
-					Marketing Communications
-<hr>
-
-					<h3>Marketing Development Fund (MDF)</h3></br>
-					Marketing development fund or MDF are funds made available by a Vendor or brand to help affiliates, channel partners, resellers, VARs and/or distributors, market its products and create new markets for the brand.
-
-
-<hr>
-					<h3>Marketing Programs</h3></br>
-					Programs designed to increase demand, establish foothold in the market or reimbursement of expenses incurred for localized presence are referred to as Marketing Programs.
-
-
-<hr>
-					<h3>Master Data Explosion</h3></br>
-					Master data explosion refers to the rapidly increasing amount of master data generated from disparate data sources. This explosion of data presents challenges for Vendors, such as the normalization of, and common definitions for, data fields and data values across data sources, and integration of these data sources into disparate systems in the Vendor’s environment.
-<hr>
-					<h3>Master Data Management</h3></br>
-					Master data management (MDM) is a comprehensive method of enabling a Vendor to link all of its critical data to one file, called a master file, that provides a common point of reference. When properly done, MDM streamlines data sharing among personnel and functions.
-<hr>
-					<h3>Material Requirements</h3></br>
-					Contain the planned issues from primary demand and secondary demand of executable work orders, into which the part goes. Additional requirements arise from depot supply connections, if the current depot serves as supply depot for other depots. See also Primary Demand, Part, and Executable Work Order.
-<hr>
-					<h3>Mature Market</h3></br>
-					A mature market is one which has already passed the growth phase. It has the following characteristics:
-<ul><ol>1. There is relative equilibrium of supply and demand and the consumer has greater influence over the suppliers.</ol>
-<ol>2. Growth is slower while profits can be more level and stable.</ol>
-<ol>3. There are typically a larger number of established suppliers creating a broader competitive field which can result in aggressive price negotiation and procurement practices.</ol></ul>
-<hr>
-					<h3>MC</h3></br>
-					Material Commit
-<hr>
-					<h3>MCV</h3></br>
-					Multi-collab view; this term refers to a screen view in the SCPM UI. See also SCPM, Collaboration, Multi-Collab View.
-<hr>
-					<h3>MEIO</h3></br>
-					Multi-Echelon Inventory Optimization
-<hr>
-					<h3>MES</h3></br>
-					Manufacturing Execution System
-<hr>
-					<h3>MESCBN MQ</h3></br>
-					Gartner Multienterprise Supply Chain Business Networks Magic Quadrant
-<hr>
-                    <h3>MHE</h3></br>
-					Materials Handling Equipment
-<hr>
-					<h3>MIN</h3></br>
-					Minimum order quantity.
-<hr>
-					<h3>Mismatch</h3></br>
-					In SCPM, another name for an exception or problem. See also SCPM, Exception, Problem.
-<hr>
-					<h3>MOPS</h3></br>
-					Marketing Operations
-<hr>
-					<h3>Most Recently Reported Inventory (MRRI)</h3></br>
-					The inventory values considered for the current fiscal period, in the absence of inventory reporting by a partner for a SKU or group of SKUs.<br/>It is usually the latest reported inventory.
-<hr>
-					<h3>MPR</h3></br>
-					Message processing; this term is often used with rules and message throttling.
-<hr>
-					<h3>MQ</h3></br>
-					Gartner Magic Quadrant
-<hr>
-	
-					<h3>MQL</h3></br>
-					Marketing Qualified Lead
-<hr>
-					<h3>MRP</h3></br>
-					Material requirements planning. Calculates and maintains a manufacturing and material plan based on master production schedules, sales forecasts, inventory status, open orders, and bills of material. See also BOM.
-<hr>
-					<h3>MS</h3></br>
-				    IDC MarketScape
-<hr>
-					<h3>MSCCN MS</h3></br>
-				    IDC Multi-Enterprise Supply Chain Commerce Networks MarketScape
-<hr>
-					<h3>MT</h3></br>
-				    Multi-touch
-<hr>
-					<h3>MTD</h3></br>
-					Month-to-date.
-<hr>
-					<h3>MTS</h3></br>
-					Make to stock. See also BTS.
-<hr>
-					<h3>MULT</h3></br>
-					Multiple order quantity.
-<hr>
-					<h3>Multi-Collab View</h3></br>
-					In SCPM, a view that enables the user to retrieve, view, and update data across collaborations for one or more customers, suppliers, sites, and items. See also SCPM, Collaboration, MCV.
-<hr>
-<hr>
-				</div>
-
-
-				<div class="letter" id="N">
-				
-				   <h3>NDC</h3></br>
-					National Distribution Center
-<hr>	
-					<h3>Net Profit</h3></br>
-					Is Sales revenue less of both fixed and variable costs.
-<hr>
-					<h3>Non Executable Work Orders</h3></br>
-					Work orders (WO) in the proposed schedule that cannot be executed at the desired time because the available component stock or the capacity is insufficient at the proposed date. Non-Executable work orders can also arise if free WOs to cover demand are proposed within the frozen zone. See also Frozen Period.
-    <hr>                
-					<h3>NP</h3></br>
-					No partial.
-		<hr>	
-			       <h3>NVOCC</h3></br>
-					Non-vessel Owning/Operating Common Carrier
-		<hr>			
-				</div>
-
-
-				<div class="letter" id="O">
-				
-					<h3>Obsolete</h3></br>
-					Products that are no longer being produced or marketed. 
-<hr>
-					<h3>OC</h3></br>
-					Order collaboration; this term is used in SCPM. See also SCPM, Collaboration.
-<hr>
-					<h3>OFAC</h3></br> 
-					Office of Foreign Assets Control
-<hr>
-					<h3>OH</h3></br> 
-					On-hand.
-<hr>
-					<h3>OM</h3></br>
-					Order module; this term is used in SCPM documentation, such as the SCPM Order Module Implementation Guide. See also SCPM.
-<hr>
-					<h3>On Order</h3></br>
-					The total number of SKUs that have been ordered from the supplier but have not been shipped or delivered. These units are not counted as part of the inventory on hand until they actually arrive and are received into the inventory system. 
-<hr>
-					<h3>On Time to Delivery Appointment</h3></br>
-					On time based on the current appointment end date.<br/>On time is calculated to the hour. 
-<hr>
-					<h3>On Time to Delivery Plan</h3></br>
-					On time based on the current plan date.<br/>On time is calculated to the day.
-<hr>
-					<h3>On Time to Pick Appointment</h3></br>
-					On time based on the current appointment end date.<br/>On time is calculated to the hour.
-<hr>
-					<h3>On Time to Pick Plan</h3></br>
-					On time based on the current plan date.<br/>On time is calculated to the day.
-<hr>
-					<h3>Opening Stock</h3></br>
-					It is the inventory of any and all product SKUs, at the beginning of a fiscal period, expressed in units or value.
-<hr>
-					<h3>Order</h3></br>
-					A confirmed request by one party to another to buy, sell or receive goods under the specified terms and conditions.
-	<hr>				
-					<h3>Order Management</h3></br>
-					Order management is the administration of business processes related to orders for goods or services.
-		<hr>			
-					<h3>Original Design Manufacturer (ODM)</h3></br>
-					An original design manufacturer or company is responsible for designing and building a product as per another company's specifications and sold under the buying company's brand.
-			<hr>		
-					<h3>Original Equipment Manufacturer (OEM)</h3></br>
-					An original equipment manufacturer or company is responsible for designing, building and selling its product into the market; according to its own specifications and under its own brand name.
-<hr>
-					<h3>OSA</h3></br>
-					On-shelf Availability
-<hr>
-					<h3>OTIF</h3></br>
-					On-time/In-full
-<hr>
-                    <h3>Overdue</h3></br>
-					Overdue orders; purchase orders that are more than OVERDUE_PO working days. Overdue are no longer taken into account in planning. See also Purchase Order.
-<hr>
-				</div>
-
-
-				<div class="letter" id="P">
-
-					<h3>Part</h3></br>
-					Element of the supply chain structure that represents materials that flow through a supply network, such as finished goods, raw materials, or sub-assembly parts. A part is a mandatory attribute to any demand and supply within the model. See also Part Depot.
-<hr>
-					<h3>Part Depot</h3></br>
-					Depot-specific parts. See also Part.
-<hr>
-					<h3>Partner Engagement Programs</h3></br>
-					A suite of programs to ensure that Channel partner are engaged in the marketing and sale of vendor products and includes programs that ensure loyalty of partners to vendor products and incentives promote higher sales.
-<hr>
-					<h3>Partner Program</h3></br>
-					A partner program is an arrangement between between a vendor and its partners that resells its products whereby the program specifies the obligations of both parties and outlines the incentives provided by the vendor for meeting sales levels including discounts.
-<hr>
-					<h3>Partner Reported Price</h3></br>
-					The sale price of the product as reported by a partner.
-<hr>
-					<h3>PEP</h3></br>
-					Politically Exposed Persons
-<hr>
-					<h3>Performance Programs</h3></br>
-					Incentives paid to partners on the attainment of a sales goal for a specific period are referred to as Performance Programs.
-<hr>
-					<h3>PI</h3></br>
-					Process industry.
-<hr>
-					<h3>PIT</h3></br>
-					Point-in-time; this term is often used with reporting. See also Point-in-Time.
-<hr>
-					<h3>PO</h3></br>
-					Purchase order. See also Purchase Order, Discrete PO, Discrete Order, and Expected Receipts.
-<hr>
-                    <h3>POD</h3></br>
-					Proof of Delivery
-<hr>
-                    <h3>POD</h3></br>
-					Port of Discharge
-<hr>
-
-					<h3>Point-in-Time</h3></br> 
-					A data point for a particular data measure in the timeline for a specific collaboration. It’s characterized by a value and an instance of time for which the value is defined. See also PIT, Data Measure, Collaboration.
-<hr>
-                    <h3>POL</h3></br>
-					Port of Loading
-<hr>
-                    <h3>POS</h3></br>
-					Point of Sale
-<hr>
-					<h3>PSS</h3></br>
-					<p>Post Sales Service.Post-sales service is a service provided after merchandise or services have been sold.</p>
-                    <p>Most post-sales service involves a guarantee, warranty, upgrade or repair service. Some also includes an ongoing relationship with the original equipment manufacturer (OEM) throughout the life cycle of the product or service, while other warranties are under time constraints.</p>
-<hr>
-					<h3>Price Elasticity</h3></br>
-					Measures the percentage change in quantity demanded in response to a one percent change in price.
-	<hr>				
-					<h3>Price Erosion</h3></br>
-					Price Erosion is the term used when Vendor reduces the selling price of a product or a SKU, mainly to stimulate more sales for that product / SKU. In other words, it is a gradual reduction in the selling price of a product, for one of many reasons, but usually happens to stimulate more sales. Eventually leads to reduced profitability and missed forecasts.
-<hr>
-					<h3>Price Programs</h3></br>
-					All incentives that result in a reduction in the landed price of a product to a partner are referred to as Pricing Programs.
-<hr>
-					<h3>Price Protection</h3></br>
-					<p>A pricing policy that is enacted when a distributor or reseller buys a product at full price, and then, within a given time frame, that product price is reduced. Vendors will provide a “price adjustment,” refunding the difference between the original buy price and the price now available.</p><p>It refers to an agreement which guarantees the channel partner be compensated in the event of a price drop for inventory held by the channel partner.</p>
-<hr>
-
-					<h3>Primary Demand</h3></br>
-					Made up of direct customer orders and the shippable forecasts for the part. See also Customer Orders, Part, and Material Requirements.
-<hr>
-					<h3>Primary Tender Acceptance</h3></br>
-					Percent of accepted tenders to primary carriers,defined as the rank 1 routing guide carrier.
-<hr>
-					<h3>PRM</h3></br>
-					Partner relationship management (PRM) enables an organization with indirect sales channels (such as agents, brokers, dealers, distributors and value-added resellers [VARs]) to manage activities related to sales, lead management, deal registration and opportunity management more effectively and efficiently.
-<hr>
-					<h3>Problem</h3></br>
-					In SCPM, the difference between a buyer forecast quantity and a seller forecast quantity. Also known as a mismatch or an exception. See also SCPM, Mismatch, Exception, Forecast.
-<hr>
-					<h3>Problem Detail View</h3></br>
-					In SCPM, a view that displays collaborations with exceptions in the selected category. See also SCPM, Problem, Exception, Collaboration.
-<hr>
-					<h3>Problem Summary View</h3></br>
-					In SCPM, a view that displays a list of problem categories (exception data measures). See also SCPM, Problem, Data Measure.
-<hr>
-					<h3>Procurement Provider</h3></br>
-					Procurement provider is a third party organization or consultant which is used to supplement internal procurement departments. Procurement providers have their own staffing which assist in a variety of tasks for their clients.
-<hr>
-					<h3>Product Throughput Velocity</h3></br>
-					Measures the time frame for a quantity of product and the speed through which that product volume moves through the entire channel from the Vendor to the end customer. Metrics such as inventory turns and aging help to provide information related to the product throughput velocity from the Vendor to end customer(s).
-<hr>
-					<h3>Product write offs</h3></br>
-					Refers to product inventory that is unlikely to be sold and therefore written off at the end of every accounting period.
-<hr>
-					<h3>Program Claim</h3></br>
-					The proof of performance request made by a partner to the vendor for payment of the program incentive due.
-<hr>
-					<h3>Promise Schedule</h3></br>
-					A schedule that contains information like promise date, promise quantity, and ship from location. The promise schedule applies to a request schedule for a line item on a purchase order. Each purchase order can have multiple line items with multiple request schedules with multiple promise schedules. See also Line Item, Purchase Order.
-<hr>
-					<h3>Promise Ship Date</h3></br>
-					The date the supplier indicates as the anticipated ship date of the product to the customer.
-<hr>
-					<h3>Promotion Code/Offer Code</h3></br>
-					A promotion code, also known as coupon code, is a code that is associated with a marketing discount.
-
-                    For example: A Vendor company asks its customers to enter the promotion code "FX43B" to receive a 10% discount on its merchandise.
-<hr>
-					<h3>Promotions</h3></br>
-					Promotions refer to the set of marketing activities, which communicate the product, brand or service to the user/end user. The main objectives of promotion are to:
-					<ul><li>Present information to consumers and others.</li>
-                    <li>Differentiate a product from competitor products or other products</li>
-                    <li>Increase demand and generate sales as a result of the above</li></ul>
-                    <p>Typically in channel distribution, vendors organize different types of promotions for their channel partners in order to increase their product sales.</p>
-	<hr>				
-					<h3>Proposal</h3></br>
-					E2 Planning and Response (E2PR) determines production and purchasing proposals, which can be retrieved by the planner in the proposal window or via reports. See also Expected Receipts.
-<hr>
-                    <h3>PS</h3></br>
-					Professional Services or Implementation
-<hr>
-                    <h3>PSS</h3></br>
-					Post Sales Service
-<hr>
-					<h3>Public Exception</h3></br>
-					In SCPM, also called a collaboration-level exception. See also SCPM, Collaboration, Exception.
-	<hr>				
-					<h3>Purchase Order</h3></br>
-					The purchaser’s authorization that formalizes a purchase transaction with a supplier. Also called a PO. A purchase order should include in part: item name, part number, quantity, description, price, payment, and delivery information. Synonyms are discrete purchase order and discrete order. A purchase order has the following levels of information: 
-                    <ul><li>The header includes information like PO number, customer name, and supplier name. </li>
-                    <li>Each PO can have multiple line items; one for each unique item. Line items include information like item name and price. </li>
-                    <li>Each line item can have multiple request schedules, known as PO schedules. This level includes information like request date, request quantity, and ship-to location. </li>
-                    <li>Each PO schedule can have multiple promise schedules. This level includes information like promise date, promise quantity, and ship-from location. </li></ul>
-<p>See also PO, Discrete Order, Discrete PO, Item, Line Item, Promise Schedule, Expected Receipts, Part, and Overdue.</p>
-		<hr>		</div>
-
-
-				<div class="letter" id="Q">
-
-				<h3>QC</h3></br>
-					Quality Control
-<hr>
-				<h3>QMS</h3></br>
-					Quality Management System
-<hr>
-				</div>
-
-
-				<div class="letter" id="R">
-				
-					<h3>RDC</h3></br>
-					Regional Distribution Center
-<hr>
-					<h3>RDM</h3></br>
-					Reference Data Management
-<hr>				
-					<h3>Readers</h3></br>
-					Devices used for reading incoming data during data population and uploads.
-<hr>
-					<h3>Rebate</h3></br>
-					It is the return of part of payment made for a product. Unlike discount, which is deducted from the price at the time of purchase, a rebate is returned after purchase.
-<hr>
-					<h3>Request Schedule</h3></br>
-					Contains information like request date, request quantity, and ship-to location. The request schedule applies to each line item on a purchase order. Each purchase order can have multiple line items with multiple request schedules. See also Purchase Order, Line Item.
-<hr>
-					<h3>Reseller</h3></br>
-					A company or individual that purchases goods or services with the intention of reselling them rather than consuming or using them. A reseller may be purchasing goods directly from the product company or through a wholesale distributor.
-<hr>
-					<h3>Reserve Flag</h3></br>
-					A flag that refers to firm supply by indicating the progress status of firm supply orders. It denotes the type of reservations that still have to be done before the firm supply order can be completed. Possible values are “None,” “Material,” “Capacity,” and “Both.” See also Firm Supply.
-<hr>
-					<h3>Retailer</h3></br>
-					A person or a business that sells goods to the consumer as opposed to a reseller, who normally sells their goods to another business.
-<hr>
-					<h3>Return Merchandise Authorization (RMA)</h3></br>
-					RMA is the formal authorization allowing a buying party to return merchandise to the selling party and receive a refund, credit or product exchange. The RMA efficiently ensures visibility and tracking of the item/s until the transaction is completed.
-<hr>
-					<h3>Revenue Recognition</h3></br>
-					According to this principle, revenues are recognized when they are realized or realizable and are earned (usually when goods are transferred or services rendered), no matter when cash is received. In a channel distribution scenario, the vendor revenue may not be "recognized" until the product is sold from the distributor to the reseller and reported on a POS report.
-<hr>
-					<h3>Revenue Recognition Risk</h3></br>
-					It is the risk of either under-reporting or over-reporting revenue received from Channel sales.
-<hr>
-					<h3>Reverse Logistics</h3></br>
-					In the case of reverse logistics, goods move from the customer to the distributor or to the Vendor/manufacturer. This is an after-sale activity and includes repair, refurbishment, recycling, e-waste, after-market call center support, reverse fulfilment, and field service.
-<hr>
-  				   <h3>RMA</h3></br>
-					Return Merchandise Authorization or return goods authorization (RGA) is a part of the process of returning a product in order to receive a refund, replacement, or repair during the product's warranty period.
-<hr>
-					<h3>Role</h3></br>
-					A category of data access privileges assigned to one or more users; the Supplier role, for example.
-<hr>
-					<h3>Routing Guide Compliance</h3></br>
-					Percent of loads where the routing guide was applied and the winning carrier was in the RG
-<hr>
-					<h3>Routing Guide Overspend</h3></br>
-					Percent variance in rates from the primary carrier rate.
-<hr>
-					<h3>RPL</h3></br>
-					Restricted Party List
-<hr>
-					<h3>RPS</h3></br>
-					Restricted Party Screening
-<hr>
-				</div>
-
-
-				<div class="letter" id="S">
-
-					<h3>S2S</h3></br>
-					Server-to-server; customers’ connections to E2open. S2S is customers’ business-to-our business connection and can be classified as B2B. Therefore, B2B can be interpreted as a super set of S2S, though in a broker-less model, E2open is the software/platform provider and is like an extension of their infrastructure. See also B2B.
-<hr>
-					<h3>S&D</h3></br>
-					Ship and Debit
-<hr>
-					<h3>S&OP</h3></br>
-					Sales and Operations Planning 
-<hr>
-					<h3>SaaS</h3></br>
-					Software as a service
-<hr>
-					<h3>Safety Stock</h3></br>
-					The inventory a business holds above normal needs as a buffer against delays in receipt of supply or changes in customer demand. Safety stock levels are decided on various estimates such as sales forecasts, regional sales trends, transit times, seasonality of product demand.
-<hr>
-					<h3>Sales Commission(s)</h3></br>
-					A commission is a fee paid to a person/entity in exchange for his or her services in facilitating or completing a sale transaction. The commission may be structured as a flat fee, or as a percentage of the revenue, gross margin, or profit generated by the sale.
-<hr>
-					<h3>Sales Intelligence</h3></br>
-					It refers to technologies, applications and business practices for the collection, integration, analysis, and presentation of information to help salespeople keep up to date with clients, prospect data and drive business. With sales intelligence an organization can direct its sales and marketing resources to the products and partners that deliver the best performance, can target its customers better, can improve the quality of its products based on the feedback from product returns, can optimize its partner incentive programs by investing in those programs yielding the best outcome.
-<hr>
-					<h3>Sales Rep</h3></br>
-					A person authorized to sell for a firm and compensated through commission or salary or both.
-<hr>
-					<h3>Sales Return</h3></br>
-					A sales return is merchandise sent back to the seller (Vendor/manufacturer) by the buyer (distributor). A return usually requires a formal RMA.
-	<hr>				
-					<h3>Sarbanes-Oxley Act (SOX)</h3></br>
-					Sarbanes-Oxley Act is a 2002 federal law which establish a broad array of standards for public companies, their management boards and accounting firms. It is designed to increase corporate accountability.
-<hr>
-					<h3>SC</h3></br>
-					Solutions Consulting - now known as Presales at e2open
-<hr>
-					<h3>SCD</h3></br>
-					Solution configuration document.
-<hr>
-					<h3>SCM</h3></br>
-					Is an abbreviation for Supply Chain Management. SCM is a term refers to business practices, strategies and technologies that companies use to manage and analyses its supply chain and supply chain information with the goal of improving the supply chain network comprising of service providers, logistics, and other stakeholders thereby resulting in a smooth flow in the channel.
-<hr>
-					<h3>SCP</h3></br>
-					Supply Chain Planning
-<hr>
-					<h3>SCPM</h3></br>
-					A set of workflows that enables roles in separate planning domains to jointly create supply chain management plans and to jointly execute against these plans. The official name of the product is Supply Chain Process Manager (SCPM). It’s sometimes referred to as E2SC (E2 Supply Chain). SCPM documentation is published as part of the Standard Solution Product (SSP). See also E2SC, SSP, Role, Workflow.
-<hr>
-					<h3>SCP MQ</h3></br>
-					Gartner Supply Chain Planning Magic Quadrant
-<hr>
-					<h3>SDR</h3></br>
-					Sales Development Representative
-<hr>
-					<h3>Sell In</h3></br>
-					Sell In refers to sales from the Vendor/manufacturer into the distributor(s) or indirect channel.
-<hr>
-					<h3>Sell Out</h3></br>
-					Sell Out refers to sales from the either the distributor(s) or reseller(s) or retailer(s) to the end user
-<hr>
-                    <br/>For example:
-                    <ul><ol>1. Gregg Computers, a Tier 2 reseller sells Logitech's products to Manhattan Bank</ol>
-                    <ol>2. An OEM works with Tier 1 resellers who sell directly to consumers</ol></ul>
-<hr>
-					<h3>Sell Thru</h3></br>
-					Sell Thru refers to sales by a Tier 1 Partner (Distributor) to a Tier 2 Partner in the indirect Channel
-                    <br/>For example:
-                    <p>Compuage Infocom Ltd, one of the authorized distributors on Microsoft products in India, sells to its resellers.</p>
-	<hr>				
-					<h3>Serial Number</h3></br>
-					A unique number assigned for identification to a single piece that will never be repeated for similar pieces. Serial numbers are usually applied by the Vendor/manufacturer.
-<hr>
-					<h3>Serial Number Tracking</h3></br>
-					The process of monitoring serial numbers from the point when the number is assigned to a component or product through to the point of sale to the end user. This tracking process is important for maintaining quality assurance, for administering product recalls, for addressing warranty claims, and for identifying potential gray market activities.
-<hr>
-					<h3>SFC</h3></br>
-					Shippable forecast.
-<hr>
-					<h3>SFDC</h3></br>
-					Salesforce.com
-<hr>
-					<h3>Short Order Lead Time Percentage</h3></br>
-					Percent of orders with less than 24 hours lead time to pick up.
-<hr>
-					<h3>Spot Market Delta to Rate Percent</h3></br>
-					The average percent delta between spot market rates and rate percent rates.
-<hr>
-					<h3>Spot Market Usage</h3></br>
-					Percent of loads being sent to the spot market
-<hr>
-					<h3>SIC Code</h3></br>
-					The Standard Industrial Classification (SIC) is a system for classifying industries by a four-digit code. SIC codes are assigned to businesses based on the descriptions provided by employers about the business activity.
-<hr>
-					<h3>SISO</h3></br>
-					Sales-In Sales-Out
-<hr>
-                    <h3>SL</h3></br>
-				    SalesLoft
-<hr>
-                    <h3>SLC</h3></br>
-					Shippers Load and Count
-<hr>
-                    <h3>SP</h3></br>
-					SharePoint
-<hr>
-					<h3>Special Pricing Agreement</h3></br>
-					A special pricing agreement (SPA) is an authorization between the vendor and the distributor allowing the distributor or reseller to purchase products from the vendor and sell to the end customer for a certain negotiated price typically lower that standard commercial prices. SPAs are usually negotiated for the purchase of large volumes in a single transaction or across a contracted period of time.
-<hr>
-					<h3>SPIF</h3></br>
-					Is an acronym for Sales Performance Incentive Fund. It is an immediate bonus paid, either by a manufacturer or distributor to a salesperson for selling a specific product. This promotion is applicable for internal sales representatives of vendors, distributors, resellers. 
-	<hr>				
-					<h3>SSP</h3></br>
-					Standard Solution Product (SSP). This is the default model for the SCPM product. See also SCPM and E2SC.
-<hr>
-					<h3>State</h3></br>
-					In SCPM, the place in the life cycle where the purchase order (PO) or PO schedule resides. See also SCPM, Purchase Order.
-<hr>
-					<h3>Stock Keeping Units (SKU)</h3></br>
-					SKU is a unique identifier for each distinct product and service that can be purchased in business. It is used to track, inventory and sales movement of a particular product.
-<hr>
-					<h3>Stock-on-hand</h3></br>
-					It is the quantity of a product that is held in inventory for sale on any given date. 
-
-<hr>
-					<h3>Stockist</h3></br>
-					A entity or business that handles distribution of Products at low margin and ensures availability of the product. 
-<hr>
-					<h3>Supplier</h3></br>
-					In SCPM, the entity that markets and sells items to customers. See also SCPM, Customer.
-<hr>
-					<h3>Supply Chain Linearity </h3></br>
-					Goods should typically flow in a straight line – from Vendor to distributor to reseller/retailer to end customer. This is supply chain linearity. Excess inventory could result in cross shipment or returns to vendor impacting the linearity of the channel and vendor is likely to lose visibility to the products.
-<hr>
-					<h3>Supply Chain Management</h3></br>
-					Supply Chain Management (SCM) is the management of the flow of goods and services. It includes the movement and storage of raw materials, work-in-process inventory and finished goods from the point of origin to the point of consumption.
-<hr>
-					<h3>System Integrator</h3></br>
-					A systems integrator (SI) is an individual or business that builds computing systems for clients by combining hardware and software products from multiple vendors. Using a systems integrator, a company can align cheaper, pre-configured components and off-the-shelf software to meet key business goals, as opposed to more expensive, customized implementations that may require original programming or manufacture of unique components.
-                    <br/>Example: Accenture, Wipro, Deloitte etc.
-	<hr>			
-</div>
-
-				<div class="letter" id="T">
-				
-				    <h3>TCMA</h3></br>
-					Through-Channel Marketing Automation
-		<hr>	
-					<h3>Territory/Sales Territory</h3></br>
-					A sales territory is the geographical area or market segment for which an individual salesperson or a sales team holds responsibility. Territories are generally defined on the basis of geography, but can often be defined by market segment as well. Market segment coverage is typically focused on horizontal segments such as SMB, mid-market, enterprise etc., but can sometimes be focused on a vertical market or industry such as financial services or healthcare.
-		<hr>
-				<h3>TEU</h3></br>
-					Twenty-foot Equivalent Unit
-		<hr>			
-					<h3>Theaters</h3></br> 
-					Geographical regions or geos are referred to as theaters by some vendors.
-			<hr>		
-					<h3>Tier 1 Partner (Distributor)</h3></br>
-					A Tier 1 partner (wholesale distributor)  buys products from vendor/manufacturer and assumes the credit and inventory risk while reselling them to resellers (Tier 2 partner).
-<hr>
-					<h3>Tier 2 Partner (Indirect Partner)</h3></br>
-					A sub-distributor/reseller/retailer who buys from a distributor (Tier 1) and not from the vendor/manufacturer.
-<hr>
-					<h3>Time Bucket</h3></br>
-                    In SCPM, the system displays the daily or weekly time buckets across the top of the collab display. See also SCPM, Collaboration.
-<hr>
-					<h3>TMS</h3></br>
-                    Transportation Management System
-<hr>
-					<h3>TMS MQ</h3></br>
-                    Gartner Transportation Management Systems Magic Quadrant
-<hr>
-					<h3>Tolerance (Exception)</h3></br>
-					In SCPM, the agreed-upon permissible deviation from the specified exception value. See also SCPM, Exception.
-<hr>
-					<h3>Total Addressable Market</h3></br>
-					It is also called total available market or TAM, is a term that is typically used to reference the revenue opportunity available for a product or service. TAM helps to prioritize business opportunities by serving as a quick metric of the underlying potential of a given opportunity.
-<hr>
-					<h3>Transit Time</h3></br>
-					Measured by the number of days (or hours) from the time the shipment leaves the seller's facility to the time it arrives at the customer's location.
-	<hr>			</div>
-
-
-				<div class="letter" id="U">
-
-					<h3>UAT</h3></br>
-					User-acceptance testing; it’s performed at the customer site before the solution is fully rolled into production.
-<hr>
-					<h3>UDF</h3></br>
-					User-defined field; this term is used in SCPM and SSP documenation. See also SCPM, SSP.
-<hr>
-					<h3>UMS</h3></br>
-					User Management Service.
-					<hr>
-<h3>Unit of Measure: Adaptor (Genus price book Global Trade Management - Acuris Adverse Media Adaptor)
-</h3></br>
-					A tool that allows connection between the Global Knowledge® Content and the Subscription Services.
-<hr>
-<h3>Unit of Measure: AIA (Genus price book Managed Services - Channel Managed Services AIA)
-</h3></br>
-					Managed Services analyze agreed number of partner-SKU level Inventory delta/variances shown on the AIA dashboard and follow up with customer/partner to resolve the variances.
-<hr>
-<h3>Unit of Measure: Annual Load (Genus price book Transportation and Logistics - Gatehouse)
-</h3></br>
-					The count of annual shipments that are not in a voided state.	
-<hr>
-<h3>Unit of Measure: Annual Parcel Spend (Genus price book Transportation and Logistics - TMS4S Parcel - SaaS)
-</h3></br>
-					Transportation costs incurred by Customer for parcel services that are managed or supported by the applicable Subscription Service in each Year, as measured in billions of US dollars.					
-<hr>
-<h3>Unit of Measure: Batch (Genus price book Managed Services - Channel Managed Services Payment Processing)
-</h3></br>
-					A collection of payments to be made to Partners. Payments are typically grouped by payment mode (e.g., ACH, Wire, Check) and currency. Payments to several Partners can be processed as one Batch if the payment mode and currency are identical.					
-<hr>
-<h3>Unit of Measure: Block of Transactions (Genus price book Transportation and Logistics - TM - LSP)
-</h3></br>
-250,000 transactions. A Transaction is defined as a record created in the system resulting in the creation of a File where the File number can be the unique 
-  Order Management identifier for:
-
-- Consignment for Road Transportation and/or
-- Trip for Road Transportation and/or
-- Bordero for Road Transportation and/or
-- House / Master Airwaybill for Air and/or
-- Master / Consol for Sea and/or
-- Inbound / Outbound for WMS and/or
-- Miscellaneous for other data capturing and processing purposes (e.g. Claims)
-
-Any subsequent modifications or changes to the existing record or additions of complimentary data elements related to the original record created are considered part of the original transaction and are not counted as an additional Transaction.  The Transaction count will be the greater of the total number of Files.
-<hr>
-<h3>Unit of Measure: Claim (Genus price book Managed Services - Channel Managed Services Claims Auditing - Region: Global , Complexity: 1)
-</h3></br>
-A transaction submitted on an approved activity against a Marketing Incentives Program.With proper proof of performance based on the Customer’s guidelines, the claim is reimbursed to the partner.
-<hr>
-<h3>Unit of Measure: Connectivity (Genus price book Add-On -SAML2.0 or OIDC Single Sign On)
-</h3></br>
-A single identity provider system (IdP) at Customer’s location. Each SKU includes connectivity with the test and production instances of the IdP.
-<hr>
-<h3>Unit of Measure: Connector (Genus price book Customer Connections - Internal Systems - ERP/Legacy Connector)
-</h3></br>
-A connection established with a single identity provider system (IdP) at Customer’s location. Each provision includes connections to the test and production instances of the IdP.
-<hr>
-<h3>Unit of Measure: Containers (Genus price book Transportation and Logistics - Audit and Settlement (No of Containers))
-</h3></br>
-The actual number of shipping containers that Customer uses to manage shipments in the applicable Subscription Services on an annual basis.
-<hr>
-<h3>Unit of Measure: Country (Genus price book Global Trade Management - Global Knowledge  Country)
-</h3></br>
-A single identity provider system (IdP) at Customer’s location. Each SKU includes connectivity with the test and production instances of the IdP.
-<hr>
-<h3>Unit of Measure: Courses (Genus price book Global Trade Management - eLearning - Awareness course(s))
-</h3></br>
-A program of learning a User could take on a topic offered in the eLearning curriculum.
-<hr>
-
-<h3>Unit of Measure: Credit (Genus price book Channel Shaping - Lead Essentials)
-</h3></br>
-Partner paid for this 3rd party service using their credit card.
-<hr>
-<h3>Unit of Measure: Declarations (Genus price book Global Trade Management - Global Customs Management - SaaS Declarations (CM-G))
-</h3></br>
-Each separate declaration or parent message toward customs authorities, as such declarations are defined by county. Each individual Transaction created and sent to Customs or similar authorities (as applicable) is counted as an individual Transaction. Amended submissions are not counted as additional Transactions. The document generated as part of the normal Customs workflow and included within the associated declaration is part of the Transaction as defined. Each document complementary to the Customs workflow is counted as a separate billable Transaction.
-<hr>
-<h3>Unit of Measure: Declared Value (Genus price book Transportation and Logistics - TM - Insurance)
-</h3></br>
-Declared value units of $100 per shipment, rounded up.
-<hr>
-<h3>Unit of Measure: Documents (Genus price book Supply Management - Purchase Order Collaboration-Express)
-</h3></br>
-The number of purchase orders that Customer can transact within the Subscription Services in a given Year.
-<hr>
-<h3>Unit of Measure: Entities (Genus price book Global Trade Management - Export and Export Management - all versions)
-</h3></br>
-Any combination of Partners, Products, and Transactions where (a) a “Partner” is a single name and address along with its related contacts with a unique Partner ID; (b) a “Product” is an item or part with a unique Product ID. A product can have multiple suppliers and classification records for various countries based on country subscription. Note: A product record does not represent a Bill of Material (wherein “Bill of Material” or “BOM” means lines/components for all Bill of Material types associated with each unique BOM that was qualified during a Year); and (c) a “Transaction” is a unique Sales Order/Delivery/Purchase Order/Shipment/Commercial Invoice/Customs Entry that includes header level information, line level information, transactional partner either at header and/or line level along with reference to product(s).
-<hr>
-<h3>Unit of Measure: Fleet Size (Genus price book Transportation and Logistics - Fleet Management)
-</h3></br>
-The number of drivers.
-<hr>
-<h3>Unit of Measure: FTE (Genus price book Enhanced Subscription Support - Enhanced Subscription Support FTE)+
-</h3></br>
-Full Time Equivalent; the full time equivalent of 156 hours per month or 1,872 hours per year for 1.0 FTE. Unused hours cannot be carried over into subsequent Years.
-<hr>
-<h3>Unit of Measure: FUM ($M) (Genus price book Add-On - LTL Carrier Connect)
-</h3></br>
-Freight Under Management; transportation costs incurred by Customer for transportation services that are managed by the Subscription Services during Customer’s fiscal year.
-<hr>
-<h3>Unit of Measure: GB/Year (Genus price book Add-On - Offline Message Download E2net)
-</h3></br>
-The total amount of compressed data transferred from e2net to Customer in a given Year. Raw transaction payload data is compressed before transport from e2net to the off-line storage connection.
-<hr>
-<h3>Unit of Measure: GTIN (Genus price book Add-On - GS1 Item Catalog)
-</h3></br>
-Global Trade Item Number; a unique and internationally recognized identifier for a product.
-<hr>
-<h3>Unit of Measure: Hub Documents (Genus price book Supply Management - Drop/Ship Management-Hub Express)
-</h3></br>
-The number of orders that a hub customer can load into the Subscription Services in a given Year.
-<hr>
-<h3>Unit of Measure: Instance (Genus price book Add-On - Additional Production Environment)
-</h3></br>
-The customer-specific deployment of the applicable Subscription Services.
-<hr>
-<h3>Unit of Measure: Kilo-characters (Genus price book Partner Connections - External Volume KC)
-</h3></br>
-A unit of measurement that represents one thousand characters, including spaces, in a given B2B message payload.   
-<hr>
-<h3>Unit of Measure: Labels (Genus price book Supply Management - Drop/Ship Management-Express-Label Generation)
-</h3></br>
-The number of label images that are generated by the system in a given year
-<hr>
-<h3>Unit of Measure: List Entity (Genus price book Global Trade Management - Acuris Adverse Media)
-</h3></br>
-Standard Lists and/or Premium Lists (as specified in Table 1) where (i) “Standard Lists” include 600+ government-issued restricted party lists including but not limited to those issued by Canada, Japan, the European Union, the United Nations, and the United States; and (ii) “Premium Lists” include government-issued restricted party lists, such as DHHS and GSA.
-<hr>
-<h3>Unit of Measure: Load Volume (Genus price book Transportation and Logistics - Road Carrier API Connector)
-</h3></br>
-The annual count of loads in Transportation Management.  A load constitutes a transportation movement from pickup to delivery.  The movement could have one or more shipments as well as one or more pick and delivery stops.  Each load will have a unique identification number that shall serve as the common reference number for load transaction summation.  For the specified reporting period, the status of these transactions shall be in 'Accepted' or 'Completed only.  All other statuses are removed from summation (i.e. 'Voided').	
-<hr>
-<h3>Unit of Measure: Message and direction (Genus price book B2B UK - Data Mapping (message.type))
-</h3></br>
-A translation map is required to convert data received in one format to another format.   The translation map is created assuming a single input format (message) and will convert that message into a second format.  For example, if a translation map is created assuming the receipt of message A and it is converted to message B that implies a direction (A to B).   If later a translation map is also required for converting message type B into A, that would require another translation map as that direction of translation is not supported by the first translation map.
-<hr>
-<h3>Unit of Measure: Message Type (Genus price book B2B UK - NB & TVG (Integrated) Message Annual Fee, Configuration)
-</h3></br>
-When integrating a company to an e2open application using a system-to-system (or B2B) integration approach the project scope will vary and include different data feeds.   For example, one project scope may include enabling the exchange of purchase orders and invoices, whereas another may include purchase orders, purchase order acknowledgements, goods receipts and invoices.   These different business documents are considered Message Types and the order form will include a number of them that are assumed to be in scope.
-<hr>
-<h3>Unit of Measure: Orders (Genus price book B2B UK - Portal Tariff)
-</h3></br>
-Individual Orders as sent by the retailer/hub.
-<hr>
-<h3>Unit of Measure: Partners (Genus price book Channel Shaping - Channel Marketing Automation)
-</h3></br>
-The number of partners provisioned. Each Partner is defined as a single name and address along with its related contacts with a unique Partner ID.
-<hr>
-<h3>Unit of Measure: Program (Genus price book Global Trade Management - FTZ/Bonded Warehouse/Duty Drawback)
-</h3></br>
-A specific government program used to ensure that the product meets the essential requirements in the form of a specific directive, regulation, and harmonized standard.
-<hr>
-<h3>Unit of Measure: Record (Genus price book Managed Services - Channel Managed Services Record)
-</h3></br>
-A Vendor Data Stewards research for records not matched automatically with the aim of increasing the match rates of the Resellers. Vendor will discuss and agree with Customer which records need to be prioritized.
-<hr>
-<h3>Unit of Measure: Request (Genus price book Global Trade Management - Trade Engine)
-</h3></br>
-Any of the following in the XML request: Classification, Party Screening, Export Control, Import Control, Landed Cost or Document Explorer. For each Classification & Party Screening, the XML request counts as a separate query while Export/Import Controls, Landed Cost or Document Explorer counts as a separate query for each transaction line.
-<hr>
-<h3>Unit of Measure: Retained Data Days (Genus price book Add-On - Online Audit Data Retention for E2net)
-</h3></br>
-The number of days that online audit data is visible in the E2net console. Transaction data older than this will be purged from the system and inaccessible by Customer.
-<hr>
-<h3>Unit of Measure: Revenue ($B/M) (Genus price book Various - Various SKUs)
-</h3></br>
-The amount of Customer’s revenue managed or supported by the applicable Subscription Services for each Year, as measured in [billions/millions] of US dollars. 
-<hr>
-<h3>Unit of Measure: Shipments (Genus price book Transportation and Logistics - TM - Rail Rating, Billing, & Audit)
-</h3></br>
-The number of rail cars booked and/or traced in each Year of the Term.
-<hr>
-<h3>Unit of Measure: SIC (Genus price book Managed Services - Channel Managed Services SIC)
-</h3></br>
-Data Steward research services to identify & enrich Standard Industry Classification (SIC) codes for agreed number of reseller records.
-<hr>
-<h3>Unit of Measure: SIC (Genus price book Managed Services - Channel Managed Services SIC)
-</h3></br>
-Data Steward research services to identify & enrich Standard Industry Classification (SIC) codes for agreed number of reseller records.
-<hr>
-<h3>Unit of Measure: Spend ($B/M) (Genus price book Various - Various SKUs)
-</h3></br>
-The amount of goods and services managed or supported by the applicable Subscription Services for each Year, as measured in [billions/millions] of US dollars.
-<hr>
-<h3>Unit of Measure: Supplier Documents (Genus price book Supply Management - Drop/Ship Management-Supplier Express)
-</h3></br>
-Number of orders that a supplier can access in the system within a given calendar year.
-<hr>
-<h3>Unit of Measure: Trade Agreement (Genus price book Global Trade Management - United Kingdom-Côte d'Ivoire Stepping Stone Economic Partnership Agreement)
-</h3></br>
-The agreement between two or more countries for preferential trade programs designed to reduce or eliminate duties assessed for products that are qualified for free trade agreements. Free trade agreements are also known as special trade programs which result in reduced import costs, where the applicable duties/taxes/fees are generally lower on specified goods originating in a particular country.
-	<hr>
-<h3>Unit of Measure: Trading Partner (Genus price book B2B UK - various SKUs)
-</h3></br>
-A company that the Business Integration team work with to onboard them onto e2net.
-	<hr>
-<h3>Unit of Measure: Transactions (Genus price book Transportation and Logistics - TM - Forwarders Enterprise)
-</h3></br>
-Each record created in the system resulting in the creation of a Master Bill of Lading (MBL) (e.g., shipment, Bill of Lading (BOL), invoice, job). Any subsequent touches or changes to the existing record or additions of complimentary data elements related to the original record created are considered part of the original transaction and are not counted as an additional transaction. The transaction count will be the greater of the total number of Master Bills of Lading or House Bills of Lading.
-	<hr>
-<h3>Unit of Measure: Transactions (Genus price book Transportation and Logistics - China Trade Management (Enterprise and Express))
-</h3></br>
-Each unique Sales Order/Delivery/Purchase Order/Shipment/Commercial Invoice/Customs Entry that includes header level information, line level information, transactional partner either at header and/or line level along with reference to product(s).
-<hr>
-<h3>Unit of Measure: Transport Orders (Genus price book Transportation and Logistics - Air Tracking)
-</h3></br>
-A delivery reference coming from a unique loading place and going to a unique delivery place.
-<hr>
-<h3>Unit of Measure: Usage (Genus price book Transportation and Logistics -TM - Postal)
-</h3></br>
-A named authorized User of the applicable Subscription Services.
-	<hr>
-<h3>Unit of Measure: Users (Genus price book Add-On - World Customs Org Explanatory Notes)
-</h3></br>
-A named authorized User of the applicable Subscription Services.
-	<hr>				
-					<h3>Universal Cloud Connectivity</h3></br>
-					E2net; see also E2net. 
-<hr>
-					<h3>Universal Product Code (UPC)</h3></br>
-					A barcode symbology (i.e., a specific type of barcode) that is widely used around the world for tracking trade items or SKUs in stores and warehouse inventory. Its most common form, the UPC-A, consists of 12 numerical digits, which are uniquely assigned to each trade item. The UPC is the barcode mainly used for scanning of trade items at the point of sale.
-<hr>
-					<h3>UOM</h3></br>
-					Unit of measure.
-
-<hr>
-					<h3>Upsell</h3></br>
-					Involves transactions that sell additional products to an existing customer. 
-	<hr>
-					<h3>USMCA</h3></br>
-					United States-Mexico-Canada Agreement
-	<hr>	
-	
-	</div>
-
-
-				<div class="letter" id="V">
-				
-				<h3>VAD</h3></br>
-					Value-added Distributor
-<hr>
-				<h3>VAN</h3></br>
-					Value-added Network
-<hr>
-				<h3>VAR</h3></br>
-					Value-added Reseller. A value added reseller (VAR) is an organization that buys equipment from the vendor at a discount, adds value (such as application software packaged and sold with underlying system software) and remarkets/resells it.
-<hr>
-
-					<h3>Vendor</h3></br>
-					A vendor is an entity that designs and manufactures its own products or assembles products manufactured by others or procure products from an original equipment manufacturer/contract manufacturer and sells it to end customers either directly or through a channel.
-
-                   <p><strong>Note:</strong> E2open customers are all vendors or brand owners.</p>
-<hr>
-					<h3>Vertical Market</h3></br>
-					<p>A market is defined as vertical when it addresses the needs of a particular industry viz., healthcare, financial services, automotive, government etc. A vertical market can be subdivided into narrower niche markets. For example, the government vertical has state, local and federal niches; the pet market has niches for different types of pets.</p>
-<hr>
-                    <p>A vertical market differs from a horizontal market because the needs of the market are specific and limited to itself. For example, hypodermic needles are specific to the healthcare vertical but largely irrelevant to financial services. Horizontal markets meet the needs of a wide variety of industries, rather than a specific one: for example, word processing software is used across multiple vertical markets.</p>
-<hr>
-                   <h3>VGM</h3></br>
-					Verified Gross Mass
-<hr>
-		
-                   <h3>VMI</h3></br>
-					Vendor Managed inventory 
-<hr>
-                   <h3>VMR</h3></br>
-					Vendor Managed Replenishment
-<hr>
-				</div>
-				
-				<div class="letter" id="W">
-				    <h3>Warehouse</h3></br>
-					A warehouse is a commercial building for storage of goods and is used by manufacturers, importers, exporters, wholesaler distributors, transport businesses, customs, etc. They usually have loading docks to load and unload goods from trucks.
-
-	<hr>				<h3>Warranties Claims</h3></br>
-					Any claims made by the customer within the warranty period to replace or repair a defective product.
-<hr>
-					<h3>Warranties Revenue</h3></br>
-					Extended warranties purchased by the customer will be recognized as revenue after the period of warranty expires.
-<hr>
-					<h3>Wave</h3></br>
-					Forrester Wave
-<hr>
-					<h3>WCO</h3></br>
-					World Customs Organization
-<hr>
-					<h3>WCS</h3></br>
-					Warehouse Control System
-<hr>
-					<h3>WD</h3></br>
-					Working days.
-	<hr>				
-					<h3>Weeks of Inventory</h3></br>
-					Weeks of inventory indicates the number of weeks of inventory on hand based on the sell through run rate.
-                    
-					For example: If 100 units sell through in a single week, then 500 units in stock represent 5 weeks of On Hand Inventory.
-	<hr>	
-					<h3>WES</h3></br>
-					Warehouse Execution System 
-	<hr>	
-					
-					<h3>Wildcard Search</h3></br>
-					In SCPM, a search method that uses an asterisk (*) as the search criteria. The asterisk tells the system to search for all purchase orders (PO) and PO schedules in the chosen search categories. See also SCPM, Purchase Order.
-		<hr>
-		         <h3>WMS</h3></br>
-					Warehouse Management System
-			<hr>		
-					<h3>WO</h3></br>
-					Work order.
-			<hr>		
-					
-					<h3>Workflow</h3></br>
-					In SCPM, a collection of activities and events executed by systems and external agents participating in a business process. See also SCPM.
-<hr>
-					<h3>WRO</h3></br>
-					Withold Request Order
-<hr>
-					<h3>WTO</h3></br>
-					World Trade Organization
-<hr>
-				</div>
-                 
-				<div class="letter" id="X">
-				No entries found in this section
-				</div>
-				
-                <div class="letter" id="Y">
-				No entries found in this section
-				</div>
-				
-
-				<div class="letter" id="Z">
-				No entries found in this section
-				</div>
-				
-			</div>
-
-
-</div>
+   <div class="columns" style=" background-color: #97baba;">
+    <h3>Goals</h3>
+    <p style="font-size: 14px;"><b>Decide whether to participate.</b>Assess prospect's pain points, solution fit, and willingness to engage in BANT and value hypothesis discussions.</p>
+   </div>
+   
+   <div class="columns" style=" background-color: #b9ace8;">
+    <h3>Qualification</h3>
+   <p style="font-size: 14px;">Mutual Evaluation Plan delivered to Coach/Sponsor, BANT plan discussed with Coach, and BANT issues identified</p>
+   </div>
+   <div class="columns" style=" background-color: #a3ca8c;">
+    <h3>Dis-qualification</h3>
+    <p style="font-size: 14px;">Prospect doesn't agree to engage in BANT and value hypothesis discussions, has no identified pain points, or isn't willing to assign a Coach/Sponsor</p>
+  
+  </div>
+   </div>
+  <h3 style="text-align:center;">Sales Aids</h3>
+
+  <div class="row">
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#517222;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">RFx</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
     </div>
   </div>
-</div>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-  <script>
-  
-$(document).ready(function(){ 
-  // ===================================
-  var $ts = $('.text-search');
-    var source = '';
-    var alphabet = '';
-  var searchtitle = '';
-  var searchin = '';
-  var lbl = '';
-    var $elemsfound;
-  var offset = 0;
-  // Filter per data-key="value"
-  $.fn.filterData = function(key, value) {
-    return this.filter(function() {
-      return $(this).data(key) == value;
-    });
-  };
-  // :contains case-insensitive
-  $.expr[":"].contains = $.expr.createPseudo(function(arg) {
-    return function( elem ) {
-      return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
-    };
-  });
-  // reset
-    function resetAlphabet(ab, letter) {
-    var starter = (letter == '') ? $(ab).children('button').first().data('value') : letter;
-    var lettercode = starter.charCodeAt(0);    
-    if ((lettercode >= 65) && (lettercode <= 90) && (ab != '')) {
-      activateLetter($(ab).children('button').filterData("value", starter));
-    }
-  }
-  // active div letter
-  function activateLetter(ellet) {
-    var thisletter = $(ellet).data('value');
-   window.scrollTo(0, 0);
-    $(ellet).addClass('active');
-    $(ellet).siblings().removeClass('active');
-    if (!$("#" + thisletter).hasClass('active')) {
-      $(source).children('div').removeClass('active');
-      $("#" + $(ellet).data('value')).addClass('active');
-    }
-  }
-  // delay 
-  function delay(callback, ms) {
-    var timer = 0;
-    return function() {
-      var context = this, args = arguments;
-      clearTimeout(timer);
-      timer = setTimeout(function () {
-        callback.apply(context, args);
-      }, ms || 0);
-    };
-  }
-  
-  function resetMsg(){
-    let lbl = $("label[for='" + $ts.attr('id') + "']");
-    lbl.html('Browse the glossary using this index')
-  }
 
-  // Startup
-    
+   <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#517222;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Sales Discovery</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
   
-          
-    if ($ts.length > 0) {       
-        alphabet = $ts.data('alphabet') || alphabet;
-        source = $ts.data('source') || source;
-    searchtitle = $ts.data('searchtitle') || searchtitle;
-    lbl = $("label[for='" + $ts.attr('id') + "']");
-    offset = $ts.data('offset') || 0;
-    offset = ((searchtitle != '') && offset == 0)  ? parseInt($(searchtitle).css('marginTop')) : offset;
-    
-        if ($(source).length == 1) {                         
-      if (alphabet != '') {
-        var $ab = $(alphabet);
-        if ($ab.length > 0) {       
-          var alphaletters = $(source).children('div');
-          $(alphaletters).css('backgroundColor','').css('border','');
-          $ab.html('');
-          $(alphaletters).each(function(id, elem){
-            $ab.append('<button type="button" data-value="' + $(elem).attr('id') + '">' + $(elem).attr('id') + '</button>' + " | ");
-          });               
-          $ab.on('click', 'button', function(e){            
-            e.preventDefault();
-            e.stopPropagation();
-            $('.text-search').val('');          
-            activateLetter($(this));
-            resetMsg();
-			
-          }); 
-          resetAlphabet(alphabet, '');
-        } else {
-          alphabet = '';
-          $(source).children('div').addClass('active');
-        }
-      } else {
-        $(source).children('div').addClass('active');
-      }
-            
-            $('body').on('keyup', '.text-search', delay(function(e){
-                var sSearch = $(this).val();                
-                if (sSearch != '') {                    
-          var fl = sSearch.substring(0, 1).toUpperCase();
-          $(searchin + '.found').removeClass('found');
-          searchin = source + ((alphabet == '') ? '' : ' > div#' + fl) + ((searchtitle == '') ? '' : ' ' + searchtitle);
-                    console.log('search for a word: "' + sSearch + '" in "' + searchin + '"');
-                    $elemsfound = $(searchin + ':contains("' + sSearch + '")');
-          console.log('element found: ' + $elemsfound.length);
-          if ($elemsfound.length > 0) {
-            resetAlphabet(alphabet, fl);            
-            if (searchtitle != '') {
-              var goto = $elemsfound.first().offset().top - offset;
-              $("html,body").animate({ scrollTop: goto}, 500 );
-            } else {
-              console.log('it is a global search')
-              $(source).html().replace(sSearch, '<span class="found">' + sSearch + '</span>');
-            }
-          } else {
-            searchin = source + ((alphabet == '') ? '' : ' > div') + ((searchtitle == '') ? '' : ' ' + searchtitle);
-            console.log('I DID NOT FIND ANYTHING so I am looking for a word:"' + sSearch + '" in "' + searchin + '"');
-            $elemsfound = $(searchin + ':contains("' + sSearch + '")');
-            if ($elemsfound.length > 0) {              
-              fl = $elemsfound.first().parent().attr('id');
-              resetAlphabet(alphabet, fl);
-              searchin = source + ((alphabet == '') ? '' : ' > div#' + fl) + ((searchtitle == '') ? '' : ' ' + searchtitle);
-              $elemsfound = $(searchin + ':contains("' + sSearch + '")');
-              var goto = $elemsfound.first().offset().top - offset;
-              console.log(goto);
-              $("html,body").animate({ scrollTop: goto}, 500 );
-            }
-          }  
-          $elemsfound.addClass('found');
-          if (lbl.length == 1) {lbl.html('Found' + ($elemsfound.length == 1 ? '' : '') + ' ' + $elemsfound.length + ' word' + ($elemsfound.length == 1 ? '' : 's'))};
-                } else {
-          resetAlphabet(alphabet, '');
-          $(searchin).removeClass('found');
-          if (lbl.length == 1) {resetMsg()}
-        }
-            }, 500));
-        }
-    }
-});</script>
+     <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#517222;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Qualification</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#517222;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">BANT</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+    <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#517222;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Mutual Evaluation Plan</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+   <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#517222;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">NDA</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  </div>
+  
+   <h3 class="align-center" style="text-align: center;">Sales Tools</h3>
+   
+    <div class="row">
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#517222;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Paperflite</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Training 1</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Training 2</a></li>
+    </ul>
+    </div>
+  </div>
+  </div>
+  </div>
+ 
+<div id="30-discovery" class="tabcontent">
+     <div class="row">
+<div class="columns" style=" background-color: #97baba;">
+    <h3>Goals</h3>
+    <p style="font-size: 14px;"><b>Figure out how to win and to develop a “Coach”.</b>Discover customer pain points, business objectives, and organizational structure to frame the solution’s value proposition.</p>
+   
+  </div>
+  <div class="columns" style=" background-color: #b9ace8;">
+    <h3>Qualification</h3>
+   <p style="font-size: 14px;">Discovery meetings complete, next steps scheduled, org chart & power base chart developed, decision-maker known, and evaluation plan confirmed (verbally or in writing).</p>
+  </div>
+  <div class="columns" style=" background-color: #a3ca8c;">
+    <h3>Dis-qualification</h3>
+    <p style="font-size: 14px;">Prospect doesn't confirm their pain points, doesn't engage key stakeholders, or doesn't commit to the evaluation plan.	</p>
+  
+  </div>
+  </div>
+  <h3 style="text-align:center;">Sales Aids</h3>
+ 
+  <div class="row">
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#1e5b67;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Initial SC Support Request</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
 
+   <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#1e5b67;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Technical Discovery</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+     <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#1e5b67;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Look & Feel Demo</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#1e5b67;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Opportunity Scoping Document</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+  </div>
+   <h3 class="align-center" style="text-align: center;">Sales Tools</h3>
+   
+    <div class="row">
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#1e5b67;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Paperflite</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Training 1</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Training 2</a></li>
+    </ul>
+    </div>
+  </div>
+  </div>
+  
+  </div>
+
+<div id="40-tech/prove" class="tabcontent">
+      <div class="row">
+<div class="columns" style=" background-color: #97baba;">
+    <h3>Goals</h3>
+    <p style="font-size: 14px;"><b>Prove our value is best.</b>Convince the customer that the solution can address their pain points and provide superior capabilities.</p>
+   
+  </div>
+  <div class="columns" style=" background-color: #b9ace8;">
+    <h3>Qualification</h3>
+   <p style="font-size: 14px;">Close Plan agreed upon by Sponsor, E2open selected or shortlisted to two, pricing submitted for approval, and formal proposal or term sheet provided with the customer negotiating back.</p>
+  </div>
+  <div class="columns" style=" background-color: #a3ca8c;">
+    <h3>Dis-qualification</h3>
+    <p style="font-size: 14px;">Prospect doesn't see the solution’s value, doesn't agree to the pricing, or doesn't engage in contract negotiations.</p>
+  
+  </div>
+  </div>
+  <h3 style="text-align:center;">Sales Aids</h3>
+ 
+  <div class="row">
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#4d3075;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 1</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+
+   <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#4d3075;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 2</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+     <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#4d3075;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 3</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#4d3075;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 4</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+  </div>
+   <h3 class="align-center" style="text-align: center;">Sales Tools</h3>
+   
+    <div class="row">
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#4d3075;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Paperflite</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Training 1</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Training 2</a></li>
+    </ul>
+    </div>
+  </div>
+  </div>
+  
+  </div>
+
+
+<div id="50-negotiation" class="tabcontent">
+    <div class="row">
+<div class="columns" style=" background-color: #97baba;">
+    <h3>Goals</h3>
+    <p style="font-size: 14px;"><b>Finalise the deal, Capturing a fair share of the value.</b>Negotiate business and legal terms, including Press Releases and Case Studies.</p>
+   
+  </div>
+  <div class="columns" style=" background-color: #b9ace8;">
+    <h3>Qualification</h3>
+   <p style="font-size: 14px;">MSA, OF, SLA, SOW signed; Involvement of all necessary Stakeholders in the commitment to the Close Plan.</p>
+  </div>
+  <div class="columns" style=" background-color: #a3ca8c;">
+    <h3>Dis-qualification</h3>
+    <p style="font-size: 14px;">Failure to reach an agreement on business and legal terms or lack of stakeholder commitment to the Close Plan.</p>
+  
+  </div>
+  </div>
+  <h3 style="text-align:center;">Sales Aids</h3>
+ 
+  <div class="row">
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#c69a3f;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 1</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+
+   <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#c69a3f;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 2</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+     <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#c69a3f;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 3</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#c69a3f;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 4</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+  </div>
+   <h3 class="align-center" style="text-align: center;">Sales Tools</h3>
+   
+    <div class="row">
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#c69a3f;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Paperflite</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Training 1</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Training 2</a></li>
+    </ul>
+    </div>
+  </div>
+  </div>
+  
+  </div>
+
+<div id="60-closed/won" class="tabcontent">
+  <div class="row">
+<div class="columns" style=" background-color: #97baba;">
+    <h3>Goals</h3>
+    <p style="font-size: 14px;"><b>Ensure value is achieved.</b>Transition to Services and Customer Success.</p>
+   
+  </div>
+  <div class="columns" style=" background-color: #b9ace8;">
+    <h3>Qualification</h3>
+   <p style="font-size: 14px;">Finance moves the deal to Backlog once documents are fully executed.</p>
+  </div>
+  <div class="columns" style=" background-color: #a3ca8c;">
+    <h3>Dis-qualification</h3>
+    <p style="font-size: 14px;">Contract not fully executed or implementation issues arise.</p>
+  
+  </div>
+  </div>
+  <h3 style="text-align:center;">Sales Aids</h3>
+ 
+  <div class="row">
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#80994d;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 1</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+
+   <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#80994d;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 2</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+     <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#80994d;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 3</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#80994d;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Activity 4</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Reference Doc</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+  </div>
+   <h3 class="align-center" style="text-align: center;">Sales Tools</h3>
+   
+    <div class="row">
+  <div class="column">
+    <div class="card">
+      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#80994d;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Paperflite</h4></div>
+		<ul class="courses" style="margin-left: 10%;">
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/About%20Sales%20Stages.mp4?csf=1&web=1&e=evdeSe" target="_blank">Training 1</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Driving%20Value.mp4?csf=1&web=1&e=spuE2t" target="_blank">Training 2</a></li>
+    </ul>
+    </div>
+  </div>
+  </div>
+  
+  </div>
+<script>
+function openApp(evt, appName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(appName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+</script>
+   
 </body>
-</html>
+</html> 
