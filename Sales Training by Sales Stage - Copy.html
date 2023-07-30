@@ -186,7 +186,7 @@ font-size: 24px;
 .card {
   transition: 0.3s;
 width: 90%;
-    height: 115px;
+    height: 125px;
 	background: #ffffff;
     border: 1px solid #ebebeb;
     box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
@@ -249,7 +249,7 @@ i.fa {
 .columns {
   width: 33%;
   min-width: 280px;
-  height:155px;
+  height:170px;
   vertical-align: top;/*Fix for different     height elements*/
   margin-bottom: 10px;
   text-align: center;
@@ -269,6 +269,10 @@ a.sales:hover {
 color: #7239a4;
 }
 
+a.sales-coming-soon{
+color:#b5b1b1;
+}
+
 a.sales {
 color: #1e5b67;
 }
@@ -283,7 +287,65 @@ div.ex2 {
 a{
   text-decoration:none;
 }
+.ST_Card {
+   transition: 0.3s;
+   width: calc(20% - 1px); /* Adjusted width to fit four cards in a row */
+   background: #ffffff;
+   border: 1px solid #ebebeb;
+   box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
+   margin: 0 0%; /* Added margin to create spacing between cards */
+   margin-top: 4%;
+   font-family: Arial;
+   float: left;
+ }
 
+ .ST_Card:hover {
+   box-shadow: 0px 1px 20px rgb(0 0 0 / 10%);
+   transform: translate(0, -5px);
+ }
+
+ /* Added CSS for link and text color on hover */
+ .ST_Card a {
+   text-decoration: none;
+   color: #1e5b67 !important;
+ }
+
+ .ST_Card a:hover, .ST_Card:hover {
+  color: #7239a4 !important;
+ }
+ .ST_Card:hover i.fa, .card:hover i.fa{
+ background-color:#c69a3f !important;
+ }
+
+
+.card.coming-soon:hover i.fa.fa-link {
+pointer-events: none;
+ color: #ffff; /* Change the icon color back to original */
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .ST_Card {
+    width: 20%;
+
+    margin-bottom: 20px;
+  }
+}
+.ST_Row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+   padding-left: 1%;
+   padding-right: 1%;
+   margin-top:-3%;
+}
+ .ST_Heading {
+   text-align: center;
+   color: #282828;
+   font-weight: 100 !important;
+   font-size: 24px;
+   font-family: Arial;
+ }
 </style>
 </head>
 <body>
@@ -305,18 +367,18 @@ a{
    <div class="columns" style=" background-color: #c6e1a5;">
     <P Style="font-size:11px;">00-10 Sales Acceptance Lead</p>
     <h4 style="margin-top:1%;">GOALS</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>Get a meeting.</li><li>Determine if there is sufficient reason to believe the lead has potential and should be pursued by Sales.</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>Get a meeting.</li><li>Determine if there is sufficient reason to believe the lead has potential and should be pursued by Sales.</li></ul>
    </div>
    
    <div class="columns" style=" background-color: #c6e1a5;">
     <P Style="font-size:11px;">00-10 Sales Acceptance Lead</p>
     <h4 style="margin-top:1%;">QUALIFICATION</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>Spoke with the target, agreed on next steps, and there is a reasonable expectation that the opportunity will close within the rolling 12 months.</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>Spoke with the target, agreed on next steps.</li><li>There is a reasonable expectation that the opportunity will close within the rolling 12 months.</li></ul>
    </div>
    <div class="columns" style=" background-color: #c6e1a5;">
     <P Style="font-size:11px;">00-10 Sales Acceptance Lead</p>
     <h4 style="margin-top:1%;">DISQUALIFICATION</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>Prospect doesn't have a need for the solution, lacks budget or authority, or is unresponsive. Move to LTD or disqualify.</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>Prospect doesn't have a need for the solution, lacks budget or authority, or is unresponsive. Move to LTD or disqualify.</li></ul>
    </div>
    </div>
   <h3 style="text-align:center;">Sales Aids</h3>
@@ -324,29 +386,29 @@ a{
   <div class="row">
   
     <div class="column">
-    <div class="card">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#517222;"></i>
+    <div class="card coming-soon">
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#517222;"></i>
         <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Sales Discovery</h4></div>
 		<ul class="courses" style="margin-left: 1%;">
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Video:Coming Soon</i></a></li>
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Video:Coming Soon</i></a></li>
     </ul>
     </div>
   </div>
   <div class="column">
     <div class="card">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#517222;"></i>
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#517222;"></i>
         <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Qualification</h4></div>
 		<ul class="courses" style="margin-left: 1%;">
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Video:Coming Soon</i></a></li>
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Video:Coming Soon</i></a></li>
     </ul>
     </div>
   </div>
   
   <div class="column">
     <div class="card">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#517222;"></i>
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#517222;"></i>
         <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">BANT Assessment</h4></div>
 		<ul class="courses" style="margin-left: 1%;">
 	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:b:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/Launch-Quip/Template%20Guides/PDFs/BANT%20Assessment%20Reference%20Guide.pdf?csf=1&web=1&e=dOF8Ug" target="_blank">Reference Doc</a></li>
@@ -356,6 +418,40 @@ a{
   </div>
   
   </div>
+  
+   <div style="margin-top:2%;"><h3 style="text-align:center;">Sales Tools</h3></div><br />
+
+  <div class="ST_Row">
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/157/genus-quotes" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#517222;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Genus Quotes</span>
+</a>
+</div>
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/161/artifacts-working-with-sf-quip" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#517222;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Artifacts: Working with SF Quip</span>
+</a>
+</div>
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/162/salesforce-functionality" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#517222;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Salesforce: Functionality</span>
+</a>
+</div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+ </div>
+ 
+  <div style="margin-top: 3%;">
+  <img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/stage_10.png" width="1230" height="480" frameborder="0" scrolling="no" allowfullscreen title="Stage-10.png"></div>
   </div>
   
  <div id="LTD" class="tabcontent">
@@ -365,18 +461,18 @@ a{
    <div class="columns" style=" background-color: #b2cec3;">
     <P Style="font-size:11px;">Long-Term Development "LTD"</p>
     <h4 style="margin-top:1%;">GOALS</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>Capture potential future opportunities and build a plan to move them into the pipeline.</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>Capture potential future opportunities and build a plan to move them into the pipeline.</li></ul>
    </div>
    
    <div class="columns" style=" background-color: #b2cec3;">
     <P Style="font-size:11px;">Long-Term Development "LTD"</p>
     <h4 style="margin-top:1%;">QUALIFICATION</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>Potential future opportunities identified, and a plan is in place to move them into the pipeline.</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>Potential future opportunities identified.</li><li>A plan is in place to move them into the pipeline.</li></ul>
    </div>
    <div class="columns" style=" background-color: #b2cec3;">
     <P Style="font-size:11px;">Long-Term Development "LTD"</p>
     <h4 style="margin-top:1%;">DISQUALIFICATION</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>No potential opportunities in the foreseeable future.</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>No potential opportunities in the foreseeable future.</li></ul>
    </div>
    </div>
     <h3 style="text-align:center;">Sales Aids</h3>
@@ -385,15 +481,50 @@ a{
   
     <div class="column">
     <div class="card">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#1e415a;"></i>
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#1e415a;"></i>
         <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Prospecting</h4></div>
 		<ul class="courses" style="margin-left: 1%;">
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Video:Coming Soon</i></a></li>
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Video:Coming Soon</i></a></li>
     </ul>
     </div>
   </div>
  </div>
+ 
+  <div style="margin-top:2%;"><h3 style="text-align:center;">Sales Tools</h3></div><br />
+
+  <div class="ST_Row">
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/157/genus-quotes" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#1e415a;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Genus Quotes</span>
+</a>
+</div>
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/161/artifacts-working-with-sf-quip" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#1e415a;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Artifacts: Working with SF Quip</span>
+</a>
+</div>
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/162/salesforce-functionality" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#1e415a;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Salesforce: Functionality</span>
+</a>
+</div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+ </div>
+ 
+ <div style="margin-top: 3%;">
+  <img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/stage_ltd.png" width="1230" height="480" frameborder="0" scrolling="no" allowfullscreen title="Stage-LTD.png"></div>
+  
 </div>
 <div id="20-qualify" class="tabcontent">
 
@@ -402,21 +533,21 @@ a{
    <div class="columns" style=" background-color: #b9ace8;">
     <P Style="font-size:11px;">20-Qualify</p>
     <h4 style="margin-top:1%;">GOALS</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>Decide whether to participate.</li><li>Assess prospect's pain points, solution fit, and willingness to engage in BANT and value hypothesis discussions.</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>Decide whether to participate.</li><li>Assess prospect's pain points, solution fit, and willingness to engage in BANT and value hypothesis discussions.</li></ul>
    </div>
  
    
    <div class="columns" style=" background-color: #b9ace8;">
     <P Style="font-size:11px;">20-Qualify</p>
     <h4 style="margin-top:1%;">QUALIFICATION</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>Mutual Evaluation Plan delivered to Coach/Sponsor, BANT plan discussed with Coach, and BANT issues identified</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>Mutual Evaluation Plan delivered to Coach/Sponsor.</li><li>BANT plan discussed with Coach.</li><li>BANT issues identified.</li></ul>
    </div>
   
    
    <div class="columns" style=" background-color: #b9ace8;">
     <P Style="font-size:11px;">20-Qualify</p>
     <h4 style="margin-top:1%;">DISQUALIFICATION</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>Prospect doesn't agree to engage in BANT and value hypothesis discussions, has no identified pain points, or isn't willing to assign a Coach/Sponsor</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>Prospect doesn't agree to engage in BANT and value hypothesis discussions, has no identified pain points, or isn't willing to assign a Coach/Sponsor</li></ul>
    </div>
    
   
@@ -427,58 +558,58 @@ a{
   <div class="row">
   <div class="column">
     <div class="card">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#3c1e64;"></i>
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#3c1e64;"></i>
         <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Sales Stages</h4></div>
 		<ul class="courses" style="margin-left: 1%;">
-	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/43/e2open-sales-stages-deep-dive" target="_blank">E2open Sales Stages Deep Dive</a></li>
-	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Qualify%20Stage.mp4?csf=1&web=1&e=7ugT3b" target="_blank">Stage 20 Video</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/43/e2open-sales-stages-deep-dive?generated_by=15533&hash=a6988003ab510e99044c30d5466608700b1fff87" target="_blank">E2open Sales Stages Deep Dive</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/2108/e2open-sales-stage-20?generated_by=15533&hash=32d985ecb23bccb12798d8a067278193bd45649c" target="_blank">Stage 20 Video</a></li>
     </ul>
     </div>
   </div>
    <div class="column">
     <div class="card">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#3c1e64;"></i>
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#3c1e64;"></i>
         <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">RFx</h4></div>
 		<ul class="courses" style="margin-left: 1%;">
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Video:Coming Soon</i></a></li>
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Video:Coming Soon</i></a></li>
     </ul>
     </div>
   </div>
   <div class="column">
     <div class="card">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#3c1e64;"></i>
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#3c1e64;"></i>
         <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Sales Discovery</h4></div>
 		<ul class="courses" style="margin-left: 1%;">
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Video:Coming Soon</i></a></li>
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Video:Coming Soon</i></a></li>
     </ul>
     </div>
   </div>
   <div class="column">
     <div class="card">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#3c1e64;"></i>
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#3c1e64;"></i>
         <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Qualification</h4></div>
 		<ul class="courses" style="margin-left: 1%;">
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Video:Coming Soon</i></a></li>
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Video:Coming Soon</i></a></li>
     </ul>
     </div>
   </div>
   <div class="column">
     <div class="card">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#3c1e64;"></i>
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#3c1e64;"></i>
         <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">BANT</h4></div>
 		<ul class="courses" style="margin-left: 1%;">
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Video:Coming Soon</i></a></li>
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Video:Coming Soon</i></a></li>
     </ul>
     </div>
   </div>
   
     <div class="column">
     <div class="card">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#3c1e64;"></i>
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#3c1e64;"></i>
         <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Mutual Evaluation Plan</h4></div>
 		<ul class="courses" style="margin-left: 1%;">
 	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:b:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/Launch-Quip/Template%20Guides/PDFs/Mutual%20Evaluation%20Plan%20Reference%20Guide.pdf?csf=1&web=1&e=d1dx43" target="_blank">Reference Doc</a></li>
@@ -488,41 +619,55 @@ a{
   </div>
   <div class="column">
     <div class="card">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#3c1e64;"></i>
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#3c1e64;"></i>
         <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">NDA</h4></div>
 		<ul class="courses" style="margin-left: 1%;">
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Video:Coming Soon</i></a></li>
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Video:Coming Soon</i></a></li>
     </ul>
     </div>
   </div>
   
   </div>
  
-   <h3 class="align-center" style="text-align: center;">Sales Tools</h3>
-   
-    <div class="row">
-  <div class="column" style="width:47%;height:190px;">
-    <div class="card" style="height:240px;">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#3c1e64;"></i>
-        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -5%;margin-left: 16%;">Paperflite</h4></div>
-		<ul class="courses" style="margin-left: 1%;">
-	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/983/paperflite" target="_blank">Paperflite</a></li>
-	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/970/what-is-paperflite" target="_blank">What is Paperflite</a></li>
-	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/972/how-to-set-up-your-account-and-create-your-first-collection" target="_blank">How to Set Up Your Account and Create Your First Collection</a></li>
-	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/971/paperflite-walkthrough" target="_blank">Paperflite Walkthrough</a></li>
-	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/966/organize-your-content-in-one-repository-using-paperflite" target="_blank">Organize Your Content in One Repository Using Paperflite</a></li>
-	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/967/create-personalized-microsites-using-paperflite-to-share-content" target="_blank">Create Personalized Microsites Using Paperflite to Share Content</a></li>
-	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/968/content-sharing-methodologies-on-paperflite" target="_blank">Content Sharing Methodologies On Paperflite</a></li>
-	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/969/track-user-engagement-with-the-content-on-paperflite" target="_blank">Track User Engagement With The Content on Paperflite
-</a></li>
-    </ul>
-    </div>
-  </div>
-  </div>
+  <div style="margin-top:2%;"><h3 style="text-align:center;">Sales Tools</h3></div><br />
 
- <a href="https://e2open.docebosaas.com/pages/112/micro-videos-genus-quotes-sales-artifacts-salesforce-and-sales-process"> <div class="ex2" style="max-width: 1230px;margin: auto;border: 3px solid #282828;background-color: #ebebeb;text-align: CENTER;margin-top: 10%;Padding: 7px;" >Genus Price Book Quotes</div></a>
+  <div class="ST_Row">
+  
+  
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/learn/catalog?ctldoc-catalog-0=se-paperflite" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#3c1e64;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Paperflite</span>
+</a>
+</div>
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/157/genus-quotes" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#3c1e64;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Genus Quotes</span>
+</a>
+</div>
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/161/artifacts-working-with-sf-quip" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#3c1e64;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Artifacts: Working with SF Quip</span>
+</a>
+</div>
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/162/salesforce-functionality" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#3c1e64;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Salesforce: Functionality</span>
+</a>
+</div>
  
+ </div>
+ 
+ <div style="margin-top: 3%;">
+  <img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/stage_20.png" width="1230" height="480" frameborder="0" scrolling="no" allowfullscreen title="Stage-20.png"></div>
+  
  </div>
  
 <div id="30-discovery" class="tabcontent">
@@ -530,21 +675,21 @@ a{
  <div class="columns" style=" background-color: #f5deb0;">
     <P Style="font-size:11px;">30-Discovery</p>
     <h4 style="margin-top:1%;">GOALS</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>Figure out how to win and to develop a “Coach”.</li><li>Discover customer pain points, business objectives, and organizational structure to frame the solution’s value proposition.</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>Figure out how to win and to develop a “Coach”.</li><li>Discover customer pain points, business objectives, and organizational structure to frame the solution’s value proposition.</li></ul>
    </div>
  
    
    <div class="columns" style=" background-color: #f5deb0;">
     <P Style="font-size:11px;">30-Discovery</p>
     <h4 style="margin-top:1%;">QUALIFICATION</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>Discovery meetings complete, next steps scheduled, org chart & power base chart developed, decision-maker known, and evaluation plan confirmed (verbally or in writing).</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>Discovery meetings complete</li><li>Next steps scheduled.</li><li>Org chart & power base chart developed</li><li> Decision-maker known.</li><li>Evaluation plan confirmed (verbally or in writing).</li></ul>
    </div>
   
    
    <div class="columns" style=" background-color: #f5deb0;">
     <P Style="font-size:11px;">30-Discovery</p>
     <h4 style="margin-top:1%;">DISQUALIFCATION</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>Prospect doesn't confirm their pain points, doesn't engage key stakeholders, or doesn't commit to the evaluation plan.</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>Prospect doesn't confirm their pain points, doesn't engage key stakeholders, or doesn't commit to the evaluation plan.</li></ul>
    </div>
   </div>
   <h3 style="text-align:center;">Sales Aids</h3>
@@ -553,18 +698,18 @@ a{
   
   <div class="column">
     <div class="card">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#775a14;"></i>
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#775a14;"></i>
         <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Sales Stages</h4></div>
 		<ul class="courses" style="margin-left: 1%;">
-	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/43/e2open-sales-stages-deep-dive" target="_blank">E2open Sales Stages Deep Dive</a></li>
-	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Discovery%20Stage.mp4?csf=1&web=1&e=MpzBCV" target="_blank">Stage 30 Video</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/43/e2open-sales-stages-deep-dive?generated_by=15533&hash=a6988003ab510e99044c30d5466608700b1fff87" target="_blank">E2open Sales Stages Deep Dive</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/2109/e2open-sales-stage-30?generated_by=15533&hash=999746728d75753103c5e2069b3052edd91cc66e" target="_blank">Stage 30 Video</a></li>
     </ul>
     </div>
   </div>
   
    <div class="column">
     <div class="card">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#775a14;"></i>
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#775a14;"></i>
         <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Opportunity Plan</h4></div>
 		<ul class="courses" style="margin-left: 1%;">
 	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:b:/t/Sales/FieldOps/EeIckWa-InBHhkJGMjkmp_gB9LFm0_AxBoOlTKKFMl9s1g?e=prkZwm" target="_blank">Reference Doc</a></li>
@@ -575,44 +720,67 @@ a{
   
   <div class="column">
     <div class="card">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#775a14;"></i>
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#775a14;"></i>
         <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Initial SC Support Request</h4></div>
 		<ul class="courses" style="margin-left: 1%;">
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Video:Coming Soon</i></a></li>
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/1421/sales-process-request-sc-for-reps?generated_by=17205&hash=63c2d9f4e32ff35078f8575866fa8ce8d7c0fb5a" target="_blank">Video</a></li>
     </ul>
     </div>
   </div>
-
+  
    <div class="column">
     <div class="card">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#775a14;"></i>
-        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Technical Discovery</h4></div>
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#775a14;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Request SC-For SCs</h4></div>
 		<ul class="courses" style="margin-left: 1%;">
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Video:Coming Soon</i></a></li>
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/1422/sales-process-request-sc-for-scs?generated_by=17205&hash=4120219a7dc5c01d3f588c6713bd7b1a06c262d4" target="_blank">Video</a></li>
     </ul>
     </div>
   </div>
   
      <div class="column">
     <div class="card">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#775a14;"></i>
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#775a14;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">RFX Projects-Create Intake and Check Status</h4></div>
+		<ul class="courses" style="margin-left: 1%;">
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/1423/sales-process-rfx-projects-create-intake-and-check-status?generated_by=17205&hash=fd90ea4b247f14c5b0082ad6507367a7a1222ddf" target="_blank">Video</a></li>
+    </ul>
+    </div>
+  </div>
+  
+
+   <div class="column">
+    <div class="card">
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#775a14;"></i>
+        <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Technical Discovery</h4></div>
+		<ul class="courses" style="margin-left: 1%;">
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Video:Coming Soon</i></a></li>
+    </ul>
+    </div>
+  </div>
+  
+     <div class="column">
+    <div class="card">
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#775a14;"></i>
         <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Look & Feel Demo</h4></div>
 		<ul class="courses" style="margin-left: 1%;">
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Video:Coming Soon</i></a></li>
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Video:Coming Soon</i></a></li>
     </ul>
     </div>
   </div>
   
   <div class="column">
     <div class="card">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#775a14;"></i>
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#775a14;"></i>
         <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Opportunity Scoping Document</h4></div>
 		<ul class="courses" style="margin-left: 1%;">
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
-	<li style="color:#282828;"><a class="sales" target="_blank"><i>Video:Coming Soon</i></a></li>
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Reference Doc:Coming Soon</i></a></li>
+	<li style="color:#282828;"><a class="sales-coming-soon" target="_blank"><i>Video:Coming Soon</i></a></li>
     </ul>
     </div>
   </div>
@@ -620,30 +788,62 @@ a{
   </div>
    
 
-   <a href="https://e2open.docebosaas.com/pages/112/micro-videos-genus-quotes-sales-artifacts-salesforce-and-sales-process"> <div class="ex2" style="max-width: 1230px;margin: auto;border: 3px solid #282828;background-color: #ebebeb;text-align: CENTER;margin-top: 3%;Padding: 7px;" >Genus Price Book Quotes</div></a>
-   
-  </div>
+ <div style="margin-top:2%;"><h3 style="text-align:center;">Sales Tools</h3></div><br />
+
+  <div class="ST_Row">
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/157/genus-quotes" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#775a14;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Genus Quotes</span>
+</a>
+</div>
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/161/artifacts-working-with-sf-quip" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#775a14;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Artifacts: Working with SF Quip</span>
+</a>
+</div>
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/162/salesforce-functionality" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#775a14;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Salesforce: Functionality</span>
+</a>
+</div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+ </div>
+ 
+ <div style="margin-top: 3%;">
+  <img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/stage_30.png" width="1230" height="480" frameborder="0" scrolling="no" allowfullscreen title="Stage-30.png"></div>
+  
+ </div>
 
 <div id="40-tech/prove" class="tabcontent">
    <div class="row">
  <div class="columns" style=" background-color: #c6e1a5;">
     <P Style="font-size:11px;">40-Teach/Prove</p>
     <h4 style="margin-top:1%;">GOALS</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>Prove our value is best.</li><li>Convince the customer that the solution can address their pain points and provide superior capabilities.</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>Prove our value is best.</li><li>Convince the customer that the solution can address their pain points and provide superior capabilities.</li></ul>
    </div>
  
    
    <div class="columns" style=" background-color: #c6e1a5;">
     <P Style="font-size:11px;">40-Teach/Prove</p>
     <h4 style="margin-top:1%;">QUALIFICATION</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>Close Plan agreed upon by Sponsor, E2open selected or shortlisted to two, pricing submitted for approval, and formal proposal or term sheet provided with the customer negotiating back.</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>Close Plan agreed upon by Sponsor, E2open selected or shortlisted to two, pricing submitted for approval, and formal proposal or term sheet provided with the customer negotiating back.</li></ul>
    </div>
   
    
    <div class="columns" style=" background-color: #c6e1a5;">
     <P Style="font-size:11px;">40-Teach/Prove</p>
     <h4 style="margin-top:1%;">DISQUALIFCATION</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>Prospect doesn't see the solution’s value, doesn't agree to the pricing, or doesn't engage in contract negotiations.</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>Prospect doesn't see the solution’s value, doesn't agree to the pricing, or doesn't engage in contract negotiations.</li></ul>
    </div>
   </div>
   <h3 style="text-align:center;">Sales Aids</h3>
@@ -651,18 +851,18 @@ a{
   <div class="row">
   <div class="column">
     <div class="card">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#325d19;"></i>
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#325d19;"></i>
         <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Sales Stages</h4></div>
 		<ul class="courses" style="margin-left: 1%;">
-	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/43/e2open-sales-stages-deep-dive" target="_blank">E2open Sales Stages Deep Dive</a></li>
-	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Teach%20Prove%20Stage.mp4?csf=1&web=1&e=HMtXJO" target="_blank">Stage 40 Video</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/43/e2open-sales-stages-deep-dive?generated_by=15533&hash=a6988003ab510e99044c30d5466608700b1fff87" target="_blank">E2open Sales Stages Deep Dive</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/2110/e2open-sales-stage-40?generated_by=15533&hash=decb6d8cf89838beec3280ef42c860034757c851" target="_blank">Stage 40 Video</a></li>
     </ul>
     </div>
   </div>
   
     <div class="column">
     <div class="card">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#325d19;"></i>
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#325d19;"></i>
         <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Close Plan</h4></div>
 		<ul class="courses" style="margin-left: 1%;">
 	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:b:/t/Sales/FieldOps/EdfuStIrjhBBqd0eEEIvyHcBoBANeMXiOuOJpLBZKp6Huw?e=3SbFC6" target="_blank">Reference Doc</a></li>
@@ -676,9 +876,41 @@ a{
 
    
 
-   <a href="https://e2open.docebosaas.com/pages/112/micro-videos-genus-quotes-sales-artifacts-salesforce-and-sales-process"> <div class="ex2" style="max-width: 1230px;margin: auto;border: 3px solid #282828;background-color: #ebebeb;text-align: CENTER;margin-top: 3%;Padding: 7px;" >Genus Price Book Quotes</div></a>
-   
-  </div>
+   <div style="margin-top:2%;"><h3 style="text-align:center;">Sales Tools</h3></div><br />
+
+  <div class="ST_Row">
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/157/genus-quotes" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#325d19;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Genus Quotes</span>
+</a>
+</div>
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/161/artifacts-working-with-sf-quip" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#325d19;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Artifacts: Working with SF Quip</span>
+</a>
+</div>
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/162/salesforce-functionality" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#325d19;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Salesforce: Functionality</span>
+</a>
+</div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+ </div>
+ 
+ <div style="margin-top: 3%;">
+  <img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/stage_40.png" width="1230" height="480" frameborder="0" scrolling="no" allowfullscreen title="Stage-40.png"></div>
+  
+ </div>
 
 
 <div id="50-negotiation" class="tabcontent">
@@ -686,21 +918,21 @@ a{
  <div class="columns" style=" background-color: #b2cec3;">
     <P Style="font-size:11px;">50-Negotiation</p>
     <h4 style="margin-top:1%;">GOALS</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>Finalise the deal, Capturing a fair share of the value.</li><li>Negotiate business and legal terms, including Press Releases and Case Studies.</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>Finalise the deal, Capturing a fair share of the value.</li><li>Negotiate business and legal terms, including Press Releases and Case Studies.</li></ul>
    </div>
  
    
    <div class="columns" style=" background-color: #b2cec3;">
     <P Style="font-size:11px;">50-Negotiation</p>
     <h4 style="margin-top:1%;">QUALIFICATION</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>MSA, OF, SLA, SOW signed; Involvement of all necessary Stakeholders in the commitment to the Close Plan.</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>MSA, OF, SLA, SOW signed.</li><li>Involvement of all necessary Stakeholders in the commitment to the Close Plan.</li></ul>
    </div>
   
    
    <div class="columns" style=" background-color: #b2cec3;">
     <P Style="font-size:11px;">50-Negotiation</p>
     <h4 style="margin-top:1%;">DISQUALIFCATION</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>Failure to reach an agreement on business and legal terms or lack of stakeholder commitment to the Close Plan.</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>Failure to reach an agreement on business and legal terms or lack of stakeholder commitment to the Close Plan.</li></ul>
    </div>
   </div>
   
@@ -710,17 +942,17 @@ a{
 
    <div class="column">
     <div class="card">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#1e415a;"></i>
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#1e415a;"></i>
         <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Sales Stages</h4></div>
 		<ul class="courses" style="margin-left: 1%;">
-	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/43/e2open-sales-stages-deep-dive" target="_blank">E2open Sales Stages Deep Dive</a></li>
-	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Negotiation%20Stage.mp4?csf=1&web=1&e=whqFqA" target="_blank">Stage 50 Video</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/43/e2open-sales-stages-deep-dive?generated_by=15533&hash=a6988003ab510e99044c30d5466608700b1fff87" target="_blank">E2open Sales Stages Deep Dive</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/2111/e2open-sales-stage-50?generated_by=15533&hash=1c5a4c84f6249a0f81acf63497ec1f0a6e2a6547" target="_blank">Stage 50 Video</a></li>
     </ul>
     </div>
   </div>
     <div class="column">
     <div class="card">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#1e415a;"></i>
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#1e415a;"></i>
         <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Give Get Framework</h4></div>
 		<ul class="courses" style="margin-left: 1%;">
 	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:b:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/Launch-Quip/Template%20Guides/PDFs/Give%20-%20Get%20Reference%20Guide.pdf?csf=1&web=1&e=OhojHY" target="_blank">Reference Doc</a></li>
@@ -731,30 +963,62 @@ a{
   
   </div>
 
-   <a href="https://e2open.docebosaas.com/pages/112/micro-videos-genus-quotes-sales-artifacts-salesforce-and-sales-process"> <div class="ex2" style="max-width: 1230px;margin: auto;border: 3px solid #282828;background-color: #ebebeb;text-align: CENTER;margin-top: 3%;Padding: 7px;" >Genus Price Book Quotes</div></a>
-   
-  </div>
+  <div style="margin-top:2%;"><h3 style="text-align:center;">Sales Tools</h3></div><br />
+
+  <div class="ST_Row">
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/157/genus-quotes" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#1e415a;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Genus Quotes</span>
+</a>
+</div>
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/161/artifacts-working-with-sf-quip" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#1e415a;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Artifacts: Working with SF Quip</span>
+</a>
+</div>
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/162/salesforce-functionality" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#1e415a;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Salesforce: Functionality</span>
+</a>
+</div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+ </div>
+ 
+ <div style="margin-top: 3%;">
+  <img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/stage_50.png" width="1230" height="480" frameborder="0" scrolling="no" allowfullscreen title="Stage-50.png"></div>
+  
+ </div>
 
 <div id="60-closed/won" class="tabcontent">
   <div class="row">
  <div class="columns" style=" background-color: #b9ace8;">
     <P Style="font-size:11px;">60-Closed/Won</p>
     <h4 style="margin-top:1%;">GOALS</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>Ensure value is achieved.</li><li>Transition to Services and Customer Success.</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>Ensure value is achieved.</li><li>Transition to Services and Customer Success.</li></ul>
    </div>
  
    
    <div class="columns" style=" background-color: #b9ace8;">
     <P Style="font-size:11px;">60-Closed/Won</</p>
     <h4 style="margin-top:1%;">QUALIFICATION</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>Finance moves the deal to Backlog once documents are fully executed.</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>Finance moves the deal to Backlog once documents are fully executed.</li></ul>
    </div>
   
    
    <div class="columns" style=" background-color: #b9ace8;">
     <P Style="font-size:11px;">60-Closed/Won</</p>
     <h4 style="margin-top:1%;">DISQUALIFCATION</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>Contract not fully executed or implementation issues arise.</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>Contract not fully executed or implementation issues arise.</li></ul>
    </div>
   </div>
   <h3 style="text-align:center;">Sales Aids</h3>
@@ -762,17 +1026,17 @@ a{
   <div class="row">
   <div class="column">
     <div class="card">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#3c1e64;"></i>
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#3c1e64;"></i>
         <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Sales Stages</h4></div>
 		<ul class="courses" style="margin-left: 1%;">
-	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/43/e2open-sales-stages-deep-dive" target="_blank">E2open Sales Stages Deep Dive</a></li>
-	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:v:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/BU%20Ops%20Homepage%20Links/Leveraging%20the%20Sales%20Stages%20Recordings/Closed-Won%20Stage.mp4?csf=1&web=1&e=FWwPay" target="_blank">Stage 60 Video</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/43/e2open-sales-stages-deep-dive?generated_by=15533&hash=a6988003ab510e99044c30d5466608700b1fff87" target="_blank">E2open Sales Stages Deep Dive</a></li>
+	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.docebosaas.com/learn/course/2112/e2open-sales-stage-60?generated_by=15533&hash=f5595b370cb33326715e3e2bbed1279e8ef859d1" target="_blank">Stage 60 Video</a></li>
     </ul>
     </div>
   </div>
   <div class="column">
     <div class="card">
-      <div><i class="fa fa-star-o" aria-hidden="true" style="background-color:#3c1e64;"></i>
+      <div><i class="fa fa-link" aria-hidden="true" style="background-color:#3c1e64;"></i>
         <h4 style="font-weight: 400;font-size:13.8px;margin-top: -10%;margin-left: 20%;">Opportunity Transition Plan</h4></div>
 		<ul class="courses" style="margin-left: 1%;">
 	<li style="color:#1e5b67;"><a class="sales" href="https://e2open.sharepoint.com/:b:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/Launch-Quip/Template%20Guides/PDFs/Opportunity%20Transition%20Plan%20Reference%20Guide.pdf?csf=1&web=1&e=dSfGHb" target="_blank">Reference Doc</a></li>
@@ -783,34 +1047,100 @@ a{
   
   </div>
  
-   <a href="https://e2open.docebosaas.com/pages/112/micro-videos-genus-quotes-sales-artifacts-salesforce-and-sales-process"> <div class="ex2" style="max-width: 1230px;margin: auto;border: 3px solid #282828;background-color: #ebebeb;text-align: CENTER;margin-top: 3%;Padding: 7px;" >Genus Price Book Quotes</div></a>
-   
-  </div>
+<div style="margin-top:2%;"><h3 style="text-align:center;">Sales Tools</h3></div><br />
+
+  <div class="ST_Row">
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/157/genus-quotes" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#3c1e64;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Genus Quotes</span>
+</a>
+</div>
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/161/artifacts-working-with-sf-quip" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#3c1e64;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Artifacts: Working with SF Quip</span>
+</a>
+</div>
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/162/salesforce-functionality" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#3c1e64;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Salesforce: Functionality</span>
+</a>
+</div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+ </div>
+ 
+ <div style="margin-top: 3%;">
+  <img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/stage_60.png" width="1230" height="480" frameborder="0" scrolling="no" allowfullscreen title="Stage-60.png"></div>
+  
+ </div>
   
   <div id="90-backlog" class="tabcontent">
   <div class="row">
  <div class="columns" style=" background-color: #f5deb0;">
     <P Style="font-size:11px;">90-Backlog Closed Qualified Out / 90 - Closed Lost</p>
     <h4 style="margin-top:1%;">GOALS</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>Win/Lost Analysis.</li><li>Determine the reason for losing the opportunity and learn from it for future opportunities.</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>Win/Lost Analysis.</li><li>Determine the reason for losing the opportunity and learn from it for future opportunities.</li></ul>
    </div>
  
    
    <div class="columns" style=" background-color: #f5deb0;">
     <P Style="font-size:11px;">90-Backlog Closed Qualified Out / 90 - Closed Lost</</p>
     <h4 style="margin-top:1%;">QUALIFICATION</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>Complete Post Deal Analysis in Salesforce & set up a Follow-Up task.</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>Complete Post Deal Analysis in Salesforce.</li><li>Set up a Follow-Up task.</li></ul>
    </div>
   
    
    <div class="columns" style=" background-color: #f5deb0;">
     <P Style="font-size:11px;">90-Backlog Closed Qualified Out / 90 - Closed Lost</</p>
     <h4 style="margin-top:1%;">DISQUALIFCATION</h4>
-    <ul style="margin-top:-2%;margin-left:-3%;"><li>Opportunity lost to a competitor, solution fit, price, in-house solution, or project not funded.</li></ul>
+    <ul style="margin-top:-3%;margin-left:-3%;padding-right:5%;"><li>Opportunity lost to a competitor, solution fit, price, in-house solution, or project not funded.</li></ul>
    </div>
   </div>
   
-  </div>
+  <div style="margin-top:2%;"><h3 style="text-align:center;">Sales Tools</h3></div><br />
+
+  <div class="ST_Row">
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/157/genus-quotes" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#3c1e64;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Genus Quotes</span>
+</a>
+</div>
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/161/artifacts-working-with-sf-quip" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#3c1e64;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Artifacts: Working with SF Quip</span>
+</a>
+</div>
+
+<div class="ST_Card">
+<a class="ST_Courselinks" href="https://e2open.docebosaas.com/pages/162/salesforce-functionality" target="_blank" style="display:block;color:inherit;text-decoration:none;" rel="noreferrer noopener">
+<i class="fa fa-link" aria-hidden="true" style="background-color:#3c1e64;margin-left: 3%;"></i>
+<span style="font-weight: 400; font-size: 13.8px;display: block;padding-left: 6%;padding-right: 3%;;padding-top: 8%;padding-bottom: 15%;font-family: Arial;">Salesforce: Functionality</span>
+</a>
+</div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+ </div>
+ 
+ <div style="margin-top: 3%;">
+  <img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/stage_90.png" width="1230" height="480" frameborder="0" scrolling="no" allowfullscreen title="Stage-90.png"></div>
+  
+ </div>
 <script>
 function openApp(evt, appName) {
   var i, tabcontent, tablinks;
