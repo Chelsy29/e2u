@@ -81,12 +81,11 @@ body {
 .card {
    background: #fff;
    border-radius: 8px;
-   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-   margin: 9px;
+   margin: 30px;
    flex: 1;
    min-width: 250px;
-   max-width: 300px;
-   padding: 15px;
+   max-width: 260px;
+   padding: 0px;
    text-align: center;
    transition: transform 0.3s;
    text-decoration: none;
@@ -99,6 +98,31 @@ body {
    transform: translateY(-5px);
 }
 .card-header {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   margin-bottom: 10px;
+}
+.card1 {
+   background: #fff;
+   border-radius: 8px;
+   margin: 30px;
+   flex: 1;
+   min-width: 190px;
+   max-width: 190px;
+   padding: 0px;
+   text-align: center;
+   transition: transform 0.3s;
+   text-decoration: none;
+   color: #000;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+}
+.card1:hover {
+   transform: translateY(-5px);
+}
+.card1-header {
    display: flex;
    align-items: center;
    justify-content: flex-start;
@@ -124,6 +148,17 @@ body {
    color: #1e5b67;
    margin: 0;
 }
+.card1 i {
+   font-size: 16px; /* Icon size */
+   color: #fff;
+}
+
+.card1 h4 {
+   font-weight: 400;
+   font-size: 16px;
+   color: #1e5b67;
+   margin: 0;
+}
 .courses {
    flex: 1; /* Allow the list to grow vertically */
    list-style: disc inside;
@@ -141,7 +176,7 @@ body {
 
 <body>
 <div class="header">
-<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/headline_3.png" width="1256px" alt="Header Image">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/headline_1570_hq.png" width="1570" height="167" alt="Header Image">
 </div>
 <div class="container">
 <div class="sidebar">
@@ -150,68 +185,93 @@ body {
 <li><a href="#" onclick="showContent('buyers-journey')"><i class="fas fa-map"></i> Buyers Journey</a></li>
 <li><a href="#" onclick="showContent('entry-criteria')"><i class="fas fa-sign-in-alt"></i> Entry Criteria</a></li>
 <li><a href="#" onclick="showContent('exit-criteria')"><i class="fas fa-sign-out-alt"></i> Exit Criteria</a></li>
-<li><a href="#" onclick="showContent('key-responsibilities')"><i class="fas fa-users"></i> Key Responsibilities</a></li>
+<li><a href="#" onclick="showContent('key-responsibilities')"><i class="fas fa-users"></i> Who</a></li>
 <li><a href="#" onclick="showContent('sales-aids')"><i class="fas fa-handshake"></i> Sales Aids</a></li>
+<li><a href="#" onclick="showContent('sales-tools')"><i class="fas fa-wrench"></i> Sales Tools</a></li>
 <li><a href="#" onclick="showContent('raci-matrix')"><i class="fas fa-table"></i> Raci Matrix</a></li>
 </ul>
 </div>
 <div class="content">
 <div id="stage-goal" class="content-item">
-<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales%20Central/page.png" alt="Stage Goal Image">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/page_02_5__1_.png" alt="Stage Goal Image">
 </div>
 <div id="buyers-journey" class="content-item">
-<img src="buyers-journey.jpg" alt="Buyers Journey Image">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/page_07_2.png" alt="Buyers Journey Image">
 </div>
 <div id="entry-criteria" class="content-item">
-<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/page_03_heading_2.png" alt="Entry Criteria Image">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/page_03_5.png" width="1390" alt="Entry Criteria Image">
 </div>
 <div id="exit-criteria" class="content-item">
-<img src="exit-criteria.jpg" alt="Exit Criteria Image">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/page_04_6__1_.png" alt="Exit Criteria Image">
 </div>
 <div id="key-responsibilities" class="content-item">
-<img src="key-responsibilities.jpg" alt="Key Responsibilities Image">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/page_06_2__1_.png" alt="Key Responsibilities Image">
 </div>
 <div id="sales-aids" class="content-item">
-<div class="row">
-<a class="sales" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/2167/stage-00-10-sales-accepted-lead-reaching-out" target="_blank">
-<div class="card coming-soon">
-<div class="card-header">
-<div class="icon-bg"><i class="fa fa-link" aria-hidden="true"></i></div>
-<h4>Reaching Out</h4>
+<div class="header">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/objectives_1_1.png" alt="Header Image">
 </div>
-<ul class="courses">
-<li>Reach out timely when the lead is provided.</li>
-<li>Gather information during initial interactions.</li>
-<li>Determine lead potential.</li>
-</ul>
+<div class="row">
+<div class="column">
+<a class="sales" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/2167/stage-00-10-sales-accepted-lead-reaching-out" target="_blank">
+<div class="card">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/objectives_2.png" width="260px" alt="Image 1">
 </div>
 </a>
+</div>
+<div class="column">
 <a class="sales" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/2225/stage-00-10-sales-accepted-lead-bant" target="_blank">
 <div class="card">
-<div class="card-header">
-<div class="icon-bg"><i class="fa fa-link" aria-hidden="true"></i></div>
-<h4>BANT</h4>
-</div>
-<ul class="courses">
-<li>Read BANT form attached to the opportunity.</li>
-</ul>
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/objectives_3.png" width="260px alt="Image 2">
 </div>
 </a>
+</div>
+<div class="column">
 <a class="sales" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/2226/stage-00-10-sales-accepted-lead-following-up" target="_blank">
 <div class="card">
-<div class="card-header">
-<div class="icon-bg"><i class="fa fa-link" aria-hidden="true"></i></div>
-<h4>Following Up</h4>
-</div>
-<ul class="courses">
-<li>Meeting set to qualify leads.</li>
-</ul>
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/objectives_4.png" width="260px alt="Image 3">
 </div>
 </a>
+</div>
+</div>
+</div>
+<div id="sales-tools" class="content-item">
+<div class="header">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/easy_access_1.png" alt="Header Image">
+</div>
+<div class="row">
+<div class="column">
+<a class="sales" href="https://e2open.docebosaas.com/pages/157/genus-quotes" target="_blank">
+<div class="card1">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/easy_access_2.png" width="190px" alt="Image 1">
+</div>
+</a>
+</div>
+<div class="column">
+<a class="sales" href="https://e2open.docebosaas.com/pages/161/artifacts-working-with-sf-quip" target="_blank">
+<div class="card1">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/easy_access_3.png" width="190px alt="Image 2">
+</div>
+</a>
+</div>
+<div class="column">
+<a class="sales" href="https://e2open.docebosaas.com/pages/162/salesforce-functionality" target="_blank">
+<div class="card1">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/easy_access_4.png" width="190px alt="Image 3">
+</div>
+</a>
+</div>
+<div class="column">
+<a class="sales" href="https://e2open.docebosaas.com/learn/course/2315/forecasting-in-sfdc-2023?generated_by=15533&hash=36f2aa4f49e000c99b49f5bc89982e6775adcac6" target="_blank">
+<div class="card1">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/easy_access_5.png" width="190px alt="Image 3">
+</div>
+</a>
+</div>
 </div>
 </div>
 <div id="raci-matrix" class="content-item">
-<img src="raci-matrix.jpg" alt="Raci Matrix Image">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/raci.png" alt="Raci Matrix Image">
 </div>
 </div>
 </div>
