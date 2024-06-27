@@ -181,7 +181,7 @@ body {
 <div class="container">
 <div class="sidebar">
 <ul>
-<li><a href="#" onclick="showContent('stage-goal')"><i class="fas fa-bullseye"></i> Stage Goal</a></li>
+<li><a href="#" onclick="showContent('stage-goal')" class="active"><i class="fas fa-bullseye"></i> Stage Goal</a></li>
 <li><a href="#" onclick="showContent('buyers-journey')"><i class="fas fa-map"></i> Buyers Journey</a></li>
 <li><a href="#" onclick="showContent('entry-criteria')"><i class="fas fa-sign-in-alt"></i> Entry Criteria</a></li>
 <li><a href="#" onclick="showContent('exit-criteria')"><i class="fas fa-sign-out-alt"></i> Exit Criteria</a></li>
@@ -276,7 +276,10 @@ body {
 </div>
 </div>
 <script>
-function showContent(id) {
+document.addEventListener('DOMContentLoaded', function() {
+   showContent('stage-goal', document.querySelector('.sidebar ul li a[onclick="showContent(\'stage-goal\')"]'));
+});
+function showContent(id, element) {
    var contentItems = document.getElementsByClassName('content-item');
    for (var i = 0; i < contentItems.length; i++) {
        contentItems[i].style.display = 'none';
@@ -286,7 +289,11 @@ function showContent(id) {
    for (var j = 0; j < menuItems.length; j++) {
        menuItems[j].classList.remove('active');
    }
-   event.currentTarget.classList.add('active');
+   if (element) {
+       element.classList.add('active');
+   } else {
+       document.querySelector('.sidebar ul li a[onclick="showContent(\'' + id + '\')"]').classList.add('active');
+   }
 }
 </script>
 </body>
