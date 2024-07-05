@@ -6,285 +6,409 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <title>Menu with Content</title>
 <style>
+
 body {
-   font-family: Arial, sans-serif;
-   display: flex;
-   flex-direction: column; /* To stack header and container vertically */
-   margin: 0;
-   padding: 0;
-   height: 100vh;
+  font-family: Arial;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 }
 .header img {
-   width: 100%;
-   height: auto;
-   display: block;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  background-color: #1e5b67;
+  padding: 10px 0;
+  border-bottom: 2px solid #ddd;
+  margin:0;
+  padding:0;
+}
+.tabs a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+  Font-family: Arial;
+    font-size: 14px;
+    text-align: center;
+}
+.tabs a.active {
+  background-color: #97baba;
+  color: #333;
+}
+.tabs a:hover {
+background-color: #b2cec3;
+  color: #333;
+}
+.fixed-image img{
+width:100%;
+height:auto;
+display:block;
+    margin-top: -2px;
+  padding:0;	
 }
 .container {
-   display: flex;
-   width: 100%;
-   height: calc(100vh - 200px); /* Adjust height considering header image height */
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 250px);
 }
 .sidebar {
-   width: 20%;
-   background-color: #34495e;
-   color: #fff;
-   padding: 0;
-   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-   display: flex;
-   flex-direction: column;
+  width: 20%;
+  background-color: #34495e;
+  color: #fff;
+  padding: 0;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
 }
 .sidebar ul {
-   list-style: none;
-   padding: 0;
-   margin: 0;
-   flex: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
 }
 .sidebar ul li {
-   width: 100%;
+  width: 100%;
 }
 .sidebar ul li a {
-   display: block;
-   padding: 15px;
-   color: #fff;
-   text-decoration: none;
-   font-weight: bold;
-   transition: background-color 0.3s, color 0.3s;
+  display: block;
+  padding: 15px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
 }
 .sidebar ul li a:hover,
 .sidebar ul li a.active {
-   background-color: #2c3e50;
-   color: #1abc9c;
+  background-color: #2c3e50;
+  color: #1abc9c;
 }
 .sidebar ul li a i {
-   margin-right: 10px;
+  margin-right: 10px;
 }
 .content {
-   width: 80%;
-   padding: 20px;
-   overflow-y: auto;
+  width: 80%;
+  padding: 20px;
+ 
 }
 .content-item {
-   display: none;
+  display: none;
 }
 .content-item img {
-   max-width: 100%;
+  max-width: 100%;
 }
 .content-item p {
-   font-size: 1.2em;
+  font-size: 1.2em;
+}
+.content-item {
+   display: flex;
+   justify-content: space-between;
+}
+.content-left {
+   width: 200%; /* 2/3 of the content area */
+}
+.content-right {
+   width: 70%; /* 1/3 of the content area */
+   padding-left: 55px; /* Add some padding for spacing */
+}
+.content-right ul {
+   
+   padding: 0;
+}
+.content-right li {
+   margin-bottom: 10px;
+}
+.content-right a {
+   
+   text-decoration: none;
+   font-weight: bold;
+   transition: color 0.3s;
+}
+.content-right a:hover {
+   color: #34495e;
 }
 .row {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-around;
-   margin: 0 -9px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 -9px;
 }
 .card {
-   background: #fff;
-   border-radius: 8px;
-   margin: 30px;
-   flex: 1;
-   min-width: 250px;
-   max-width: 260px;
-   padding: 0px;
-   text-align: center;
-   transition: transform 0.3s;
-   text-decoration: none;
-   color: #000;
-   position: relative;
-   display: flex;
-   flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  margin: 30px;
+  flex: 1;
+  min-width: 250px;
+  max-width: 260px;
+  padding: 0px;
+  text-align: center;
+  transition: transform 0.3s;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .card:hover {
-   transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 .card-header {
-   display: flex;
-   align-items: center;
-   justify-content: flex-start;
-   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
 }
 .card1 {
-   background: #fff;
-   border-radius: 8px;
-   margin: 30px;
-   flex: 1;
-   min-width: 190px;
-   max-width: 190px;
-   padding: 0px;
-   text-align: center;
-   transition: transform 0.3s;
-   text-decoration: none;
-   color: #000;
-   position: relative;
-   display: flex;
-   flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  margin: 30px;
+  flex: 1;
+  min-width: 190px;
+  max-width: 190px;
+  padding: 0px;
+  text-align: center;
+  transition: transform 0.3s;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .card1:hover {
-   transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 .card1-header {
-   display: flex;
-   align-items: center;
-   justify-content: flex-start;
-   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
 }
 .icon-bg {
-   background-color: #517222;
-   border-radius: 50%;
-   padding: 10px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   margin-right: 10px;
+  background-color: #517222;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
 }
 .card i {
-   font-size: 16px; /* Icon size */
-   color: #fff;
+  font-size: 16px;
+  color: #fff;
 }
-
 .card h4 {
-   font-weight: 400;
-   font-size: 16px;
-   color: #1e5b67;
-   margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  color: #1e5b67;
+  margin: 0;
 }
 .card1 i {
-   font-size: 16px; /* Icon size */
-   color: #fff;
+  font-size: 16px;
+  color: #fff;
 }
-
 .card1 h4 {
-   font-weight: 400;
-   font-size: 16px;
-   color: #1e5b67;
-   margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  color: #1e5b67;
+  margin: 0;
 }
 .courses {
-   flex: 1; /* Allow the list to grow vertically */
-   list-style: disc inside;
-   padding: 0;
-   margin-top: 10px;
-   text-align: left;
-   font-size: 14px;
-   overflow-y: auto; /* Add scrollbar if necessary */
+  flex: 1;
+  list-style: disc inside;
+  padding: 0;
+  margin-top: 10px;
+  text-align: left;
+  font-size: 14px;
+  overflow-y: auto;
 }
 .courses li {
-   color: #282828;
-   margin-bottom: 5px;
+  color: #282828;
+  margin-bottom: 5px;
+}
+.title-box {
+   background-color: #517222;
+   padding: 6px;
+   margin-bottom: 20px; /* Adjust spacing as needed */
+   text-align: left; /* Align text to the left */
+   border-radius: 0px;
+   width: 50%; /* Make the box occupy half of the content area */
+   float: left; /* Float the box to the left */
+}
+.title-box h3 {
+   margin: 0;
+   font-size: 18px;
+   color: #a3ca8c;
 }
 </style>
-
+</head>
 <body>
 <div class="header">
-<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/headline_1570_hq.png" width="1570" height="167" alt="Header Image">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/headline_13.png" width="1570" height="167" alt="Header Image">
+</div>
+<div style="background-color:#1e5b67;">
+<div class="tabs">
+<a href="#" onclick="showTab('long-term-development')" class="active">Long Term <br/>Development</a>
+<a href="#" onclick="showTab('stage-00-10')">Stage 00-10 <br/>Pre-Qual/Sales <br/>Accepted Lead</a>
+<a href="#" onclick="showTab('stage-20')">Stage 20 <br/>Qualify</a>
+<a href="#" onclick="showTab('stage-30')">Stage 30 <br/>Discovery</a>
+<a href="#" onclick="showTab('stage-40')">Stage 40 <br/>Tech-Prove</a>
+<a href="#" onclick="showTab('stage-50')">Stage 50 <br/>Negotiation</a>
+<a href="#" onclick="showTab('stage-60')">Stage 60 <br/>Closed Won</a>
+<a href="#" onclick="showTab('stage-90')">Stage 90 <br/>Closed Lost</a>
+</div>
+<div class="fixed-image">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/sales_14.png" width="1570">
+</div>
 </div>
 <div class="container">
 <div class="sidebar">
 <ul>
 <li><a href="#" onclick="showContent('stage-goal')" class="active"><i class="fas fa-bullseye"></i> Stage Goal</a></li>
-<li><a href="#" onclick="showContent('buyers-journey')"><i class="fas fa-map"></i> Buyers Journey</a></li>
 <li><a href="#" onclick="showContent('entry-criteria')"><i class="fas fa-sign-in-alt"></i> Entry Criteria</a></li>
+<li><a href="#" onclick="showContent('key-responsibilities')"><i class="fas fa-users"></i> Key Responsibilities</a></li>
+<li><a href="#" onclick="showContent('best-practices')"><i class="fas fa-check-circle"></i> Best Practices</a></li>
 <li><a href="#" onclick="showContent('exit-criteria')"><i class="fas fa-sign-out-alt"></i> Exit Criteria</a></li>
-<li><a href="#" onclick="showContent('key-responsibilities')"><i class="fas fa-users"></i> Who</a></li>
-<li><a href="#" onclick="showContent('sales-aids')"><i class="fas fa-handshake"></i> Sales Aids</a></li>
-<li><a href="#" onclick="showContent('sales-tools')"><i class="fas fa-wrench"></i> Sales Tools</a></li>
-<li><a href="#" onclick="showContent('raci-matrix')"><i class="fas fa-table"></i> Raci Matrix</a></li>
 </ul>
 </div>
 <div class="content">
-<div id="stage-goal" class="content-item">
-<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/page_02_5__1_.png" alt="Stage Goal Image">
+<div id="20-stage-goal" class="content-item">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/sm_02.png" width="1390" alt="Stage Goal Image">
 </div>
-<div id="buyers-journey" class="content-item">
-<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/page_07_2.png" alt="Buyers Journey Image">
+<div id="20-entry-criteria" class="content-item">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/sm_03.png" width="1390" alt="Entry Criteria Image">
 </div>
-<div id="entry-criteria" class="content-item">
-<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/page_03_5.png" width="1390" alt="Entry Criteria Image">
+<div id="20-key-responsibilities" class="content-item" style="display:flex !important;">
+<div class="content-left">
+<div class="title-box">
+<h3>Key Responsibilities by Role</h3>
 </div>
-<div id="exit-criteria" class="content-item">
-<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/page_04_6__1_.png" alt="Exit Criteria Image">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/screenshot_2024_07_05_at_5_24_25_pm.png" alt="Key Responsibilities Image">
 </div>
-<div id="key-responsibilities" class="content-item">
-<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/page_06_2__1_.png" alt="Key Responsibilities Image">
-</div>
-<div id="sales-aids" class="content-item">
-<div class="header">
-<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/objectives_1_1.png" alt="Header Image">
-</div>
-<div class="row">
-<div class="column">
-<a class="sales" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/2167/stage-00-10-sales-accepted-lead-reaching-out" target="_blank">
-<div class="card">
-<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/objectives_2.png" width="260px" alt="Image 1">
-</div>
-</a>
-</div>
-<div class="column">
-<a class="sales" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/2225/stage-00-10-sales-accepted-lead-bant" target="_blank">
-<div class="card">
-<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/objectives_3.png" width="260px alt="Image 2">
-</div>
-</a>
-</div>
-<div class="column">
-<a class="sales" href="https://e2open.docebosaas.com/learn/course/internal/view/elearning/2226/stage-00-10-sales-accepted-lead-following-up" target="_blank">
-<div class="card">
-<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/objectives_4.png" width="260px alt="Image 3">
-</div>
-</a>
+<div class="content-right">
+<div class="title-box">
+<h3>Sales Aids</h3>
+</div><br/><br/>
+<div>
+<ul>
+<li><a href="https://e2open.sharepoint.com/:b:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/Launch-Quip/Template%20Guides/PDFs/BANT%20Assessment%20Reference%20Guide%20-%20Rebranded%20(Updated%20as%20@%201%20AUG%202023).pdf?csf=1&web=1&e=MIFeux" target="_blank">BANT</a></li>
+<li><a href="https://e2open.sharepoint.com/:b:/r/teams/Sales/FieldOps/GlobalFieldEnablement/01.%20Sales/Indicative%20Pricing/Indicative_Pricing%20Update_04182024.pdf?csf=1&web=1&e=tc407J" target="_blank">Indicative Pricing</a></li>
+<li><a href="https://e2open.sharepoint.com/:b:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/Launch-Quip/Template%20Guides/PDFs/Mutual%20Evaluation%20Plan%20Reference%20Guide%20-%20Rebranded.pdf?csf=1&web=1&e=3B3dqN" target="_blank">Evaluation Plan</a></li>
+<li><a href="https://e2open.sharepoint.com/teams/Sales/FieldOps/GlobalFieldEnablement/02.%20Solutions%20Consulting/SC%20Templates/Opportunity%20Scoping" target="_blank">Opportunity Scoping Document with Discovery</a></li>
+<li><a href="https://e2open.sharepoint.com/sites/ProductMarketing#case-studies" target="_blank">Case Studies</a></li>
+<li><a href="https://e2open.sharepoint.com/sites/ProductMarketing#white-papers" target="_blank">White Paper</a></li>
+<li><a href="https://e2open.sharepoint.com/sites/ProductMarketing#analyst-reports" target="_blank">Analyst Reports</a></li>
+</ul>
 </div>
 </div>
 </div>
-<div id="sales-tools" class="content-item">
-<div class="header">
-<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/easy_access_1.png" alt="Header Image">
+<div id="20-best-practices" class="content-item">
+<img src="" alt="Best Practices Image">
 </div>
-<div class="row">
-<div class="column">
-<a class="sales" href="https://e2open.docebosaas.com/pages/157/genus-quotes" target="_blank">
-<div class="card1">
-<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/easy_access_2.png" width="190px" alt="Image 1">
-</div>
-</a>
-</div>
-<div class="column">
-<a class="sales" href="https://e2open.docebosaas.com/pages/161/artifacts-working-with-sf-quip" target="_blank">
-<div class="card1">
-<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/easy_access_3.png" width="190px alt="Image 2">
-</div>
-</a>
-</div>
-<div class="column">
-<a class="sales" href="https://e2open.docebosaas.com/pages/162/salesforce-functionality" target="_blank">
-<div class="card1">
-<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/easy_access_4.png" width="190px alt="Image 3">
-</div>
-</a>
-</div>
-<div class="column">
-<a class="sales" href="https://e2open.docebosaas.com/learn/course/2315/forecasting-in-sfdc-2023?generated_by=15533&hash=36f2aa4f49e000c99b49f5bc89982e6775adcac6" target="_blank">
-<div class="card1">
-<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/easy_access_5.png" width="190px alt="Image 3">
-</div>
-</a>
-</div>
-</div>
-</div>
-<div id="raci-matrix" class="content-item">
-<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/screenshot_2024_06_27_154235.png" alt="Raci Matrix Image">
+<div id="20-exit-criteria" class="content-item">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/sm_04.png" alt="Exit Criteria Image">
 </div>
 </div>
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+   showTab('long-term-development');
    showContent('stage-goal', document.querySelector('.sidebar ul li a[onclick="showContent(\'stage-goal\')"]'));
 });
+function showTab(tab) {
+   var tabs = document.querySelectorAll('.tabs a');
+   tabs.forEach(function(tabElement) {
+       tabElement.classList.remove('active');
+   });
+   document.querySelector('.tabs a[onclick="showTab(\'' + tab + '\')"]').classList.add('active');
+   var sidebar = document.querySelector('.sidebar ul');
+   var sidebarItems = {
+       'long-term-development': [
+           { id: 'long-term-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: 'long-term-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: 'long-term-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities' },
+           { id: 'long-term-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: 'long-term-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ],
+       'stage-00-10': [
+           { id: '00-10-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: '00-10-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: '00-10-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities' },
+           { id: '00-10-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: '00-10-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ],
+       'stage-20': [
+           { id: '20-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: '20-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: '20-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities' },
+           { id: '20-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: '20-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ],
+       'stage-30': [
+           { id: '30-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: '30-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: '30-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities' },
+           { id: '30-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: '30-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ],
+       'stage-40': [
+           { id: '40-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: '40-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: '40-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities' },
+           { id: '40-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: '40-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ],
+       'stage-50': [
+           { id: '50-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: '50-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: '50-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities' },
+           { id: '50-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: '50-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ],
+       'stage-60': [
+           { id: '60-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: '60-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: '60-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities' },
+           { id: '60-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: '60-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ],
+       'stage-90': [
+           { id: '90-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: '90-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: '90-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities' },
+           { id: '90-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: '90-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ]
+   };
+   var selectedItems = sidebarItems[tab];
+   if (selectedItems) {
+       sidebar.innerHTML = '';
+       selectedItems.forEach(function(item) {
+           var li = document.createElement('li');
+           var a = document.createElement('a');
+           a.href = '#';
+           a.setAttribute('onclick', 'showContent("' +
+item.id
++ '", this)');
+           a.innerHTML = '<i class="' + item.icon + '"></i> ' + item.text;
+           li.appendChild(a);
+           sidebar.appendChild(li);
+       });
+       showContent(selectedItems[0].id, document.querySelector('.sidebar ul li a[onclick="showContent(\'' + selectedItems[0].id + '\')"]'));
+   }
+}
 function showContent(id, element) {
    var contentItems = document.getElementsByClassName('content-item');
    for (var i = 0; i < contentItems.length; i++) {
        contentItems[i].style.display = 'none';
    }
-   document.getElementById(id).style.display = 'block';
+   document.getElementById(id).style.display = '';
    var menuItems = document.querySelectorAll('.sidebar ul li a');
    for (var j = 0; j < menuItems.length; j++) {
        menuItems[j].classList.remove('active');
@@ -296,5 +420,3 @@ function showContent(id, element) {
    }
 }
 </script>
-</body>
-</html>
