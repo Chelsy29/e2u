@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<title>Menu with Content</title>
+<style>
+
+body {
+  font-family: Arial;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+/* Header */
+.header {
+   width: 100%;
+   height: 100px;
+   background-color: #1e5b67; /* Dark Cadet */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   text-align: center;
+}
+.header h1 {
+   margin: 0;
+}
+.header a {
+   background-color: #e8ce96; /* Gold */
+   color: #282828; /* Carbon */
+   padding: 10px 20px;
+   text-decoration: none;
+   display: flex;
+   align-items: center;
+   border-radius: 5px;
+   border: 1px solid #1e5b67; /* Dark Cadet */
+}
+.header a i {
+   margin-right: 5px;
+}
+.header a:hover {
+   background-color: #c69a3f;
+   color:#ffffff;
+}
+/* Horizontal Tabs */
+.tabs {
+   display: flex;
+   justify-content: space-around;
+   background-color: #282828; /* Dark Cadet */
+   padding: 10px 0;
+   border-bottom: 2px solid #ddd;
+   margin: 0;
+   padding: 0;
+}
+.tabs a {
+   padding: 10px 20px;
+   text-decoration: none;
+   color: #fff;
+   font-weight: bold;
+   transition: background-color 0.3s, color 0.3s;
+   font-family: Arial;
+   font-size: 16px;
+   text-align: center;
+}
+.tabs a.active {
+   background-color: #3d8080; /* Medium Cadet */
+   color: #ffffff; /* Carbon */
+}
+.tabs a:hover {
+   background-color: #b2cec3;
+   color: #333;
+}
+/* Fixed Image */
+.fixed-image img {
+   width: 100%;
+   height: auto;
+   display: block;
+   margin-top: -2px;
+   padding: 0;
+}
+/* Container */
+.container {
+   display: flex;
+   width: 100%;
+   height: calc(100vh - 250px);
+}
+/* Sidebar (Vertical Tabs) */
+.sidebar {
+   width: 20%;
+   background-color: #ebebeb; /* Light Carbon */
+   color: #282828; /* Carbon */
+   padding: 0;
+   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+   display: flex;
+   flex-direction: column;
+}
+.sidebar ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   flex: 1;
+}
+.sidebar ul li {
+   width: 100%;
+}
+.sidebar ul li a {
+   display: block;
+   padding: 15px;
+   color: #282828; /* Carbon */
+   text-decoration: none;
+   font-weight: bold;
+   transition: background-color 0.3s, color 0.3s;
+}
+.sidebar ul li a:hover{
+   background-color: #80994d; /* Medium Sage */
+   color: #ffffff; /* Carbon */
+   }
+.sidebar ul li a.active {
+   background-color: #517222; /* Medium Sage */
+   color: #ffffff; /* Carbon */
+}
+.sidebar ul li a i {
+   margin-right: 10px;
+}
+.content {
+  width: 80%;
+  padding: 20px;
+ 
+}
+.content-item {
+  display: none;
+}
+.content-item img {
+  max-width: 100%;
+}
+.content-item p {
+  font-size: 1.2em;
+}
+.content-item {
+   display: flex;
+   justify-content: space-between;
+}
+.content-left {
+   width: 200%; /* 2/3 of the content area */
+}
+.content-right {
+   width: 70%; /* 1/3 of the content area */
+   padding-left: 55px; /* Add some padding for spacing */
+}
+.content-right ul {
+   
+   padding: 0;
+}
+.content-right li {
+   margin-bottom: 10px;
+}
+.content-right a {
+   
+   text-decoration: none;
+  font-size:15px;
+   transition: color 0.3s;
+}
+.content-right a:hover {
+   color: #34495e;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 -9px;
+}
+.card {
+  background: #fff;
+  border-radius: 8px;
+  margin: 30px;
+  flex: 1;
+  min-width: 250px;
+  max-width: 260px;
+  padding: 0px;
+  text-align: center;
+  transition: transform 0.3s;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+.card1 {
+  background: #fff;
+  border-radius: 8px;
+  margin: 30px;
+  flex: 1;
+  min-width: 190px;
+  max-width: 190px;
+  padding: 0px;
+  text-align: center;
+  transition: transform 0.3s;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.card1:hover {
+  transform: translateY(-5px);
+}
+.card1-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+.icon-bg {
+  background-color: #517222;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+.card i {
+  font-size: 16px;
+  color: #fff;
+}
+.card h4 {
+  font-weight: 400;
+  font-size: 16px;
+  color: #1e5b67;
+  margin: 0;
+}
+.card1 i {
+  font-size: 16px;
+  color: #fff;
+}
+.card1 h4 {
+  font-weight: 400;
+  font-size: 16px;
+  color: #1e5b67;
+  margin: 0;
+}
+.courses {
+  flex: 1;
+  list-style: disc inside;
+  padding: 0;
+  margin-top: 10px;
+  text-align: left;
+  font-size: 16px;
+  overflow-y: auto;
+}
+.courses li {
+  color: #282828;
+  margin-bottom: 5px;
+}
+.title-box {
+   background-color: #517222;
+   padding: 6px;
+   margin-bottom: 20px; /* Adjust spacing as needed */
+   text-align: left; /* Align text to the left */
+   border-radius: 0px;
+   width: 50%; /* Make the box occupy half of the content area */
+   float: left; /* Float the box to the left */
+}
+.title-box h3 {
+   margin: 0;
+   font-size: 18px;
+   color: #a3ca8c;
+}
+.content-item {
+ display: flex;
+}
+.content-left {
+ width: 50%;
+ padding-right: 20px; /* Optional: Add padding for spacing */
+}
+.content-right {
+ width: 60%;
+ display: flex;
+ align-items: center; /* Center align vertically */
+ /* Optional: Center align horizontally if needed */
+}
+.content-left .stagegoal {
+ margin-bottom: 20px; /* Optional: Add margin for spacing between sections */
+}
+.content-right img.sgimg {
+ width: 100%;
+ height: auto;
+}
+.video-button {
+ display: inline-flex;
+ align-items: center;
+ background-color: #1e5b67;
+ color: #fff;
+ text-decoration: none;
+ padding: 10px 20px;
+ margin-top: 0px;
+ font-size: 16px;
+ cursor: pointer;
+ transition: background-color 0.3s;
+ border-radius: 5px;
+}
+.video-button i {
+ margin-right: 10px;
+}
+.video-button:hover {
+ background-color: #97baba;
+}
+.content-left .stagegoal {
+ margin-bottom: 20px; /* Optional: Add margin for spacing between sections */
+}
+.custom-button {
+ display: inline-block;
+ padding: 6px 7px;
+ background-color: #fff;
+ color: #1e5b67;
+ text-decoration: none;
+ border: 2px solid #1e5b67;
+ border-radius: 5px;
+ margin-bottom: 10px;
+ transition: background-color 0.3s, color 0.3s;
+ font-size:11px;
+}
+.custom-button i {
+ margin-right: 10px;
+}
+.custom-button:hover {
+ background-color: #fffff;
+ color: #fff;
+}
+</style>
+</head>
+<body>
+<div class="header" style="position: relative;">
+<div style="width: 100%; height: 167px; position: relative;">
+<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white;">
+<h1 style="margin: 0;color:#97baba;">Stage 30 - Discovery</h1>
+</div>
+</div>
+<div style="position: absolute; top: 70%; right: 2%; transform: translateY(-50%); display: flex; gap: 10px;">
+<a href="https://e2open.docebosaas.com/pages/189/sales-central-landing-page" target="_blank" style="padding: 10px 20px; text-decoration: none; display: flex; align-items: center; border-radius: 5px;">
+<i class="fas fa-arrow-left" style="margin-right: 5px;"></i> Go back to Sales Central
+</a>
+<a href="https://e2open.docebosaas.com/pages/190/raci-matrix" target="_blank" style="padding: 10px 20px; text-decoration: none; display: flex; align-items: center; border-radius: 5px;">
+<i class="fas fa-table" style="margin-right: 5px;"></i> RACI Matrix
+</a>
+</div>
+</div>
+<div style="background-color:#1e5b67;">
+<div class="tabs">
+<a href="#" onclick="showTab('long-term-development')" class="active">Long Term <br/>Development</a>
+<a href="#" onclick="showTab('stage-00-10')">Stage 00-10 <br/>Pre-Qual/Sales <br/>Accepted Lead</a>
+<a href="#" onclick="showTab('stage-20')">Stage 20 <br/>Qualify</a>
+<a href="#" onclick="showTab('stage-30')">Stage 30 <br/>Discovery</a>
+<a href="#" onclick="showTab('stage-40')">Stage 40 <br/>Tech-Prove</a>
+<a href="#" onclick="showTab('stage-50')">Stage 50 <br/>Negotiation</a>
+<a href="#" onclick="showTab('stage-60')">Stage 60 <br/>Closed Won</a>
+<a href="#" onclick="showTab('stage-90')">Stage 90 <br/>Closed Lost</a>
+</div>
+</div>
+<div class="container">
+<div class="sidebar">
+<ul>
+<li><a href="#" onclick="showContent('stage-goal')" class="active"><i class="fas fa-bullseye"></i> Stage Goal</a></li>
+<li><a href="#" onclick="showContent('entry-criteria')"><i class="fas fa-sign-in-alt"></i> Entry Criteria</a></li>
+<li><a href="#" onclick="showContent('key-responsibilities')"><i class="fas fa-users"></i> Key Responsibilities</a></li>
+<li><a href="#" onclick="showContent('best-practices')"><i class="fas fa-check-circle"></i> Best Practices</a></li>
+<li><a href="#" onclick="showContent('exit-criteria')"><i class="fas fa-sign-out-alt"></i> Exit Criteria</a></li>
+</ul>
+</div>
+<div class="content">
+<div id="long-term-stage-goal" class="content-item" style="display: flex;">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #517222;"> Stage Goal </h2>
+<ul><li style="font-size: 16px;">Coming Soon.</li></ul>
+
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/stage_goal.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+
+<div id="long-term-entry-criteria" class="content-item">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #8e7029;"> Entry Criteria</h2>
+<ul style="line-height:24px"><li style="font-size: 16px;">Coming Soon.</li>
+</ul>
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/entry_criteria.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+<div id="long-term-key-responsibilities" class="content-item" style="display:flex !important;">
+<div class="content-left" style="width:260%;">
+<ul style="line-height:24px"><li style="font-size: 16px;">Coming Soon.</li>
+</ul>
+</div>
+<div class="content-right" style="padding-left: 0px; display: flex; flex-direction: column; gap: 10px;margin-top:1%;">
+</div>
+</div>
+
+<div id="long-term-best-practices" class="content-item">
+<div class="bp">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #4d3075;">Best Practice - Do’s and Dont's</h2>
+<ul style="line-height:24px"><li style="font-size: 16px;">Coming Soon.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="long-term-exit-criteria" class="content-item">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #1e5b67;"> Exit Criteria</h2>
+<ul style="line-height:24px"><li style="font-size: 16px;">Coming Soon.</li>
+</ul>
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/exit_criteria.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+
+
+
+
+
+<div id="00-10-stage-goal" class="content-item" style="display: flex;">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #517222;"> Stage Goal </h2>
+<ul><li style="font-size: 16px;">Identify & Develop Opportunity.</li></ul>
+<a target="_blank" class="video-button">
+<i class="fas fa-video"></i> Coming Soon: Stage 00-10 Overview
+</a>
+</div>
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #517222;"> Qualification </h2>
+<ul style="line-height:24px">
+<li style="font-size: 16px;">Speak with the target, agreed on next steps.</li>
+<li style="font-size: 16px;">There is a reasonable expectation that the opportunity will close within the rolling 12 months.</li>
+</ul>
+</div>
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #517222;"> Disqualification </h2>
+<ul style="line-height:24px">
+<li style="font-size: 16px;">Prospect doesn't have a need for the solution, lacks budget or authority, or is unresponsive. Move to LTD or disqualify.</li>
+</ul>
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/stage_goal.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+
+
+<div id="00-10-entry-criteria" class="content-item">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #8e7029;"> Entry Criteria</h2>
+<ul style="line-height:24px"><li style="font-size: 16px;">Speak with the target, agree on next steps, and there is a reasonable expectation that the opportunity will close within the rolling 12 months.</li>
+</ul>
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/entry_criteria.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+<div id="00-10-key-responsibilities" class="content-item" style="display:flex !important;">
+<div class="content-left" style="width:260%;">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/stage_10_krr.png" alt="Key Responsibilities Image">
+</div>
+<div class="content-right" style="padding-left: 0px; display: flex; flex-direction: column; gap: 10px;margin-top:1%;">
+<div>
+<a href="https://e2open.sharepoint.com/:x:/r/teams/Sales/FieldOps/GlobalFieldEnablement/01.%20Sales/Sales%20Templates%20(Updated%20Aug%202023)/BANT%20Assessment%20(Updated%20Aug%202023)/BANT-Assessment-Template.xlsx?d=wd9f4b6e0e1774036a9e8014d5fef39dc&csf=1&web=1&e=OBYkIu" class="custom-button" target="_blank" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;"><i class="fas fa-file-alt"></i> BANT Assessment Template</a>
+<a href="https://e2open.sharepoint.com/:b:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/Launch-Quip/Template%20Guides/PDFs/BANT%20Assessment%20Reference%20Guide%20-%20Rebranded%20(Updated%20as%20@%201%20AUG%202023).pdf?csf=1&web=1&e=MIFeux" class="custom-button" target="_blank" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;"><i class="fas fa-book"></i> BANT Assessment Guide</a>
+<a href="https://e2open.sharepoint.com/:p:/r/teams/Sales/FieldOps/GlobalFieldEnablement/01.%20Sales/Sales%20Templates%20(Updated%20Aug%202023)/Account%20Plan%20(Updated%20Aug%202023)/Account%20Plan%20Template%20(Aug%202023).pptx?d=w005c3d9244b74188b148892818efaad0&csf=1&web=1&e=QtiDQL" class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-file-alt"></i> Account Plan Template</a>
+<a href="https://e2open.sharepoint.com/:b:/r/teams/Sales/FieldOps/GlobalFieldEnablement/01.%20Sales/Sales%20Templates%20(Updated%20Aug%202023)/Reference%20Guides%20(Updated%20Aug%202023)/Account%20Plan%20Reference%20Guide%20-%20Rebranded%20(Updated%20as%20@%201%20AUG%202023).pdf?csf=1&web=1&e=qpCKe9" class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-book"></i> Account Plan Guide</a>
+<a class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-file-alt"></i> Coming Soon: Whitespace</a>
+<a class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-file-alt"></i> Coming Soon: Cold Calling Scripts</a>
+</div>
+</div>
+</div>
+<div id="00-10-best-practices" class="content-item">
+<div class="bp">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #4d3075;">Best Practice - Do’s and Dont's</h2>
+<table style="width: 95%; line-height: 20px; border-collapse: collapse;border-spacing:0;margin:2%;">
+<tr>
+<th style="font-size: 16px; text-align: left; padding: 5px; border-bottom: 1px solid #ddd;width:47%;color:#7239a4;">Do’s</th>
+<th style="font-size: 16px; text-align: left; padding: 5px; border-bottom: 1px solid #ddd; width:50%;color:#7239a4;">Dont's</th>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Maintain a pipeline with five times your quota to ensure success.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Wait to follow up on the lead as they may also be contacting your competitors.</li></ul></td>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Ask Partners (e.g., Accenture) for referrals.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"></td>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Respond to leads promptly, gather information during initial interactions, and determine lead potential.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"></td>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Reach out timely from when the lead is provided – time is of the essence with warm leads.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"></td>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Read the BANT form as attached to the opportunity.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"></td>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Discuss with the SDR on information in the BANT form that you have questions about.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"></td>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Use Salesforce for lead management & KEEP IT UP TO DATE.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"></td>
+
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div id="00-10-exit-criteria" class="content-item">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #1e5b67;"> Exit Criteria</h2>
+<ul style="line-height:24px"><li style="font-size: 16px;">Understanding of initial business need.</li>
+<li style="font-size: 16px;">Meeting set to qualify opportunity.</li>
+</ul>
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/exit_criteria.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+
+
+
+
+<div id="20-stage-goal" class="content-item" style="display: flex;">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #517222;"> Stage Goal </h2>
+<ul><li style="font-size: 16px;">Decide to participate.</li></ul>
+<a href="https://e2open.docebosaas.com/learn/course/2108/e2open-sales-stage-20?generated_by=15533&hash=32d985ecb23bccb12798d8a067278193bd45649c" target="_blank" class="video-button">
+<i class="fas fa-video"></i> Watch Stage 20 Overview
+</a>
+</div>
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #517222;"> Qualification </h2>
+<ul style="line-height:24px">
+<li style="font-size: 16px;">Customer has expressed interest in e2open solutions.</li>
+<li style="font-size: 16px;">Discuss with prospect indicative pricing to determine budget fit.</li>
+<li style="font-size: 16px;">In case of RFx: Qualify fit, and if the preference is to participate, create RFx request so presales can validate fit.</li>
+</ul>
+</div>
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #517222;"> Disqualification </h2>
+<ul style="line-height:24px">
+<li style="font-size: 16px;">Prospect doesn't agree to engage in BANT and value hypothesis discussions, has no identified pain points, or isn't willing to assign a Coach/Sponsor.</li>
+</ul>
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/stage_goal.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+
+<div id="20-entry-criteria" class="content-item">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #8e7029;"> Entry Criteria</h2>
+<ul style="line-height:24px"><li style="font-size: 16px;">Customer has expressed interest in e2open solutions.</li>
+<li style="font-size: 16px;">Discuss with prospect indicative pricing to determine budget fit.</li>
+<li style="font-size: 16px;">In case of RFx: Qualify fit/strategy, and if the preference is to participate, create RFx request so presales can validate fit.</li>
+</ul>
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/entry_criteria.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+<div id="20-key-responsibilities" class="content-item" style="display:flex !important;">
+<div class="content-left" style="width:260%;">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/stage_20_kr.png" alt="Key Responsibilities Image">
+</div>
+<div class="content-right" style="padding-left: 0px; display: flex; flex-direction: column; gap: 10px;margin-top:1%;">
+<div>
+<a href="https://e2open.sharepoint.com/:x:/r/teams/Sales/FieldOps/GlobalFieldEnablement/01.%20Sales/Sales%20Templates%20(Updated%20Aug%202023)/BANT%20Assessment%20(Updated%20Aug%202023)/BANT-Assessment-Template.xlsx?d=wd9f4b6e0e1774036a9e8014d5fef39dc&csf=1&web=1&e=OBYkIu" class="custom-button" target="_blank" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;"><i class="fas fa-file-alt"></i> BANT Assessment Template</a>
+<a href="https://e2open.sharepoint.com/:b:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/Launch-Quip/Template%20Guides/PDFs/BANT%20Assessment%20Reference%20Guide%20-%20Rebranded%20(Updated%20as%20@%201%20AUG%202023).pdf?csf=1&web=1&e=MIFeux" class="custom-button" target="_blank" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;"><i class="fas fa-book"></i> BANT Assessment Guide</a>
+<a href="https://e2open.sharepoint.com/:b:/r/teams/Sales/FieldOps/GlobalFieldEnablement/01.%20Sales/Indicative%20Pricing/Indicative_Pricing%20Update_04182024.pdf?csf=1&web=1&e=tc407J" class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-hand-holding-usd"></i> Indicative Pricing</a>
+<a href="https://e2open.sharepoint.com/:x:/r/teams/Sales/FieldOps/GlobalFieldEnablement/01.%20Sales/Sales%20Templates%20(Updated%20Aug%202023)/Mutual%20Evaluation%20Plan%20(Updated%20Aug%202023)/Mutual-Evaluation-Plan-Template.xlsx?d=wfee934139fe946c2993a20003ad3d11a&csf=1&web=1&e=utQJX0" class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-file-alt"></i> Evaluation Plan Template</a>
+<a href="https://e2open.sharepoint.com/:b:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/Launch-Quip/Template%20Guides/PDFs/Mutual%20Evaluation%20Plan%20Reference%20Guide%20-%20Rebranded.pdf?csf=1&web=1&e=3B3dqN" class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-book"></i> Evaluation Plan Guide</a>
+<a href="https://e2open.sharepoint.com/teams/Sales/FieldOps/GlobalFieldEnablement/02.%20Solutions%20Consulting/SC%20Templates/Opportunity%20Scoping" class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-file-alt"></i> Opportunity Scoping Document with Discovery</a>
+<a href="https://e2open.sharepoint.com/sites/ProductMarketing#case-studies" class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-file"></i> Case Studies</a>
+<a href="https://e2open.sharepoint.com/sites/ProductMarketing#white-papers" class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-file"></i> White Paper</a>
+<a href="https://e2open.sharepoint.com/sites/ProductMarketing#analyst-reports" class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-file-alt"></i> Analyst Reports</a>
+</div>
+</div>
+</div>
+<div id="20-best-practices" class="content-item">
+<div class="bp">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #4d3075;">Best Practice - Do’s and Dont's</h2>
+<table style="width: 95%; line-height: 20px; border-collapse: collapse;border-spacing:0;margin:2%;">
+<tr>
+<th style="font-size: 16px; text-align: left; padding: 5px; border-bottom: 1px solid #ddd;width:47%;color:#7239a4;">Do’s</th>
+<th style="font-size: 16px; text-align: left; padding: 5px; border-bottom: 1px solid #ddd; width:50%;color:#7239a4;">Dont's</th>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Understand who to bring into process early for involvement as a customer executive sponsor – Aim High > VP or higher.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Sell products into industries that we do not have references that can support your value story.</li></ul></td>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Have customer prove to you they can support indicative pricing models for desired solutions. Our target market is (> $1b).</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Waste time on low-potential leads or pressure leads into moving forward if they're not ready.</li></ul></td>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Provide RFx Template that aligns to customer requirements to e2open’s differentiation strengths. <b>Customize RFx cover letter (mandate)</b>.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"><ul><li>If communication has slowed or is non-existent, assume competitors have already made inroads.</li></ul></td>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>If special products are identified, opportunity ASD will engage peers (e.g., Parcel, LaaS)</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Waste time with blind RFxs.</li></ul></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div id="20-exit-criteria" class="content-item">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #1e5b67;"> Exit Criteria</h2>
+<ul style="line-height:24px"><li style="font-size: 16px;">3 of the 4 BANT criteria are known.</li>
+<li style="font-size: 16px;">Sales Discovery complete and understanding of customer scaling factors are known (spend, inventory, suppliers, modes, trade agreements, etc.).</li>
+<li style="font-size: 16px;">ASD begins initial population of Opportunity Scoping Document (initial solution, business goals, operational challenges) etc.</li>
+<li style="font-size: 16px;">NDA Initiated.</li>
+</ul>
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/exit_criteria.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+
+<div id="30-stage-goal" class="content-item" style="display: flex;">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #517222;"> Stage Goal </h2>
+<ul><li style="font-size: 16px;">Win Strategy & Coach Identification. </li></ul>
+<a href="https://e2open.docebosaas.com/learn/course/2109/e2open-sales-stage-30?generated_by=23470&hash=ce30c750e447b3676842745ff695ca800f931b88" target="_blank" class="video-button">
+<i class="fas fa-video"></i> Watch Stage 30 Overview
+</a>
+</div>
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #517222;"> Qualification </h2>
+<ul style="line-height:24px">
+<li style="font-size: 16px;">3 of the 4 BANT criteria are known.</li>
+<li style="font-size: 16px;">Sales Discovery complete and understanding of customer scaling factors are known (spend, inventory, suppliers, modes, trade agreements, etc.).</li>
+<li style="font-size: 16px;">NDA Initiated.</li>
+</ul>
+</div>
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #517222;"> Disqualification </h2>
+<ul style="line-height:24px">
+<li style="font-size: 16px;">Prospect doesn't confirm their pain points, doesn't engage key stakeholders, or doesn't commit to the evaluation plan.</li>
+</ul>
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/stage_goal.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+
+<div id="30-entry-criteria" class="content-item">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #8e7029;"> Entry Criteria</h2>
+<ul style="line-height:24px"><li style="font-size: 16px;">3 of the 4 BANT criteria are known.</li>
+<li style="font-size: 16px;">Sales Discovery complete and understanding of customer scaling factors are known (spend, inventory, suppliers, modes, trade agreements, etc.)</li>
+<li style="font-size: 16px;">NDA Initiated.</li>
+</ul>
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/entry_criteria.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+<div id="30-key-responsibilities" class="content-item" style="display:flex !important;">
+<div class="content-left" style="width:260%;">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/stage_30_kr.png" alt="Key Responsibilities Image">
+</div>
+<div class="content-right" style="padding-left: 0px; display: flex; flex-direction: column; gap: 10px;margin-top:1%;">
+<div>
+
+<a href="https://e2open.sharepoint.com/teams/Sales/FieldOps/GlobalFieldEnablement/02.%20Solutions%20Consulting/SC%20Templates/Opportunity%20Scoping" class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-file-alt"></i> Opportunity Scoping Document</a>
+<a href="https://e2open.sharepoint.com/:x:/r/teams/Sales/FieldOps/GlobalFieldEnablement/01.%20Sales/Sales%20Templates%20(Updated%20Aug%202023)/Mutual%20Evaluation%20Plan%20(Updated%20Aug%202023)/Mutual-Evaluation-Plan-Template.xlsx?d=wfee934139fe946c2993a20003ad3d11a&csf=1&web=1&e=utQJX0" class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-file-alt"></i> Evaluation Plan Template</a>
+<a href="https://e2open.sharepoint.com/:b:/r/teams/Sales/FieldOps/GlobalFieldEnablement/05.%20Training%20%26%20Enablement/Launch-Quip/Template%20Guides/PDFs/Mutual%20Evaluation%20Plan%20Reference%20Guide%20-%20Rebranded.pdf?csf=1&web=1&e=3B3dqN" class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-book"></i> Evaluation Plan Guide</a>
+
+<a href="https://e2open.sharepoint.com/sites/ProductMarketing" class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-file-powerpoint"></i> L0 – L2 Presentations</a>
+
+<a href="https://e2open.sharepoint.com/sites/ProductMarketing#case-studies" class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-file"></i> Case Studies</a>
+<a href="https://e2open.sharepoint.com/sites/ProductMarketing#white-papers" class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-file"></i> White Paper</a>
+<a href="https://e2open.sharepoint.com/sites/ProductMarketing#analyst-reports" class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-file-alt"></i> Analyst Reports</a>
+<a class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-file-alt"></i> Coming Soon: RFx Primers</a>
+</div>
+</div>
+</div>
+<div id="30-best-practices" class="content-item">
+<div class="bp">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #4d3075;">Best Practice - Do’s and Dont's</h2>
+<table style="width: 95%; line-height: 20px; border-collapse: collapse;border-spacing:0;margin:2%;">
+<tr>
+<th style="font-size: 16px; text-align: left; padding: 5px; border-bottom: 1px solid #ddd;width:47%;color:#7239a4;">Do’s</th>
+<th style="font-size: 16px; text-align: left; padding: 5px; border-bottom: 1px solid #ddd; width:50%;color:#7239a4;">Dont's</th>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Ask open-ended questions during discovery, gather information on organizational structure, and confirm evaluation plan.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Skip discovery, make assumptions about the prospect's needs, or neglect to involve key stakeholders.</li></ul></td>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"></td>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Do Demos without discovery, without knowing the pain: the purpose of discovery is “figuring out how to win”… do not jump in without taking the time to figure out how to win. </li></ul></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div id="30-exit-criteria" class="content-item">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #1e5b67;"> Exit Criteria</h2>
+<ul style="line-height:24px"><li style="font-size: 16px;">Discovery meetings completed.</li>
+<li style="font-size: 16px;"> Clear view on the customer pain points and how we can bring value and ROI).</li>
+<li style="font-size: 16px;">Org Chart & Power Base chart developed.</li>
+<li style="font-size: 16px;">Evaluation plan in place and collaborative.</li>
+</ul>
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/exit_criteria.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+
+<div id="40-stage-goal" class="content-item" style="display: flex;">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #517222;"> Stage Goal </h2>
+<ul><li style="font-size: 16px;">Prove Our Value Is Best - Triangulate approval with IT, Finance, and Supply chain.</li></ul>
+<a href="https://e2open.docebosaas.com/learn/course/2110/e2open-sales-stage-40?generated_by=23470&hash=289c790bc891d143eecd203140434a9497d3ef95" target="_blank" class="video-button">
+<i class="fas fa-video"></i> Watch Stage 40 Overview
+</a>
+</div>
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #517222;"> Qualification </h2>
+<ul style="line-height:24px">
+<li style="font-size: 16px;">Discovery meetings completed.</li>
+<li style="font-size: 16px;">Clear view on the customer pain points and how we can bring value and ROI.</li>
+<li style="font-size: 16px;">Organization chart and Power Base chart developed.</li>
+<li style="font-size: 16px;">Evaluation plan in place and collaborative.</li>
+</ul>
+</div>
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #517222;"> Disqualification </h2>
+<ul style="line-height:24px">
+<li style="font-size: 16px;">Prospect doesn't see the solution’s value, doesn't agree to the pricing, or doesn't engage in contract negotiations.</li>
+</ul>
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/stage_goal.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+
+<div id="40-entry-criteria" class="content-item">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #8e7029;"> Entry Criteria</h2>
+<ul style="line-height:24px"><li style="font-size: 16px;">Discovery meetings completed.</li>
+<li style="font-size: 16px;">Clear view on the customer pain points and how we can bring value and ROI.</li>
+<li style="font-size: 16px;">Org Chart & Power Base chart developed.</li>
+<li style="font-size: 16px;">Evaluation plan in place and collaborative.</li>
+</ul>
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/entry_criteria.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+<div id="40-key-responsibilities" class="content-item" style="display:flex !important;">
+<div class="content-left" style="width:260%;">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/stage_40_kr.png" alt="Key Responsibilities Image">
+</div>
+<div class="content-right" style="padding-left: 0px; display: flex; flex-direction: column; gap: 10px;margin-top:1%;">
+<div>
+
+<a href="https://e2open.sharepoint.com/teams/Sales/FieldOps/GlobalFieldEnablement/02.%20Solutions%20Consulting/SC%20Templates/Opportunity%20Scoping" class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-file-alt"></i> Opportunity Scoping Document</a>
+<a href="https://e2open.sharepoint.com/:f:/t/Sales/FieldOps/EsBd5cFYPU9Nl4MDiuS047sB0emE94-Bks81-HZJufKKFQ?e=gCeEZL" class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-file-alt"></i> Sales Proposal Template</a>
+<a class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-book"></i> Coming Soon: PSE</a>
+
+<a class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-file-powerpoint"></i> Coming Soon: Value Positioning</a>
+
+<a href="" class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-file"></i> Coming Soon: Genus</a>
+<a class="custom-button" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;" target="_blank"><i class="fas fa-file-powerpoint"></i> Coming Soon: L3 - L5 Presentations</a>
+</div>
+</div>
+</div>
+<div id="40-best-practices" class="content-item">
+<div class="bp">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #4d3075;">Best Practice - Do’s and Dont's</h2>
+<table style="width: 95%; line-height: 20px; border-collapse: collapse;border-spacing:0;margin:2%;">
+<tr>
+<th style="font-size: 16px; text-align: left; padding: 5px; border-bottom: 1px solid #ddd;width:47%;color:#7239a4;">Do’s</th>
+<th style="font-size: 16px; text-align: left; padding: 5px; border-bottom: 1px solid #ddd; width:50%;color:#7239a4;">Dont's</th>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Personalize demos, quantify the value of your solution, address objections or concerns.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Ignore procurement.</li></ul></td>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Communicate the value of the solution in terms of cost savings, improved efficiency, reduce risk of change management or other tangible benefits.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Offer Proof of Concepts (POCs) or pilots. </li></ul></td>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Be prepared to answer technical questions and address customer concerns during demonstrations. Do not be vague.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"></td>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Get Reference Calls, Show Testimonials.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+<div id="40-exit-criteria" class="content-item">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #1e5b67;"> Exit Criteria</h2>
+<ul style="line-height:24px"><li style="font-size: 16px;">PSE.</li>
+<li style="font-size: 16px;"> Opportunity Approval.</li>
+<li style="font-size: 16px;"> Case created for contracts creation.</li>
+<li style="font-size: 16px;"> Customer procurement engaged.</li>
+<li style="font-size: 16px;"> Validated project is funded and approved.</li>
+<li style="font-size: 16px;"> Triangulation Validated (CFO, CIO and CSO).</li>
+<li style="font-size: 16px;"> Formal proposal delivered.</li>
+</ul>
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/exit_criteria.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+
+<div id="50-stage-goal" class="content-item" style="display: flex;">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #517222;"> Stage Goal </h2>
+<ul><li style="font-size: 16px;">Finalize the deal, capturing a fair share of the value.</li></ul>
+<a href="https://e2open.docebosaas.com/learn/course/2111/e2open-sales-stage-50?generated_by=23470&hash=06f500c9a6f12ff1d537fb15325d7ae9defce557" target="_blank" class="video-button">
+<i class="fas fa-video"></i> Watch Stage 50 Overview
+</a>
+</div>
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #517222;"> Qualification </h2>
+<ul style="line-height:24px">
+<li style="font-size: 16px;">Down Selected or Selected.</li>
+<li style="font-size: 16px;">MSA | OF | SLA | SOW are in review.</li>
+<li style="font-size: 16px;">References underway.</li>
+</ul>
+</div>
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #517222;"> Disqualification </h2>
+<ul style="line-height:24px">
+<li style="font-size: 16px;">Failure to reach an agreement on business and legal terms or lack of stakeholder commitment to the Close Plan.</li>
+</ul>
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/stage_goal.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+
+<div id="50-entry-criteria" class="content-item">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #8e7029;"> Entry Criteria</h2>
+<ul style="line-height:24px"><li style="font-size: 16px;">Down Selected or Selected.</li>
+<li style="font-size: 16px;">MSA | OF | SLA | SOW are in review.</li>
+<li style="font-size: 16px;">References underway.</li>
+</ul>
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/entry_criteria.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+<div id="50-key-responsibilities" class="content-item" style="display:flex !important;">
+<div class="content-left" style="width:260%;">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/stage_50_kr.png" alt="Key Responsibilities Image">
+</div>
+<div class="content-right" style="padding-left: 0px; display: flex; flex-direction: column; gap: 10px;margin-top:1%;">
+<div>
+
+<a href="https://e2open.sharepoint.com/:x:/r/teams/Sales/FieldOps/GlobalFieldEnablement/01.%20Sales/Sales%20Templates%20(Updated%20Aug%202023)/Close%20Plan%20(Updated%20Aug%202023)/Close-Plan-Template.xlsx?d=w693b9089884147f6b7399b3eadcd0af4&csf=1&web=1&e=8MAM9M" class="custom-button" target="_blank" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;"><i class="fas fa-file-alt"></i> Close Plan Template</a>
+<a href="https://e2open.sharepoint.com/:b:/r/teams/Sales/FieldOps/GlobalFieldEnablement/01.%20Sales/Sales%20Templates%20(Updated%20Aug%202023)/Reference%20Guides%20(Updated%20Aug%202023)/Close%20Plan%20Reference%20Guide%20-%20Rebranded%20(Updated%20as%20@%201%20AUG%202023).pdf?csf=1&web=1&e=VN7ePY" class="custom-button" target="_blank" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;"><i class="fas fa-book"></i> Close Plan Guide</a>
+
+<a href="https://e2open.sharepoint.com/:x:/r/teams/Sales/FieldOps/GlobalFieldEnablement/01.%20Sales/Sales%20Templates%20(Updated%20Aug%202023)/Give%20Get%20Framework%20(Updated%20Aug%202023)/Give%20Get%20Framework.xlsx?d=wd1cb5babf9914c4aa9000161c1890557&csf=1&web=1&e=I0uq3u" class="custom-button" target="_blank" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;"><i class="fas fa-file-alt"></i> Give-Get Framework Template</a>
+<a href="https://e2open.sharepoint.com/:b:/r/teams/Sales/FieldOps/GlobalFieldEnablement/01.%20Sales/Sales%20Templates%20(Updated%20Aug%202023)/Reference%20Guides%20(Updated%20Aug%202023)/Give-Get%20Framework%20Reference%20Guide%20-%20Rebranded%20(Updated%20as%20@%201%20AUG%202023).pdf?csf=1&web=1&e=s1BuuA" class="custom-button" target="_blank" style="font-size:14px; width: 200px; height: 25px; display: flex; align-items: center; justify-content: left;"><i class="fas fa-book"></i> Give-Get Framework Guide</a>
+
+</div>
+</div>
+</div>
+<div id="50-best-practices" class="content-item">
+<div class="bp">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #4d3075;">Best Practice - Do’s and Dont's</h2>
+<table style="width: 95%; line-height: 20px; border-collapse: collapse;border-spacing:0;margin:2%;">
+<tr>
+<th style="font-size: 16px; text-align: left; padding: 5px; border-bottom: 1px solid #ddd;width:47%;color:#7239a4;">Do’s</th>
+<th style="font-size: 16px; text-align: left; padding: 5px; border-bottom: 1px solid #ddd; width:50%;color:#7239a4;">Dont's</th>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Know when you’re negotiating.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Get out over your skis without management cover.</li></ul></td>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Let them make a counter first, Don’t negotiate with yourself.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Use their paper.</li></ul></td>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Test for Procurement “pound of flesh”.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"></td>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Negotiate contract T&C + Price together.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"></td>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Collect all objections before solving any.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"></td>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Track Give/Get.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"></td>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Ask “why”, get to interests not objections.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"></td>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Communicate the value of the solution in terms of cost savings, improved efficiency, or other tangible benefits.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"></td>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Get Reference Calls, Show Testimonials.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+<div id="50-exit-criteria" class="content-item">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #1e5b67;"> Exit Criteria</h2>
+<ul style="line-height:24px"><li style="font-size: 16px;">PSE.</li>
+<li style="font-size: 16px;"> Infosec/GDPR review complete.</li>
+<li style="font-size: 16px;"> Commercials are signed.</li>
+<li style="font-size: 16px;"> Final Genus approved.</li>
+<li style="font-size: 16px;"> Hub activation.</li>
+</ul>
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/exit_criteria.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+
+<div id="60-stage-goal" class="content-item" style="display: flex;">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #517222;"> Stage Goal </h2>
+<ul><li style="font-size: 16px;">Transition to PS/ Finance/ Hosting/ Ops/ etc.</li></ul>
+<a href="https://e2open.docebosaas.com/learn/course/2112/e2open-sales-stage-60?generated_by=23470&hash=70f28ad5182b19c6adc666773bd5e81850a0a403" target="_blank" class="video-button">
+<i class="fas fa-video"></i> Watch Stage 60 Overview
+</a>
+</div>
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #517222;"> Qualification </h2>
+<ul style="line-height:24px">
+<li style="font-size: 16px;">Commercials are executed.</li>
+<li style="font-size: 16px;">Customer sent book camp credentials.</li>
+<li style="font-size: 16px;">Sales transitions to PS and CSM.</li>
+</ul>
+</div>
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #517222;"> Disqualification </h2>
+<ul style="line-height:24px">
+<li style="font-size: 16px;">Contract not fully executed or implementation issues arise.</li>
+</ul>
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/stage_goal.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+
+<div id="60-entry-criteria" class="content-item">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #8e7029;"> Entry Criteria</h2>
+<ul style="line-height:24px"><li style="font-size: 16px;">Commercials are executed.</li>
+<li style="font-size: 16px;">Customer sent book camp credentials.</li>
+<li style="font-size: 16px;">Sales transitions to PS and CSM.</li>
+</ul>
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/entry_criteria.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+<div id="60-key-responsibilities" class="content-item" style="display:flex !important;">
+<div class="content-left" style="width:260%;">
+<img src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/stage_60_kr.png" alt="Key Responsibilities Image">
+</div>
+<div class="content-right" style="padding-left: 0px; display: flex; flex-direction: column; gap: 10px;margin-top:1%;">
+<div>
+
+
+</div>
+</div>
+</div>
+<div id="60-best-practices" class="content-item">
+<div class="bp">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #4d3075;">Best Practice - Do’s and Dont's</h2>
+<table style="width: 95%; line-height: 20px; border-collapse: collapse;border-spacing:0;margin:2%;">
+<tr>
+<th style="font-size: 16px; text-align: left; padding: 5px; border-bottom: 1px solid #ddd;width:47%;color:#7239a4;">Do’s</th>
+<th style="font-size: 16px; text-align: left; padding: 5px; border-bottom: 1px solid #ddd; width:50%;color:#7239a4;">Dont's</th>
+</tr>
+
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Ensure any PO#s and other contractual documents are obtained from the customer for Accounts Receivable.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"></td>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Schedule and lead the internal kick off call for communication of gals and client expectations, include Professional Services, Training, and Customer Success.</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"></td>
+</tr>
+<tr>
+<td style="font-size: 16px; padding: 2px;"><ul><li>Leverage the Opportunity Scoping Document to communicate the success factors and goals of the relationship with customer</li></ul></td>
+<td style="font-size: 16px; padding: 2px;"></td>
+</tr>
+<tr>
+</table>
+</div>
+</div>
+</div>
+
+<div id="60-exit-criteria" class="content-item">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #1e5b67;"> Exit Criteria</h2>
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/exit_criteria.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+
+<div id="90-stage-goal" class="content-item" style="display: flex;">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #517222;"> Stage Goal </h2>
+<ul><li style="font-size: 16px;">Coming Soon.</li></ul>
+
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/stage_goal.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+
+<div id="90-entry-criteria" class="content-item">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #8e7029;"> Entry Criteria</h2>
+<ul style="line-height:24px"><li style="font-size: 16px;">Coming Soon.</li>
+</ul>
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/entry_criteria.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+<div id="90-key-responsibilities" class="content-item" style="display:flex !important;">
+<div class="content-left" style="width:260%;">
+<ul style="line-height:24px"><li style="font-size: 16px;">Coming Soon.</li>
+</ul>
+</div>
+<div class="content-right" style="padding-left: 0px; display: flex; flex-direction: column; gap: 10px;margin-top:1%;">
+</div>
+</div>
+
+<div id="90-best-practices" class="content-item">
+<div class="bp">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #4d3075;">Best Practice - Do’s and Dont's</h2>
+<ul style="line-height:24px"><li style="font-size: 16px;">Coming Soon.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="90-exit-criteria" class="content-item">
+<div class="content-left" style="width: 60%;">
+<div class="stagegoal">
+<h2 style="margin: 0;font-size: LARGE; font-family: Arial; color: #1e5b67;"> Exit Criteria</h2>
+<ul style="line-height:24px"><li style="font-size: 16px;">Coming Soon.</li>
+</ul>
+</div>
+</div>
+<div class="content-right" style="width: 60%; display: flex; align-items: center;">
+<img class="sgimg" src="https://cdn5.dcbstatic.com/files/e/2/e2open_docebosaas_com/userfiles/15533/Sales Central/exit_criteria.png" alt="Stage Goal Image" style="width: 60%; height: auto;">
+</div>
+</div>
+
+
+</div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+   showTab('stage-30');
+});
+
+function showTab(tab) {
+   var tabs = document.querySelectorAll('.tabs a');
+   tabs.forEach(function(tabElement) {
+       tabElement.classList.remove('active');
+   });
+   document.querySelector('.tabs a[onclick="showTab(\'' + tab + '\')"]').classList.add('active');
+   var sidebar = document.querySelector('.sidebar ul');
+   var sidebarItems = {
+       'long-term-development': [
+           { id: 'long-term-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: 'long-term-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: 'long-term-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities' },
+           { id: 'long-term-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: 'long-term-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ],
+       'stage-00-10': [
+           { id: '00-10-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: '00-10-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: '00-10-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities' },
+           { id: '00-10-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: '00-10-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ],
+       'stage-20': [
+           { id: '20-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: '20-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: '20-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities' },
+           { id: '20-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: '20-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ],
+       'stage-30': [
+           { id: '30-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: '30-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: '30-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities' },
+           { id: '30-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: '30-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ],
+       'stage-40': [
+           { id: '40-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: '40-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: '40-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities' },
+           { id: '40-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: '40-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ],
+       'stage-50': [
+           { id: '50-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: '50-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: '50-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities' },
+           { id: '50-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: '50-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ],
+       'stage-60': [
+           { id: '60-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: '60-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: '60-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities' },
+           { id: '60-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: '60-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ],
+       'stage-90': [
+           { id: '90-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: '90-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: '90-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities' },
+           { id: '90-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: '90-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ]
+   };
+   var selectedItems = sidebarItems[tab];
+   if (selectedItems) {
+       sidebar.innerHTML = '';
+       selectedItems.forEach(function(item) {
+           var li = document.createElement('li');
+           var a = document.createElement('a');
+           a.href = '#';
+           a.setAttribute('onclick', 'showContent("' +
+item.id
++ '", this)');
+           a.innerHTML = '<i class="' + item.icon + '"></i> ' + item.text;
+           li.appendChild(a);
+           sidebar.appendChild(li);
+       });
+       // Ensure the first item in the new sidebar is active
+       showContent(selectedItems[0].id, document.querySelector('.sidebar ul li a[onclick="showContent(\'' + selectedItems[0].id + '\')"]'));
+   }
+}
+function showContent(id, element) {
+   var contentItems = document.getElementsByClassName('content-item');
+   for (var i = 0; i < contentItems.length; i++) {
+       contentItems[i].style.display = 'none';
+   }
+   document.getElementById(id).style.display = '';
+   var menuItems = document.querySelectorAll('.sidebar ul li a');
+   for (var j = 0; j < menuItems.length; j++) {
+       menuItems[j].classList.remove('active');
+   }
+   if (element) {
+       element.classList.add('active');
+   } else {
+       document.querySelector('.sidebar ul li a[onclick="showContent(\'' + id + '\')"]').classList.add('active');
+   }
+}
+</script>
