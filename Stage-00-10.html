@@ -362,14 +362,14 @@ body {
 </div>
 <div style="background-color:#1e5b67;">
 <div class="tabs">
-<a href="#" onclick="redirect('https://e2open.docebosaas.com/pages/191/stage-long-term-development')">Long Term <br/>Development</a>
-<a href="#" onclick="showTab('stage-00-10')" class="active">Stage 00-10 <br/>Pre-Qual/Sales <br/>Accepted Lead</a>
-<a href="#" onclick="redirect('https://e2open.docebosaas.com/pages/193/stage-20-qualify')">Stage 20 <br/>Qualify</a>
-<a href="#" onclick="redirect('https://e2open.docebosaas.com/pages/194/stage-30-discovery')">Stage 30 <br/>Discovery</a>
-<a href="#" onclick="redirect('https://e2open.docebosaas.com/pages/195/stage-40-tech-prove')">Stage 40 <br/>Tech-Prove</a>
-<a href="#" onclick="redirect('https://e2open.docebosaas.com/pages/196/stage-50-negotiation')">Stage 50 <br/>Negotiation</a>
-<a href="#" onclick="redirect('https://e2open.docebosaas.com/pages/197/stage-60-closed-won')">Stage 60 <br/>Closed Won</a>
-<a href="#" onclick="redirect('https://e2open.docebosaas.com/pages/198/stage-90-closed-lost')">Stage 90 <br/>Closed Lost</a>
+<a href="#" onclick="showTab('long-term-development')" class="active">Long Term <br/>Development</a>
+<a href="#" onclick="showTab('stage-00-10')">Stage 00-10 <br/>Pre-Qual/Sales <br/>Accepted Lead</a>
+<a href="#" onclick="showTab('stage-20')">Stage 20 <br/>Qualify</a>
+<a href="#" onclick="showTab('stage-30')">Stage 30 <br/>Discovery</a>
+<a href="#" onclick="showTab('stage-40')">Stage 40 <br/>Tech-Prove</a>
+<a href="#" onclick="showTab('stage-50')">Stage 50 <br/>Negotiation</a>
+<a href="#" onclick="showTab('stage-60')">Stage 60 <br/>Closed Won</a>
+<a href="#" onclick="showTab('stage-90')">Stage 90 <br/>Closed Lost</a>
 </div>
 </div>
 <div class="container">
@@ -1157,58 +1157,105 @@ body {
 <script>
 document.addEventListener('DOMContentLoaded', function() {
    showTab('stage-00-10');
-  showContent('stage-goal', document.querySelector('.sidebar ul li a[onclick="showContent(\'stage-goal\', this)"]'));
 });
+
 function showTab(tab) {
-  var tabs = document.querySelectorAll('.tabs a');
-  tabs.forEach(function(tabElement) {
-      tabElement.classList.remove('active');
-  });
-  document.querySelector('.tabs a[onclick="showTab(\'' + tab + '\')"]').classList.add('active');
-  var sidebar = document.querySelector('.sidebar ul');
-  var sidebarItems = {
-      'stage-00-10': [
-          { id: '00-10-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
-          { id: '00-10-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
-          { id: '00-10-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities & Resource Links' },
-          { id: '00-10-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
-          { id: '00-10-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
-      ]
-  };
-  var selectedItems = sidebarItems[tab];
-  if (selectedItems) {
-      sidebar.innerHTML = '';
-      selectedItems.forEach(function(item) {
-          var li = document.createElement('li');
-          var a = document.createElement('a');
-          a.href = '#';
-          a.setAttribute('onclick', 'showContent("' +
+   var tabs = document.querySelectorAll('.tabs a');
+   tabs.forEach(function(tabElement) {
+       tabElement.classList.remove('active');
+   });
+   document.querySelector('.tabs a[onclick="showTab(\'' + tab + '\')"]').classList.add('active');
+   var sidebar = document.querySelector('.sidebar ul');
+   var sidebarItems = {
+       'long-term-development': [
+           { id: 'long-term-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: 'long-term-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: 'long-term-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities & Resource Links' },
+           { id: 'long-term-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: 'long-term-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ],
+       'stage-00-10': [
+           { id: '00-10-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: '00-10-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: '00-10-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities & Resource Links' },
+           { id: '00-10-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: '00-10-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ],
+       'stage-20': [
+           { id: '20-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: '20-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: '20-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities & Resource Links' },
+           { id: '20-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: '20-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ],
+       'stage-30': [
+           { id: '30-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: '30-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: '30-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities & Resource Links' },
+           { id: '30-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: '30-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ],
+       'stage-40': [
+           { id: '40-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: '40-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: '40-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities & Resource Links' },
+           { id: '40-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: '40-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ],
+       'stage-50': [
+           { id: '50-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: '50-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: '50-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities & Resource Links' },
+           { id: '50-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: '50-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ],
+       'stage-60': [
+           { id: '60-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: '60-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: '60-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities & Resource Links' },
+           { id: '60-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: '60-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ],
+       'stage-90': [
+           { id: '90-stage-goal', icon: 'fas fa-bullseye', text: 'Stage Goal' },
+           { id: '90-entry-criteria', icon: 'fas fa-sign-in-alt', text: 'Entry Criteria' },
+           { id: '90-key-responsibilities', icon: 'fas fa-users', text: 'Key Responsibilities & Resource Links' },
+           { id: '90-best-practices', icon: 'fas fa-check-circle', text: 'Best Practices' },
+           { id: '90-exit-criteria', icon: 'fas fa-sign-out-alt', text: 'Exit Criteria' }
+       ]
+   };
+   var selectedItems = sidebarItems[tab];
+   if (selectedItems) {
+       sidebar.innerHTML = '';
+       selectedItems.forEach(function(item) {
+           var li = document.createElement('li');
+           var a = document.createElement('a');
+           a.href = '#';
+           a.setAttribute('onclick', 'showContent("' +
 item.id
 + '", this)');
-          a.innerHTML = '<i class="' + item.icon + '"></i> ' + item.text;
-          li.appendChild(a);
-          sidebar.appendChild(li);
-      });
-      showContent(selectedItems[0].id, document.querySelector('.sidebar ul li a[onclick="showContent(\'' + selectedItems[0].id + '\')"]'));
-  }
+           a.innerHTML = '<i class="' + item.icon + '"></i> ' + item.text;
+           li.appendChild(a);
+           sidebar.appendChild(li);
+       });
+       // Ensure the first item in the new sidebar is active
+       showContent(selectedItems[0].id, document.querySelector('.sidebar ul li a[onclick="showContent(\'' + selectedItems[0].id + '\')"]'));
+   }
 }
 function showContent(id, element) {
-  var contentItems = document.getElementsByClassName('content-item');
-  for (var i = 0; i < contentItems.length; i++) {
-      contentItems[i].style.display = 'none';
-  }
-  document.getElementById(id).style.display = '';
-  var menuItems = document.querySelectorAll('.sidebar ul li a');
-  for (var j = 0; j < menuItems.length; j++) {
-      menuItems[j].classList.remove('active');
-  }
-  if (element) {
-      element.classList.add('active');
-  } else {
-      document.querySelector('.sidebar ul li a[onclick="showContent(\'' + id + '\')"]').classList.add('active');
-  }
-}
-function redirect(url) {
-  window.location.href = url;
+   var contentItems = document.getElementsByClassName('content-item');
+   for (var i = 0; i < contentItems.length; i++) {
+       contentItems[i].style.display = 'none';
+   }
+   document.getElementById(id).style.display = '';
+   var menuItems = document.querySelectorAll('.sidebar ul li a');
+   for (var j = 0; j < menuItems.length; j++) {
+       menuItems[j].classList.remove('active');
+   }
+   if (element) {
+       element.classList.add('active');
+   } else {
+       document.querySelector('.sidebar ul li a[onclick="showContent(\'' + id + '\')"]').classList.add('active');
+   }
 }
 </script>
