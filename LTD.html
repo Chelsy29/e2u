@@ -276,7 +276,15 @@ body {
  background-color: #fffff;
  color: #fff;
 }
-
+.tabs {
+   display: flex;
+   justify-content: space-around;
+   background-color: #282828; /* Dark Cadet */
+   padding: 10px 0;
+   border-bottom: 2px solid #ddd;
+   margin: 0;
+   padding: 0;
+}
 .tabs button {
   padding: 10px 20px;
   background-color: transparent;
@@ -296,6 +304,24 @@ body {
 .tabs button:hover {
   background-color: #b2cec3;
   color: #333;
+}
+.sidebar {
+   width: 20%;
+   background-color: #ebebeb; /* Light Carbon */
+   color: #282828; /* Carbon */
+   padding: 0;
+   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+   display: flex;
+   flex-direction: column;
+}
+.sidebar ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   flex: 1;
+}
+.sidebar ul li {
+   width: 100%;
 }
 .sidebar ul li button {
   width: 100%;
@@ -345,12 +371,12 @@ body {
 <div class="tabs">
 <button onclick="showTab('long-term-development')" class="active">Long Term <br/>Development</button>
 <button data-link="https://e2open.docebosaas.com/pages/192/stage-00-10-pre-qualsales-accepted-lead" onclick="openLink(this)">Stage 00-10 <br/>Pre-Qual/Sales <br/>Accepted Lead</button>
-<button data-link="https://example.com/stage-20" onclick="openLink(this)">Stage 20 <br/>Qualify</button>
-<button data-link="https://example.com/stage-30" onclick="openLink(this)">Stage 30 <br/>Discovery</button>
-<button data-link="https://example.com/stage-40" onclick="openLink(this)">Stage 40 <br/>Tech-Prove</button>
-<button data-link="https://example.com/stage-50" onclick="openLink(this)">Stage 50 <br/>Negotiation</button>
-<button data-link="https://example.com/stage-60" onclick="openLink(this)">Stage 60 <br/>Closed Won</button>
-<button data-link="https://example.com/stage-90" onclick="openLink(this)">Stage 90 <br/>Closed Lost</button>
+<button data-link="https://e2open.docebosaas.com/pages/193/stage-20-qualify" onclick="openLink(this)">Stage 20 <br/>Qualify</button>
+<button data-link="https://e2open.docebosaas.com/pages/194/stage-30-discovery" onclick="openLink(this)">Stage 30 <br/>Discovery</button>
+<button data-link="https://e2open.docebosaas.com/pages/195/stage-40-tech-prove" onclick="openLink(this)">Stage 40 <br/>Tech-Prove</button>
+<button data-link="https://e2open.docebosaas.com/pages/196/stage-50-negotiation" onclick="openLink(this)">Stage 50 <br/>Negotiation</button>
+<button data-link="https://e2open.docebosaas.com/pages/197/stage-60-closed-won" onclick="openLink(this)">Stage 60 <br/>Closed Won</button>
+<button data-link="https://e2open.docebosaas.com/pages/198/stage-90-closed-lost" onclick="openLink(this)">Stage 90 <br/>Closed Lost</button>
 </div>
 </div>
 <div class="container">
@@ -483,7 +509,7 @@ function showContent(contentId, activeButton) {
 function openLink(button) {
  var url = button.getAttribute('data-link');
  if (url) {
-   window.location.href = url;
+   window.open(url, '_blank');
  }
 }
 </Script>
